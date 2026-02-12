@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TruthPulse</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="paper-shell">
+    <div id="backendBanner" class="backend-banner" hidden>
+      Backend API is not configured. Set <strong>TRUTHPULSE_API_BASE</strong> in <a href="./runtime-config.js">runtime-config.js</a>.
+    </div>
+    <header class="masthead">
+      <p class="edition">India Digital Risk Monitor • Daily Edition</p>
+      <h1>TRUTHPULSE</h1>
+      <p class="tagline">Real-Time Civic Risk Intelligence</p>
+    </header>
+
+    <main class="news-grid">
+      <section class="panel">
+        <h2>Geographic Heatmap of Emerging Risk Clusters</h2>
+        <p id="geoUpdated" class="trend-stats">Loading regional signal intensity...</p>
+        <div id="geoHeatmapList" class="geo-heatmap-list"></div>
+      </section>
+
+      <section class="content-grid">
+        <section class="signal-column panel">
+          <h2>Risk Signals</h2>
+          <div id="themeFilterBar" class="theme-filter-bar">
+            <button class="theme-filter-btn active" data-theme="all">All</button>
+            <button class="theme-filter-btn" data-theme="violence">Violence</button>
+            <button class="theme-filter-btn" data-theme="child-abuse-nudity">Child Abuse/Nudity</button>
+            <button class="theme-filter-btn" data-theme="sexual-exploitation">Sexual Exploitation</button>
+            <button class="theme-filter-btn" data-theme="human-exploitation">Human Exploitation</button>
+            <button class="theme-filter-btn" data-theme="suicide-self-harm">Suicide/Self-Harm</button>
+            <button class="theme-filter-btn" data-theme="violent-speech">Violent Speech</button>
+            <button class="theme-filter-btn" data-theme="tvec">TVEC</button>
+            <button class="theme-filter-btn" data-theme="illegal-goods">Illegal Goods</button>
+            <button class="theme-filter-btn" data-theme="human-trafficking">Human Trafficking</button>
+            <button class="theme-filter-btn" data-theme="ncii">NCII</button>
+            <button class="theme-filter-btn" data-theme="dangerous-organizations">Criminal Orgs</button>
+            <button class="theme-filter-btn" data-theme="harassment-bullying">Harassment</button>
+            <button class="theme-filter-btn" data-theme="dangerous-misinformation">Dangerous Misinfo</button>
+            <button class="theme-filter-btn" data-theme="spam-inauthentic">Spam/Inauthentic</button>
+            <button class="theme-filter-btn" data-theme="malware">Malware</button>
+            <button class="theme-filter-btn" data-theme="cybersecurity">Cybersecurity</button>
+            <button class="theme-filter-btn" data-theme="fraud-impersonation">Fraud/Impersonation</button>
+          </div>
+          <div id="signalsList" class="signals-list"></div>
+        </section>
+
+        <aside class="panel stream-status-panel">
+          <h2 id="streamPanelTitle">Live Trending News</h2>
+          <div id="misinfoNewsList" class="live-sources-list"></div>
+          <div class="stream-pagination">
+            <button id="streamPrevBtn" class="stream-page-btn" type="button">Prev</button>
+            <span id="streamPageInfo" class="stream-page-info">Page 1 of 1</span>
+            <button id="streamNextBtn" class="stream-page-btn" type="button">Next</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer-note">
+      Trust & Safety-first • Behavioral analysis • Ecosystem-level insights
+    </footer>
+  </div>
+
+  <script src="./runtime-config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+window.TRUTHPULSE_API_BASE = window.TRUTHPULSE_API_BASE || '';

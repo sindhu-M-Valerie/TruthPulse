@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trend Detail • TruthPulse</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="paper-shell">
+    <div id="backendBanner" class="backend-banner" hidden>
+      Backend API is not configured. Set <strong>TRUTHPULSE_API_BASE</strong> in <a href="./runtime-config.js">runtime-config.js</a>.
+    </div>
+    <header class="masthead">
+      <p class="edition">India Digital Risk Monitor • Detail Edition</p>
+      <h1>TRUTHPULSE</h1>
+      <p class="tagline">Trend Intelligence Detail</p>
+    </header>
+
+    <main class="news-grid">
+      <section class="panel">
+        <h2 id="detailTitle">Loading trend detail...</h2>
+        <p id="detailMeta" class="trend-stats"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Key Highlights</h2>
+        <ul id="detailHighlights" class="detail-list"></ul>
+      </section>
+
+      <section class="panel">
+        <p><a href="./">← Back to Front Page Signals</a></p>
+      </section>
+    </main>
+
+    <footer class="footer-note">
+      Trust & Safety-first • Behavioral analysis • Ecosystem-level insights
+    </footer>
+  </div>
+
+  <script src="./runtime-config.js"></script>
+  <script src="./trend.js"></script>
+</body>
+</html>
