@@ -15,6 +15,7 @@
       <p class="edition">India Digital Risk Monitor • Daily Edition</p>
       <h1>TRUTHPULSE</h1>
       <p class="tagline">Real-Time Civic Risk Intelligence</p>
+      <p id="editionStamp" class="edition-stamp">Edition Stamp: Daily Brief</p>
     </header>
 
     <main class="news-grid">
@@ -22,6 +23,10 @@
         <h2>Geographic Heatmap of Emerging Risk Clusters</h2>
         <p id="topDataFreshness" class="data-freshness">Last Updated: —</p>
         <p id="geoUpdated" class="trend-stats">Loading regional signal intensity...</p>
+        <div class="mini-trend-block">
+          <p id="miniTrendUpdated" class="mini-trend-updated">Loading 24h signal trend...</p>
+          <div id="miniTrendChart" class="mini-trend-chart"></div>
+        </div>
         <div id="geoHeatmapList" class="geo-heatmap-list"></div>
       </section>
 
@@ -55,6 +60,20 @@
           <h2 id="streamPanelTitle">Live Trending News</h2>
           <p id="dataModeStatus" class="data-mode-status">Data Mode: Live API</p>
           <p id="dataFreshness" class="data-freshness">Last Updated: —</p>
+          <div class="stream-filters">
+            <label>
+              Category
+              <select id="streamCategoryFilter" class="stream-filter-select">
+                <option value="all">All</option>
+              </select>
+            </label>
+            <label>
+              Region
+              <select id="streamRegionFilter" class="stream-filter-select">
+                <option value="all">All</option>
+              </select>
+            </label>
+          </div>
           <div id="misinfoNewsList" class="live-sources-list"></div>
           <div class="stream-pagination">
             <button id="streamPrevBtn" class="stream-page-btn" type="button">Prev</button>

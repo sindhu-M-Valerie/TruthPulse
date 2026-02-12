@@ -113,6 +113,56 @@ function setDataFreshness(timestamp) {
 
     target.textContent = `Last Updated: ${new Date(lastDataTimestamp).toLocaleString()}`;
   });
+
+  const editionStamp = document.getElementById('editionStamp');
+  if (editionStamp) {
+    const stampTime = lastDataTimestamp ? new Date(lastDataTimestamp) : new Date();
+    editionStamp.textContent = `Edition Stamp: ${stampTime.toLocaleDateString()} • Daily 06:00 IST Edition`;
+  }
+}
+
+function renderMiniTrend(items, generatedAt) {
+  const chart = document.getElementById('miniTrendChart');
+  const updated = document.getElementById('miniTrendUpdated');
+
+  if (!chart || !updated) {
+    return;
+  }
+
+  if (!items.length) {
+    chart.innerHTML = '<p class="signals-empty">No trend data available right now.</p>';
+    updated.textContent = '24h signal trend unavailable';
+    return;
+  }
+
+  const countsByTheme = new Map();
+  items.forEach((item) => {
+    const themeKey = (item.theme || '').toLowerCase();
+    const label = themeDisplayNames[themeKey] || 'Other';
+    countsByTheme.set(label, (countsByTheme.get(label) || 0) + 1);
+  });
+
+  const rows = Array.from(countsByTheme.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6);
+
+  const maxCount = rows[0] ? rows[0][1] : 1;
+
+  chart.innerHTML = rows
+    .map(([label, count]) => {
+      const width = Math.max(6, Math.round((count / maxCount) * 100));
+      return `
+        <div class="mini-trend-row">
+          <span class="mini-trend-label">${label}</span>
+          <div class="mini-trend-bar-track"><div class="mini-trend-bar" style="width: ${width}%"></div></div>
+          <span class="mini-trend-value">${count}</span>
+        </div>
+      `;
+    })
+    .join('');
+
+  const stamp = generatedAt ? new Date(generatedAt).toLocaleTimeString() : new Date().toLocaleTimeString();
+  updated.textContent = `24h signal trend updated ${stamp}`;
 }
 
 function getRiskMeta(item) {
@@ -263,6 +313,7 @@ async function loadSignals() {
     setDataMode(mode);
     setDataFreshness(payload.generatedAt);
     const items = Array.isArray(payload.data) ? payload.data : [];
+    renderMiniTrend(items, payload.generatedAt);
 
     const uniqueItems = [];
     const seenLinks = new Set();
@@ -394,6 +445,7 @@ async function loadRegionalAndIncidentInsights() {
     geoUpdated.textContent = `Live article scan updated ${updatedAt}`;
   } catch (error) {
     geoUpdated.textContent = 'Unable to load regional heatmap right now.';
+    renderMiniTrend([], null);
     geoHeatmapList.innerHTML = '';
   }
 }
