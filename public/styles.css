@@ -129,6 +129,9 @@ a:active {
 .wildlife.w5 { top: 32%; right: 17%; }
 .wildlife.w6 { top: 38%; left: 21%; }
 .wildlife.w8 { top: 54%; left: 12%; }
+.wildlife.w9 { top: 22%; left: 72%; }
+.wildlife.w10 { top: 68%; right: 9%; }
+.wildlife.w11 { top: 82%; left: 34%; }
 
 .ambient-book {
   position: absolute;
@@ -218,7 +221,7 @@ a:active {
 .sherlock-sigil.glasses {
   width: 2.4rem;
   height: 0.7rem;
-  border-top: 2.5px solid rgba(45, 33, 22, 0.68);
+  border-top: 2.5px solid rgba(212, 220, 236, 0.72);
   border-radius: 999px;
   animation: field-glint 10s ease-in-out infinite;
 }
@@ -230,7 +233,7 @@ a:active {
   top: 0;
   width: 0.9rem;
   height: 0.62rem;
-  border: 2.5px solid rgba(45, 33, 22, 0.68);
+  border: 2.5px solid rgba(212, 220, 236, 0.72);
   border-radius: 50%;
 }
 
@@ -254,6 +257,9 @@ a:active {
 .sherlock-sigil.s10 { top: 74%; right: 4%; }
 .sherlock-sigil.s11 { top: 82%; left: 24%; }
 .sherlock-sigil.s12 { top: 88%; right: 34%; }
+.sherlock-sigil.s13 { top: 18%; left: 54%; }
+.sherlock-sigil.s14 { top: 47%; right: 30%; }
+.sherlock-sigil.s15 { top: 78%; left: 62%; }
 
 .backend-banner {
   margin-bottom: 0.65rem;
@@ -428,6 +434,18 @@ a:active {
   opacity: 0.54;
 }
 
+.decor-glasses.g4 {
+  left: 31%;
+  top: 10%;
+  opacity: 0.5;
+}
+
+.decor-glasses.g5 {
+  right: 33%;
+  top: 72%;
+  opacity: 0.5;
+}
+
 .decor-glasses::before,
 .decor-glasses::after {
   content: '';
@@ -435,7 +453,7 @@ a:active {
   top: 0;
   width: 0.82rem;
   height: 0.62rem;
-  border: 2.5px solid rgba(45, 33, 22, 0.72);
+  border: 2.5px solid rgba(212, 220, 236, 0.76);
   border-radius: 50%;
 }
 
@@ -448,7 +466,7 @@ a:active {
 }
 
 .decor-glasses {
-  border-top: 2.5px solid rgba(45, 33, 22, 0.72);
+  border-top: 2.5px solid rgba(212, 220, 236, 0.76);
   border-radius: 999px;
 }
 
@@ -563,11 +581,13 @@ a:active {
     padding-right: 6.2rem;
   }
 
-  .decor-glasses.g3 {
+  .decor-glasses.g3,
+  .decor-glasses.g5 {
     display: none;
   }
 
   .wildlife.w8,
+  .wildlife.w11,
   .ambient-book.bk3,
   .ambient-book.bk6 {
     display: none;
@@ -1338,6 +1358,8 @@ a:active {
   .decor-pen.n4,
   .decor-glasses.g2,
   .decor-glasses.g3,
+  .decor-glasses.g4,
+  .decor-glasses.g5,
   .ambient-book {
     display: none;
   }
