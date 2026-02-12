@@ -496,10 +496,9 @@ async function loadAIEcosystemWatch() {
   function renderCards(cards) {
     list.innerHTML = cards
       .map((card) => {
-        const safeSourceLink =
-          card.sourceLink ||
-          `https://news.google.com/search?q=${encodeURIComponent(card.category + ' AI safety')}&hl=en-IN&gl=IN&ceid=IN:en`;
-        const sourceMarkup = `<a href="${safeSourceLink}" target="_blank" rel="noopener noreferrer">${card.sourceTitle}</a>`;
+        const sourceMarkup = card.sourceLink
+          ? `<a href="${card.sourceLink}" target="_blank" rel="noopener noreferrer">${card.sourceTitle}</a>`
+          : card.sourceTitle;
 
         return `
           <article class="ai-watch-item">
@@ -520,8 +519,8 @@ async function loadAIEcosystemWatch() {
       category: topic.category,
       dateLabel,
       summary: 'Feed is temporarily unavailable. Snapshot refresh is pending; check back shortly for latest AI safety updates.',
-      sourceTitle: `Open ${topic.category} news search`,
-      sourceLink: `https://news.google.com/search?q=${encodeURIComponent(topic.category + ' AI safety')}&hl=en-IN&gl=IN&ceid=IN:en`
+      sourceTitle: 'No direct source available',
+      sourceLink: null
     }));
   }
 
@@ -566,14 +565,12 @@ async function loadAIEcosystemWatch() {
       const summary = summarySource.length > 180 ? `${summarySource.slice(0, 177)}...` : summarySource;
       const rawDate = lead?.publishedAt ? new Date(lead.publishedAt) : new Date(payload.generatedAt);
       const dateLabel = Number.isNaN(rawDate.getTime()) ? 'Date unavailable' : rawDate.toLocaleDateString();
-      const categorySearchUrl = `https://news.google.com/search?q=${encodeURIComponent(topic.searchQuery)}&hl=en-IN&gl=IN&ceid=IN:en`;
-
       return {
         ...topic,
         dateLabel,
         summary,
-        sourceTitle: `Open latest ${topic.category} coverage`,
-        sourceLink: categorySearchUrl
+        sourceTitle: lead?.title || 'No direct source available',
+        sourceLink: lead?.link || null
       };
     });
 
