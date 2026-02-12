@@ -4,6 +4,7 @@ let streamCurrentPage = 1;
 const streamPageSize = 5;
 const apiBase = (window.TRUTHPULSE_API_BASE || '').replace(/\/$/, '');
 let activeDataMode = 'live';
+let lastDataTimestamp = null;
 
 const riskBaselineByTheme = {
   violence: 'high',
@@ -89,6 +90,24 @@ function setDataMode(mode) {
   status.classList.toggle('live', !isSnapshot);
 }
 
+function setDataFreshness(timestamp) {
+  if (timestamp) {
+    lastDataTimestamp = timestamp;
+  }
+
+  const freshness = document.getElementById('dataFreshness');
+  if (!freshness) {
+    return;
+  }
+
+  if (!lastDataTimestamp) {
+    freshness.textContent = 'Last Updated: —';
+    return;
+  }
+
+  freshness.textContent = `Last Updated: ${new Date(lastDataTimestamp).toLocaleString()}`;
+}
+
 function getRiskMeta(item) {
   const theme = (item.theme || '').toLowerCase();
   const text = `${item.title || ''} ${item.snippet || ''}`.toLowerCase();
@@ -172,6 +191,7 @@ async function loadSignals() {
       `./data/live-sources-theme-${selectedTheme}.json`
     );
     setDataMode(mode);
+    setDataFreshness(payload.generatedAt);
     const items = Array.isArray(payload.data) ? payload.data : [];
 
     const uniqueItems = [];
@@ -239,6 +259,7 @@ async function loadRegionalAndIncidentInsights() {
       './data/live-sources-all.json'
     );
     setDataMode(mode);
+    setDataFreshness(payload.generatedAt);
     const items = Array.isArray(payload.data) ? payload.data : [];
 
     const regionCounts = Object.entries(regionRules).map(([region, keywords]) => {
@@ -309,6 +330,7 @@ async function loadStreamStatus() {
     );
     setDataMode(mode);
 
+    setDataFreshness(payload.generatedAt);
     const uniqueItems = [];
     const seenLinks = new Set();
     (Array.isArray(payload.data) ? payload.data : []).forEach((item) => {

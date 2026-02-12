@@ -603,6 +603,12 @@ body {
   color: #7a6238;
 }
 
+.data-freshness {
+  margin: -0.2rem 0 0.45rem;
+  font-size: 0.74rem;
+  color: var(--muted-ink);
+}
+
 .stream-pagination {
   margin-top: 0.55rem;
   display: flex;
