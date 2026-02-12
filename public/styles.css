@@ -53,6 +53,108 @@ body {
   overflow: hidden;
 }
 
+.paper-shell > *:not(.sherlock-field) {
+  position: relative;
+  z-index: 1;
+}
+
+.sherlock-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sherlock-sigil {
+  position: absolute;
+  opacity: 0.34;
+}
+
+.sherlock-sigil.paper {
+  width: 2rem;
+  height: 2.35rem;
+  border: 1.5px solid rgba(45, 33, 22, 0.64);
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 0.28rem,
+      rgba(45, 33, 22, 0.16) 0.3rem,
+      transparent 0.32rem
+    ),
+    rgba(255, 248, 232, 0.2);
+  transform: rotate(-8deg);
+  animation: field-float 8s ease-in-out infinite;
+}
+
+.sherlock-sigil.paper::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  border-top: 0.42rem solid rgba(255, 255, 255, 0.45);
+  border-left: 0.42rem solid transparent;
+}
+
+.sherlock-sigil.pen {
+  width: 2.35rem;
+  height: 0.24rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(63, 47, 35, 0.95), rgba(18, 14, 11, 0.95));
+  transform: rotate(-20deg);
+  animation: field-shift 9s ease-in-out infinite;
+}
+
+.sherlock-sigil.pen::before {
+  content: '';
+  position: absolute;
+  left: -0.3rem;
+  top: -0.04rem;
+  border-top: 0.16rem solid transparent;
+  border-bottom: 0.16rem solid transparent;
+  border-right: 0.3rem solid rgba(18, 14, 11, 0.95);
+}
+
+.sherlock-sigil.glasses {
+  width: 2.4rem;
+  height: 0.7rem;
+  border-top: 2.5px solid rgba(45, 33, 22, 0.68);
+  border-radius: 999px;
+  animation: field-glint 10s ease-in-out infinite;
+}
+
+.sherlock-sigil.glasses::before,
+.sherlock-sigil.glasses::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0.9rem;
+  height: 0.62rem;
+  border: 2.5px solid rgba(45, 33, 22, 0.68);
+  border-radius: 50%;
+}
+
+.sherlock-sigil.glasses::before {
+  left: 0;
+}
+
+.sherlock-sigil.glasses::after {
+  right: 0;
+}
+
+.sherlock-sigil.s1 { top: 7%; left: 5%; }
+.sherlock-sigil.s2 { top: 11%; left: 31%; }
+.sherlock-sigil.s3 { top: 8%; right: 7%; }
+.sherlock-sigil.s4 { top: 26%; right: 22%; }
+.sherlock-sigil.s5 { top: 33%; left: 14%; }
+.sherlock-sigil.s6 { top: 39%; right: 5%; }
+.sherlock-sigil.s7 { top: 52%; left: 4%; }
+.sherlock-sigil.s8 { top: 58%; left: 39%; }
+.sherlock-sigil.s9 { top: 66%; right: 18%; }
+.sherlock-sigil.s10 { top: 74%; right: 4%; }
+.sherlock-sigil.s11 { top: 82%; left: 24%; }
+.sherlock-sigil.s12 { top: 88%; right: 34%; }
+
 .backend-banner {
   margin-bottom: 0.65rem;
   border: 1px solid #9b2c24;
@@ -107,7 +209,7 @@ body {
 .decor-pen,
 .decor-glasses {
   position: absolute;
-  opacity: 0.24;
+  opacity: 0.42;
 }
 
 .decor-paper {
@@ -115,7 +217,7 @@ body {
   right: 0.6rem;
   width: 2rem;
   height: 2.4rem;
-  border: 1px solid var(--rule);
+  border: 1.5px solid rgba(45, 33, 22, 0.68);
   background:
     repeating-linear-gradient(
       180deg,
@@ -144,7 +246,7 @@ body {
   width: 2.2rem;
   height: 0.22rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--ink));
+  background: linear-gradient(90deg, rgba(63, 47, 35, 0.95), rgba(18, 14, 11, 0.95));
   transform: rotate(-18deg);
   animation: pen-shift 5.5s ease-in-out infinite;
 }
@@ -174,7 +276,7 @@ body {
   top: 0;
   width: 0.82rem;
   height: 0.62rem;
-  border: 2px solid var(--rule);
+  border: 2.5px solid rgba(45, 33, 22, 0.72);
   border-radius: 50%;
 }
 
@@ -187,8 +289,40 @@ body {
 }
 
 .decor-glasses {
-  border-top: 2px solid var(--rule);
+  border-top: 2.5px solid rgba(45, 33, 22, 0.72);
   border-radius: 999px;
+}
+
+@keyframes field-float {
+  0%,
+  100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-6deg) translateY(-2px);
+  }
+}
+
+@keyframes field-shift {
+  0%,
+  100% {
+    transform: rotate(-20deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-17deg) translateX(2px);
+  }
+}
+
+@keyframes field-glint {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.42;
+    transform: translateY(-1px);
+  }
 }
 
 @keyframes paper-float {
@@ -964,9 +1098,14 @@ body {
   .ai-watch-list {
     grid-template-columns: 1fr;
   }
+
+  .sherlock-field {
+    opacity: 0.65;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .sherlock-sigil,
   .decor-paper,
   .decor-pen,
   .decor-glasses {
