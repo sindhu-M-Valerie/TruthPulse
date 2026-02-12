@@ -5,9 +5,8 @@ async function loadTrendDetail() {
   const banner = document.getElementById('backendBanner');
 
   const apiBase = (window.TRUTHPULSE_API_BASE || '').replace(/\/$/, '');
-  const isGitHubPages = window.location.hostname.endsWith('github.io');
   if (banner) {
-    banner.hidden = !(isGitHubPages && !apiBase);
+    banner.hidden = true;
   }
 
   const parts = window.location.pathname.split('/').filter(Boolean);

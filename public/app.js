@@ -34,8 +34,7 @@ function showBackendBannerIfNeeded() {
     return;
   }
 
-  const isGitHubPages = window.location.hostname.endsWith('github.io');
-  banner.hidden = !(isGitHubPages && !apiBase);
+  banner.hidden = true;
 }
 
 showBackendBannerIfNeeded();
