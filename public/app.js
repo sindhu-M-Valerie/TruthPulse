@@ -8,6 +8,7 @@ let activeDataMode = 'live';
 let lastDataTimestamp = null;
 let selectedStreamCategory = 'all';
 let selectedStreamRegion = 'all';
+let selectedStreamQuery = '';
 
 const riskBaselineByTheme = {
   violence: 'high',
@@ -289,9 +290,11 @@ function applyStreamFilters() {
   filteredStreamItems = streamItems.filter((item) => {
     const category = getStreamCategory(item);
     const region = getStreamRegion(item);
+    const searchText = `${item.title || ''} ${item.source || ''} ${item.snippet || ''}`.toLowerCase();
     const matchesCategory = selectedStreamCategory === 'all' || category === selectedStreamCategory;
     const matchesRegion = selectedStreamRegion === 'all' || region === selectedStreamRegion;
-    return matchesCategory && matchesRegion;
+    const matchesQuery = !selectedStreamQuery || searchText.includes(selectedStreamQuery);
+    return matchesCategory && matchesRegion && matchesQuery;
   });
 }
 
@@ -540,6 +543,7 @@ function initStreamPagination() {
   const streamNextBtn = document.getElementById('streamNextBtn');
   const streamCategoryFilter = document.getElementById('streamCategoryFilter');
   const streamRegionFilter = document.getElementById('streamRegionFilter');
+  const streamKeywordFilter = document.getElementById('streamKeywordFilter');
 
   if (!streamPrevBtn || !streamNextBtn) {
     return;
@@ -571,6 +575,14 @@ function initStreamPagination() {
   if (streamRegionFilter) {
     streamRegionFilter.addEventListener('change', () => {
       selectedStreamRegion = streamRegionFilter.value;
+      streamCurrentPage = 1;
+      renderStreamPage();
+    });
+  }
+
+  if (streamKeywordFilter) {
+    streamKeywordFilter.addEventListener('input', () => {
+      selectedStreamQuery = streamKeywordFilter.value.trim().toLowerCase();
       streamCurrentPage = 1;
       renderStreamPage();
     });

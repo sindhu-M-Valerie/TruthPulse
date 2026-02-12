@@ -645,6 +645,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.stream-search-wrap {
+  grid-column: 1 / -1;
+}
+
 .stream-filters label {
   display: grid;
   gap: 0.12rem;
@@ -661,6 +665,17 @@ body {
   font-size: 0.74rem;
   border-radius: 0.3rem;
   padding: 0.2rem 0.35rem;
+}
+
+.stream-filter-input {
+  width: 100%;
+  border: 1px solid var(--rule);
+  background: #fff9ea;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.74rem;
+  border-radius: 0.3rem;
+  padding: 0.22rem 0.38rem;
 }
 
 .data-mode-status {
