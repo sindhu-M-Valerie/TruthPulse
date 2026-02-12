@@ -84,7 +84,12 @@ a:active {
     linear-gradient(180deg, rgba(21, 43, 91, 0.84), rgba(11, 29, 69, 0.94)),
     rgba(9, 24, 58, 0.94);
   border: 1px solid #3c5385;
-  box-shadow: 0 10px 26px rgba(3, 10, 29, 0.45);
+  box-shadow: 
+    0 10px 26px rgba(3, 10, 29, 0.45),
+    inset 12px 0 16px rgba(0, 0, 0, 0.32),
+    inset -12px 0 16px rgba(0, 0, 0, 0.32),
+    inset 0 12px 14px rgba(0, 0, 0, 0.28),
+    inset 0 -12px 14px rgba(0, 0, 0, 0.28);
   padding: 1rem 1.2rem 1.4rem;
   overflow: hidden;
 }
@@ -92,6 +97,34 @@ a:active {
 .paper-shell > *:not(.sherlock-field) {
   position: relative;
   z-index: 1;
+}
+
+.paper-shell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+  background: 
+    radial-gradient(ellipse 100% 100% at 50% 0%, rgba(0,0,0,0.35), transparent 70%),
+    linear-gradient(180deg, rgba(40,60,100,0.3), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.paper-shell::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.2rem;
+  background: 
+    radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,0,0,0.35), transparent 70%),
+    linear-gradient(0deg, rgba(40,60,100,0.3), transparent);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .sherlock-field {
