@@ -837,7 +837,7 @@ body {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 980px) {
   .news-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
