@@ -2,142 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=../" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <base href="../" />
-  <title>Argus</title>
-  <link rel="stylesheet" href="./styles.css?v=20260212j" />
+  <title>Redirecting…</title>
+  <script>
+    window.location.replace('../');
+  </script>
 </head>
 <body>
-  <div class="paper-shell">
-    <div class="sherlock-field" aria-hidden="true">
-      <span class="sherlock-sigil paper s1"></span>
-      <span class="sherlock-sigil pen s2"></span>
-      <span class="sherlock-sigil glasses s3"></span>
-      <span class="sherlock-sigil paper s4"></span>
-      <span class="sherlock-sigil pen s5"></span>
-      <span class="sherlock-sigil glasses s6"></span>
-      <span class="sherlock-sigil paper s7"></span>
-      <span class="sherlock-sigil pen s8"></span>
-      <span class="sherlock-sigil glasses s9"></span>
-      <span class="sherlock-sigil paper s10"></span>
-      <span class="sherlock-sigil pen s11"></span>
-      <span class="sherlock-sigil glasses s12"></span>
-    </div>
-    <div class="wildlife-sprites" aria-hidden="true">
-      <span class="wildlife owl w3">🦉</span>
-      <span class="wildlife bee w4">🐝</span>
-      <span class="wildlife bee w5">🐝</span>
-      <span class="wildlife owl w6">🦉</span>
-      <span class="wildlife bee w8">🐝</span>
-      <span class="bunny-footprint bf1"></span>
-      <span class="bunny-footprint bf2"></span>
-      <span class="ambient-book bk1"></span>
-      <span class="ambient-book bk2"></span>
-      <span class="ambient-book bk3"></span>
-      <span class="ambient-book bk4"></span>
-      <span class="ambient-book bk5"></span>
-      <span class="ambient-book bk6"></span>
-    </div>
-    <div id="backendBanner" class="backend-banner" hidden>
-      Backend API is not configured. Set <strong>ARGUS_API_BASE</strong> in <a href="./runtime-config.js">runtime-config.js</a>.
-    </div>
-    <header class="masthead">
-      <div class="sherlock-decor" aria-hidden="true">
-        <span class="decor-paper p1"></span>
-        <span class="decor-paper p2"></span>
-        <span class="decor-paper p3"></span>
-        <span class="decor-paper p4"></span>
-        <span class="decor-pen n1"></span>
-        <span class="decor-pen n2"></span>
-        <span class="decor-pen n3"></span>
-        <span class="decor-pen n4"></span>
-        <span class="decor-glasses g1"></span>
-        <span class="decor-glasses g2"></span>
-        <span class="decor-glasses g3"></span>
-      </div>
-      <p class="edition">India Digital Risk Monitor • Daily Edition</p>
-      <h1>ARGUS</h1>
-      <p class="tagline">Real-Time Civic Risk Intelligence</p>
-      <p id="editionStamp" class="edition-stamp">Edition Stamp: Daily Brief</p>
-    </header>
-
-    <main class="news-grid">
-      <section class="panel">
-        <h2>Geographic Heatmap of Emerging Risk Clusters</h2>
-        <p id="topDataFreshness" class="data-freshness">Last Updated: —</p>
-        <p id="geoUpdated" class="trend-stats">Loading regional signal intensity...</p>
-        <div class="mini-trend-block">
-          <p id="miniTrendUpdated" class="mini-trend-updated">Loading 24h signal trend...</p>
-          <div id="miniTrendChart" class="mini-trend-chart"></div>
-        </div>
-        <div id="geoHeatmapList" class="geo-heatmap-list"></div>
-      </section>
-
-      <section class="signal-column panel">
-          <h2>Risk Signals</h2>
-          <div id="themeFilterBar" class="theme-filter-bar">
-            <button class="theme-filter-btn active" data-theme="all">All</button>
-            <button class="theme-filter-btn" data-theme="violence">Violence</button>
-            <button class="theme-filter-btn" data-theme="child-abuse-nudity">Child Abuse/Nudity</button>
-            <button class="theme-filter-btn" data-theme="sexual-exploitation">Sexual Exploitation</button>
-            <button class="theme-filter-btn" data-theme="human-exploitation">Human Exploitation</button>
-            <button class="theme-filter-btn" data-theme="suicide-self-harm">Suicide/Self-Harm</button>
-            <button class="theme-filter-btn" data-theme="violent-speech">Violent Speech</button>
-            <button class="theme-filter-btn" data-theme="tvec">TVEC</button>
-            <button class="theme-filter-btn" data-theme="illegal-goods">Illegal Goods</button>
-            <button class="theme-filter-btn" data-theme="human-trafficking">Human Trafficking</button>
-            <button class="theme-filter-btn" data-theme="ncii">NCII</button>
-            <button class="theme-filter-btn" data-theme="dangerous-organizations">Criminal Orgs</button>
-            <button class="theme-filter-btn" data-theme="harassment-bullying">Harassment</button>
-            <button class="theme-filter-btn" data-theme="dangerous-misinformation">Dangerous Misinfo</button>
-            <button class="theme-filter-btn" data-theme="spam-inauthentic">Spam/Inauthentic</button>
-            <button class="theme-filter-btn" data-theme="malware">Malware</button>
-            <button class="theme-filter-btn" data-theme="cybersecurity">Cybersecurity</button>
-            <button class="theme-filter-btn" data-theme="fraud-impersonation">Fraud/Impersonation</button>
-          </div>
-          <div id="signalsList" class="signals-list"></div>
-      </section>
-
-      <aside class="panel stream-status-panel">
-          <h2 id="streamPanelTitle">Live Trending News</h2>
-          <p id="dataModeStatus" class="data-mode-status">Data Mode: Live API</p>
-          <p id="dataFreshness" class="data-freshness">Last Updated: —</p>
-          <div class="stream-filters">
-            <label>
-              Category
-              <select id="streamCategoryFilter" class="stream-filter-select">
-                <option value="all">All</option>
-              </select>
-            </label>
-            <label>
-              Region
-              <select id="streamRegionFilter" class="stream-filter-select">
-                <option value="all">All</option>
-              </select>
-            </label>
-          </div>
-          <div id="misinfoNewsList" class="live-sources-list"></div>
-          <div class="stream-pagination">
-            <button id="streamPrevBtn" class="stream-page-btn" type="button">Prev</button>
-            <span id="streamPageInfo" class="stream-page-info">Page 1 of 1</span>
-            <button id="streamNextBtn" class="stream-page-btn" type="button">Next</button>
-          </div>
-      </aside>
-
-      <section class="panel full-width-panel">
-        <h2>AI Safety Pulse</h2>
-        <p id="aiWatchUpdated" class="trend-stats">Loading AI safety updates...</p>
-        <div id="aiWatchList" class="ai-watch-list"></div>
-      </section>
-    </main>
-
-    <footer class="footer-note">
-      Trust & Safety-first • Behavioral analysis • Ecosystem-level insights
-    </footer>
-  </div>
-
-  <script src="./runtime-config.js?v=20260212d"></script>
-  <script src="./cursor-effects.js?v=20260212i"></script>
-  <script src="./app.js?v=20260212d"></script>
+  <p>Redirecting to the latest Argus dashboard…</p>
 </body>
 </html>
