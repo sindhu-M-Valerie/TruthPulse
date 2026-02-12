@@ -491,9 +491,10 @@ async function loadAIEcosystemWatch() {
   function renderCards(cards) {
     list.innerHTML = cards
       .map((card) => {
-        const sourceMarkup = card.sourceLink
-          ? `<a href="${card.sourceLink}" target="_blank" rel="noopener noreferrer">${card.sourceTitle}</a>`
-          : 'No matched source right now.';
+        const safeSourceLink =
+          card.sourceLink ||
+          `https://news.google.com/search?q=${encodeURIComponent(card.category + ' AI safety')}&hl=en-IN&gl=IN&ceid=IN:en`;
+        const sourceMarkup = `<a href="${safeSourceLink}" target="_blank" rel="noopener noreferrer">${card.sourceTitle}</a>`;
 
         return `
           <article class="ai-watch-item">
