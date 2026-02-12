@@ -1,14 +1,13 @@
 services:
   - type: web
-    name: truthpulse-api
+    name: truthpulse-web
     runtime: node
     plan: free
     autoDeploy: true
     rootDir: .
     buildCommand: npm install
     startCommand: npm start
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_VERSION
         value: 20
-      - key: PORT
-        value: 10000
