@@ -452,6 +452,107 @@ async function loadRegionalAndIncidentInsights() {
 
 loadRegionalAndIncidentInsights();
 
+async function loadAIEcosystemWatch() {
+  const updated = document.getElementById('aiWatchUpdated');
+  const list = document.getElementById('aiWatchList');
+
+  if (!updated || !list) {
+    return;
+  }
+
+  const watchTopics = [
+    {
+      title: 'New AI moderation tools',
+      keywords: ['ai moderation', 'content moderation model', 'moderation tool', 'safety classifier', 'toxicity model']
+    },
+    {
+      title: 'Red-teaming research releases',
+      keywords: ['red team', 'red-teaming', 'adversarial testing', 'safety eval', 'model evaluation']
+    },
+    {
+      title: 'AI safety agent launches',
+      keywords: ['ai safety agent', 'safety assistant', 'agent launch', 'safety copilot', 'guardrail agent']
+    },
+    {
+      title: 'Trust & Safety startups funding rounds',
+      keywords: ['trust and safety startup', 'safety startup', 'funding round', 'series a', 'venture funding']
+    },
+    {
+      title: 'Platform transparency reports',
+      keywords: ['transparency report', 'enforcement report', 'platform transparency', 'community standards report']
+    }
+  ];
+
+  try {
+    const { payload, mode } = await fetchJson(
+      apiUrl('/api/live-sources?type=news&limit=120'),
+      './data/live-sources-all.json'
+    );
+
+    setDataMode(mode);
+    setDataFreshness(payload.generatedAt);
+
+    const items = Array.isArray(payload.data) ? payload.data : [];
+    const now = Date.now();
+
+    const cards = watchTopics.map((topic) => {
+      const matched = items.filter((item) => {
+        const text = `${item.title || ''} ${item.snippet || ''} ${item.source || ''}`.toLowerCase();
+        return topic.keywords.some((keyword) => text.includes(keyword));
+      });
+
+      const unique = [];
+      const seen = new Set();
+      matched.forEach((entry) => {
+        if (entry.link && !seen.has(entry.link)) {
+          seen.add(entry.link);
+          unique.push(entry);
+        }
+      });
+
+      const recent24h = unique.filter((entry) => {
+        const ts = new Date(entry.publishedAt).getTime();
+        return Number.isFinite(ts) && now - ts <= 24 * 60 * 60 * 1000;
+      }).length;
+
+      const trendLabel = recent24h >= 4 ? 'Rising' : recent24h >= 2 ? 'Stable' : 'Watch';
+
+      return {
+        ...topic,
+        mentions24h: unique.length,
+        recent24h,
+        trendLabel,
+        links: unique.slice(0, 3)
+      };
+    });
+
+    list.innerHTML = cards
+      .map((card) => {
+        const linksMarkup = card.links.length
+          ? card.links
+              .map((entry) => `<li><a href="${entry.link}" target="_blank" rel="noopener noreferrer">${entry.title}</a></li>`)
+              .join('')
+          : '<li>No matched articles in current scan.</li>';
+
+        return `
+          <article class="ai-watch-item">
+            <p class="ai-watch-title">${card.title}</p>
+            <p class="ai-watch-stats">24h mentions: ${card.mentions24h} • recent items: ${card.recent24h} • trend: ${card.trendLabel}</p>
+            <ul class="ai-watch-links">${linksMarkup}</ul>
+          </article>
+        `;
+      })
+      .join('');
+
+    updated.textContent = `AI ecosystem watch updated ${new Date(payload.generatedAt).toLocaleString()}`;
+  } catch (error) {
+    updated.textContent = 'Unable to load AI ecosystem watch right now.';
+    list.innerHTML = '';
+  }
+}
+
+loadAIEcosystemWatch();
+
 async function loadStreamStatus() {
   const misinfoNewsList = document.getElementById('misinfoNewsList');
   const streamPanelTitle = document.getElementById('streamPanelTitle');

@@ -138,6 +138,57 @@ body {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
+.full-width-panel {
+  grid-column: 1 / -1;
+}
+
+.ai-watch-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.4rem;
+}
+
+.ai-watch-item {
+  border-left: 3px solid var(--rule);
+  border-right: 1px solid rgba(106, 90, 67, 0.25);
+  background: rgba(255, 250, 237, 0.88);
+  padding: 0.5rem 0.65rem;
+}
+
+.ai-watch-title {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.ai-watch-stats {
+  margin: 0.22rem 0 0;
+  font-size: 0.76rem;
+  color: var(--muted-ink);
+}
+
+.ai-watch-links {
+  margin: 0.3rem 0 0;
+  padding-left: 1.05rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.ai-watch-links li {
+  margin-bottom: 0.2rem;
+}
+
+.ai-watch-links a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.ai-watch-links a:hover {
+  color: var(--alert);
+}
+
 .panel h2 {
   margin: 0 0 0.45rem;
   font-size: 1.05rem;
@@ -778,6 +829,10 @@ body {
   }
 
   .signals-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-watch-list {
     grid-template-columns: 1fr;
   }
 }
