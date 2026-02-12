@@ -670,6 +670,45 @@ const liveSourceFeeds = [
   }
 ];
 
+const aiSafetyPulseTopics = [
+  {
+    title: '📰 New Tool Launch',
+    category: 'New AI Moderation Tools',
+    keywords: ['moderation tool', 'safety classifier', 'toxicity classifier', 'guardrail', 'content moderation model', 'deepfake detection']
+  },
+  {
+    title: '💰 Startup Funding',
+    category: 'Trust & Safety Startups',
+    keywords: ['startup funding', 'funding round', 'series a', 'series b', 'seed funding', 'venture funding', 'trust and safety startup']
+  },
+  {
+    title: '📄 Research Paper Release',
+    category: 'Adversarial & Red-Team Research',
+    keywords: ['research paper', 'preprint', 'arxiv', 'red team', 'red-teaming', 'adversarial evaluation', 'safety benchmark']
+  },
+  {
+    title: '🤖 New Agent Deployment',
+    category: 'New AI Agents',
+    keywords: ['ai agent', 'safety agent', 'fact-checking bot', 'monitoring bot', 'risk scoring model', 'agent launch']
+  },
+  {
+    title: '📊 Transparency Report',
+    category: 'Platform Transparency Reports',
+    keywords: ['transparency report', 'enforcement report', 'community standards report', 'bot detection stats', 'monthly enforcement']
+  }
+];
+
+const aiSafetyFeedLabelMatchers = [
+  'AI Safety Research Releases',
+  'AI Agent Launches',
+  'Trust & Safety Startup Funding',
+  'Platform Transparency Reports',
+  'arXiv',
+  'Hugging Face',
+  'PIB Fact Check',
+  'BOOM Live'
+];
+
 const fallbackLiveSources = [
   {
     title: 'Live source feed is temporarily unavailable',
@@ -986,6 +1025,160 @@ async function fetchGdeltArticles(theme, limit) {
     return [];
   }
 }
+
+async function fetchGdeltAIPulseArticles(limit) {
+  const query = 'AI safety OR model safety OR red team OR adversarial evaluation OR transparency report OR trust and safety startup OR AI agent launch';
+  const gdeltUrl = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(query)}&mode=artlist&format=json&maxrecords=${limit}`;
+
+  try {
+    const response = await fetch(gdeltUrl, {
+      headers: {
+        'User-Agent': 'TruthPulse/1.0 (+https://localhost)'
+      }
+    });
+
+    if (!response.ok) {
+      return [];
+    }
+
+    const payload = await response.json();
+    const articles = Array.isArray(payload.articles) ? payload.articles : [];
+
+    return articles.map((article) => ({
+      title: article.title || 'Untitled source',
+      link: article.url,
+      snippet: article.seendate || '',
+      publishedAt: article.seendate ? new Date(article.seendate).toISOString() : new Date().toISOString(),
+      source: article.domain ? `GDELT • ${article.domain}` : 'GDELT Public News API',
+      theme: 'dangerous-misinformation',
+      type: 'News'
+    }));
+  } catch (error) {
+    return [];
+  }
+}
+
+function scoreAIPulseMatch(item, topic) {
+  const text = `${item.title || ''} ${item.snippet || ''} ${item.source || ''}`.toLowerCase();
+  let score = 0;
+
+  topic.keywords.forEach((keyword) => {
+    if (text.includes(keyword)) {
+      score += keyword.includes(' ') ? 2 : 1;
+    }
+  });
+
+  const aiSignals = ['ai', 'safety', 'model', 'agent', 'research', 'transparency', 'moderation'];
+  if (!aiSignals.some((term) => text.includes(term))) {
+    return 0;
+  }
+
+  return score;
+}
+
+function buildAIPulseCards(items, generatedAt) {
+  return aiSafetyPulseTopics.map((topic) => {
+    const candidates = [];
+    const seen = new Set();
+
+    items.forEach((item) => {
+      if (!item.link || seen.has(item.link)) {
+        return;
+      }
+
+      const score = scoreAIPulseMatch(item, topic);
+      if (score <= 0) {
+        return;
+      }
+
+      seen.add(item.link);
+      candidates.push({ item, score });
+    });
+
+    candidates.sort((a, b) => {
+      if (b.score !== a.score) {
+        return b.score - a.score;
+      }
+      return new Date(b.item.publishedAt) - new Date(a.item.publishedAt);
+    });
+
+    const leadCandidate = candidates[0] || null;
+    const lead = leadCandidate && leadCandidate.score >= 2 ? leadCandidate.item : null;
+
+    const summarySource = (
+      lead?.snippet ||
+      lead?.title ||
+      `No verified match found in current scan for ${topic.category.toLowerCase()}.`
+    ).trim();
+
+    return {
+      title: topic.title,
+      category: topic.category,
+      dateLabel: lead?.publishedAt ? new Date(lead.publishedAt).toLocaleDateString() : new Date(generatedAt).toLocaleDateString(),
+      summary: summarySource.length > 180 ? `${summarySource.slice(0, 177)}...` : summarySource,
+      sourceTitle: lead?.title || 'No direct source available',
+      sourceLink: lead?.link || null
+    };
+  });
+}
+
+app.get('/api/ai-safety-pulse', async (req, res) => {
+  const generatedAt = new Date().toISOString();
+
+  try {
+    const aiFeeds = liveSourceFeeds.filter((feed) =>
+      aiSafetyFeedLabelMatchers.some((marker) => feed.label.includes(marker))
+    );
+
+    const [feedResults, gdeltItems] = await Promise.all([
+      Promise.allSettled(aiFeeds.map((feed) => parser.parseURL(feed.url))),
+      fetchGdeltAIPulseArticles(40)
+    ]);
+
+    const feedItems = feedResults.flatMap((result, index) => {
+      if (result.status !== 'fulfilled') {
+        return [];
+      }
+
+      const feed = aiFeeds[index];
+      return result.value.items.map((item) => ({
+        title: item.title || 'Untitled source',
+        link: item.link,
+        snippet: item.contentSnippet || item.content || '',
+        publishedAt: item.isoDate || item.pubDate || generatedAt,
+        source: feed.label,
+        theme: feed.theme,
+        type: feed.type
+      }));
+    });
+
+    const normalized = [...feedItems, ...gdeltItems]
+      .filter((item) => item.link && item.title)
+      .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+    const cards = buildAIPulseCards(normalized, generatedAt);
+
+    return res.json({
+      generatedAt,
+      stats: {
+        totalSources: aiFeeds.length + 1,
+        totalItems: normalized.length,
+        cardsWithLinks: cards.filter((card) => Boolean(card.sourceLink)).length
+      },
+      data: cards
+    });
+  } catch (error) {
+    return res.json({
+      generatedAt,
+      stats: {
+        totalSources: 0,
+        totalItems: 0,
+        cardsWithLinks: 0
+      },
+      data: buildAIPulseCards([], generatedAt)
+    });
+  }
+});
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'truthpulse-api', timestamp: new Date().toISOString() });

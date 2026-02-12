@@ -460,55 +460,6 @@ async function loadAIEcosystemWatch() {
     return;
   }
 
-  const watchTopics = [
-    {
-      title: '📰 New Tool Launch',
-      category: 'New AI Moderation Tools',
-      keywords: ['ai moderation', 'content moderation model', 'moderation tool', 'safety classifier', 'toxicity model', 'deepfake detection', 'content labeling', 'content authenticity']
-    },
-    {
-      title: '💰 Startup Funding',
-      category: 'Trust & Safety Startups',
-      keywords: ['trust and safety startup', 'safety startup', 'funding round', 'series a', 'venture funding', 'seed funding', 'startup raises']
-    },
-    {
-      title: '📄 Research Paper Release',
-      category: 'Adversarial & Red-Team Research',
-      keywords: ['red team', 'red-teaming', 'adversarial testing', 'safety eval', 'model evaluation', 'research paper', 'preprint', 'arxiv', 'benchmark']
-    },
-    {
-      title: '🤖 New Agent Deployment',
-      category: 'New AI Agents',
-      keywords: ['ai safety agent', 'safety assistant', 'agent launch', 'safety copilot', 'guardrail agent', 'fact-checking bot', 'risk scoring model', 'monitoring bot']
-    },
-    {
-      title: '📊 Transparency Report',
-      category: 'Platform Transparency Reports',
-      keywords: ['transparency report', 'enforcement report', 'platform transparency', 'community standards report', 'hate speech removals', 'bot detection', 'takedown report', 'monthly enforcement']
-    }
-  ];
-
-  function scoreTopicMatch(item, topic) {
-    const title = (item.title || '').toLowerCase();
-    const snippet = (item.snippet || '').toLowerCase();
-    const text = `${title} ${snippet}`;
-    let score = 0;
-
-    topic.keywords.forEach((keyword) => {
-      if (text.includes(keyword)) {
-        score += keyword.includes(' ') ? 2 : 1;
-      }
-    });
-
-    const aiSafetySignals = ['ai', 'safety', 'moderation', 'deepfake', 'trust', 'transparency', 'enforcement'];
-    const hasAISafetySignal = aiSafetySignals.some((signal) => text.includes(signal));
-    if (!hasAISafetySignal) {
-      return 0;
-    }
-
-    return score;
-  }
-
   function renderCards(cards) {
     list.innerHTML = cards
       .map((card) => {
@@ -530,7 +481,15 @@ async function loadAIEcosystemWatch() {
 
   function createUnavailableCards() {
     const dateLabel = new Date().toLocaleDateString();
-    return watchTopics.map((topic) => ({
+    const placeholders = [
+      { title: '📰 New Tool Launch', category: 'New AI Moderation Tools' },
+      { title: '💰 Startup Funding', category: 'Trust & Safety Startups' },
+      { title: '📄 Research Paper Release', category: 'Adversarial & Red-Team Research' },
+      { title: '🤖 New Agent Deployment', category: 'New AI Agents' },
+      { title: '📊 Transparency Report', category: 'Platform Transparency Reports' }
+    ];
+
+    return placeholders.map((topic) => ({
       title: topic.title,
       category: topic.category,
       dateLabel,
@@ -542,60 +501,14 @@ async function loadAIEcosystemWatch() {
 
   try {
     const { payload, mode } = await fetchJson(
-      apiUrl('/api/live-sources?type=news&limit=120'),
-      './data/live-sources-all.json'
+      apiUrl('/api/ai-safety-pulse'),
+      './data/ai-safety-pulse.json'
     );
 
     setDataMode(mode);
     setDataFreshness(payload.generatedAt);
 
-    const items = Array.isArray(payload.data) ? payload.data : [];
-
-    const cards = watchTopics.map((topic) => {
-      const candidates = [];
-      const seenLinks = new Set();
-
-      items.forEach((item) => {
-        if (!item.link || seenLinks.has(item.link)) {
-          return;
-        }
-
-        const score = scoreTopicMatch(item, topic);
-        if (score <= 0) {
-          return;
-        }
-
-        seenLinks.add(item.link);
-        candidates.push({ item, score });
-      });
-
-      candidates.sort((a, b) => {
-        if (b.score !== a.score) {
-          return b.score - a.score;
-        }
-        const aTime = new Date(a.item.publishedAt).getTime();
-        const bTime = new Date(b.item.publishedAt).getTime();
-        return (Number.isFinite(bTime) ? bTime : 0) - (Number.isFinite(aTime) ? aTime : 0);
-      });
-
-      const leadCandidate = candidates[0] || null;
-      const lead = leadCandidate && leadCandidate.score >= 2 ? leadCandidate.item : null;
-      const summarySource = (
-        lead?.snippet ||
-        lead?.title ||
-        `No verified match found in current scan for ${topic.category.toLowerCase()}.`
-      ).trim();
-      const summary = summarySource.length > 180 ? `${summarySource.slice(0, 177)}...` : summarySource;
-      const rawDate = lead?.publishedAt ? new Date(lead.publishedAt) : new Date(payload.generatedAt);
-      const dateLabel = Number.isNaN(rawDate.getTime()) ? 'Date unavailable' : rawDate.toLocaleDateString();
-      return {
-        ...topic,
-        dateLabel,
-        summary,
-        sourceTitle: lead?.title || 'No direct source available',
-        sourceLink: lead?.link || null
-      };
-    });
+    const cards = Array.isArray(payload.data) ? payload.data : [];
 
     renderCards(cards);
 

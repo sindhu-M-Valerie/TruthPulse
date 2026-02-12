@@ -8,6 +8,7 @@ mkdir -p "$OUT_DIR"
 
 curl -fsS "${BASE_URL}/api/signals" > "${OUT_DIR}/signals.json"
 curl -fsS "${BASE_URL}/api/live-sources?type=news&limit=120" > "${OUT_DIR}/live-sources-all.json"
+curl -fsS "${BASE_URL}/api/ai-safety-pulse" > "${OUT_DIR}/ai-safety-pulse.json"
 
 THEMES=(
   "violence"
