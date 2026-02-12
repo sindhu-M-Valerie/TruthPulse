@@ -103,10 +103,6 @@ body {
   filter: saturate(0.75) sepia(0.24);
 }
 
-.wildlife.bird {
-  animation: bird-flutter 7s ease-in-out infinite;
-}
-
 .wildlife.owl {
   animation: owl-hover 8s ease-in-out infinite;
 }
@@ -115,14 +111,31 @@ body {
   animation: bee-buzz 4.5s ease-in-out infinite;
 }
 
-.wildlife.w1 { top: 5%; left: 18%; }
-.wildlife.w2 { top: 13%; right: 21%; }
 .wildlife.w3 { top: 24%; left: 8%; }
 .wildlife.w4 { top: 17%; right: 10%; }
 .wildlife.w5 { top: 32%; right: 17%; }
 .wildlife.w6 { top: 38%; left: 21%; }
-.wildlife.w7 { top: 48%; right: 8%; }
 .wildlife.w8 { top: 54%; left: 12%; }
+
+.bunny-step {
+  position: absolute;
+  width: 12px;
+  height: 9px;
+  border-radius: 70% 70% 65% 65%;
+  background: rgba(70, 54, 38, 0.42);
+  box-shadow:
+    -4px -5px 0 -4px rgba(70, 54, 38, 0.42),
+    4px -5px 0 -4px rgba(70, 54, 38, 0.42);
+  opacity: 0;
+  animation: bunny-step-fade 7s ease-in-out infinite;
+}
+
+.bunny-step.f1 { left: 58%; top: 69%; animation-delay: 0s; transform: rotate(-8deg); }
+.bunny-step.f2 { left: 60%; top: 73%; animation-delay: 0.4s; transform: rotate(8deg); }
+.bunny-step.f3 { left: 62%; top: 77%; animation-delay: 0.8s; transform: rotate(-6deg); }
+.bunny-step.f4 { left: 64%; top: 81%; animation-delay: 1.2s; transform: rotate(7deg); }
+.bunny-step.f5 { left: 66%; top: 85%; animation-delay: 1.6s; transform: rotate(-7deg); }
+.bunny-step.f6 { left: 68%; top: 89%; animation-delay: 2s; transform: rotate(6deg); }
 
 .sherlock-sigil {
   position: absolute;
@@ -277,8 +290,7 @@ body {
 
 .decor-paper,
 .decor-pen,
-.decor-glasses,
-.decor-telescope {
+.decor-glasses {
   position: absolute;
   opacity: 0.64;
 }
@@ -414,42 +426,6 @@ body {
   border-radius: 999px;
 }
 
-.decor-telescope {
-  width: 2.3rem;
-  height: 0.3rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(80, 60, 42, 0.86), rgba(28, 21, 14, 0.95));
-  transform: rotate(18deg);
-  animation: telescope-scan 7.8s ease-in-out infinite;
-}
-
-.decor-telescope::before {
-  content: '';
-  position: absolute;
-  right: -0.28rem;
-  top: -0.06rem;
-  width: 0.28rem;
-  height: 0.42rem;
-  border-radius: 0.1rem;
-  background: rgba(28, 21, 14, 0.95);
-}
-
-.decor-telescope.t1 {
-  left: 10%;
-  top: 82%;
-}
-
-.decor-telescope.t2 {
-  right: 10%;
-  top: 82%;
-}
-
-.decor-telescope.t3 {
-  right: 33%;
-  top: 80%;
-  opacity: 0.56;
-}
-
 @keyframes field-float {
   0%,
   100% {
@@ -516,26 +492,6 @@ body {
   }
 }
 
-@keyframes telescope-scan {
-  0%,
-  100% {
-    transform: rotate(18deg) translateX(0);
-  }
-  50% {
-    transform: rotate(15deg) translateX(2px);
-  }
-}
-
-@keyframes bird-flutter {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-3px) translateX(2px);
-  }
-}
-
 @keyframes owl-hover {
   0%,
   100% {
@@ -559,19 +515,34 @@ body {
   }
 }
 
+@keyframes bunny-step-fade {
+  0%,
+  18% {
+    opacity: 0;
+  }
+  32%,
+  58% {
+    opacity: 0.42;
+  }
+  78%,
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 980px) {
   .masthead {
     padding-left: 6.2rem;
     padding-right: 6.2rem;
   }
 
-  .decor-telescope.t3,
   .decor-glasses.g3 {
     display: none;
   }
 
-  .wildlife.w7,
-  .wildlife.w8 {
+  .wildlife.w8,
+  .bunny-step.f5,
+  .bunny-step.f6 {
     display: none;
   }
 }
@@ -1329,13 +1300,13 @@ body {
     opacity: 0.58;
   }
 
-  .decor-telescope,
   .decor-paper.p3,
   .decor-paper.p4,
   .decor-pen.n3,
   .decor-pen.n4,
   .decor-glasses.g2,
-  .decor-glasses.g3 {
+  .decor-glasses.g3,
+  .bunny-step {
     display: none;
   }
 
@@ -1354,7 +1325,7 @@ body {
   .decor-paper,
   .decor-pen,
   .decor-glasses,
-  .decor-telescope,
+  .bunny-step,
   .wildlife {
     animation: none;
   }
