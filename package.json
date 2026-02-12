@@ -1,7 +1,7 @@
 {
-  "name": "truthpulse-app",
+  "name": "argus-app",
   "version": "1.0.0",
-  "description": "TruthPulse real-time civic risk intelligence dashboard",
+  "description": "Argus real-time civic risk intelligence dashboard",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

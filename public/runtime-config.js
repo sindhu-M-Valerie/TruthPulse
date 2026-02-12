@@ -1,1 +1,1 @@
-window.TRUTHPULSE_API_BASE = window.TRUTHPULSE_API_BASE || '';
+window.ARGUS_API_BASE = window.ARGUS_API_BASE || '';

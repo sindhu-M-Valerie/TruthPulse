@@ -4,7 +4,7 @@ async function loadTrendDetail() {
   const highlights = document.getElementById('detailHighlights');
   const banner = document.getElementById('backendBanner');
 
-  const apiBase = (window.TRUTHPULSE_API_BASE || '').replace(/\/$/, '');
+  const apiBase = (window.ARGUS_API_BASE || '').replace(/\/$/, '');
   if (banner) {
     banner.hidden = true;
   }

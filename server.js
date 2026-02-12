@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 const parser = new Parser({
   requestOptions: {
     headers: {
-      'User-Agent': 'TruthPulse/1.0 (+https://localhost)'
+      'User-Agent': 'Argus/1.0 (+https://localhost)'
     }
   }
 });
@@ -1001,7 +1001,7 @@ async function fetchGdeltArticles(theme, limit) {
   try {
     const response = await fetch(gdeltUrl, {
       headers: {
-        'User-Agent': 'TruthPulse/1.0 (+https://localhost)'
+        'User-Agent': 'Argus/1.0 (+https://localhost)'
       }
     });
 
@@ -1033,7 +1033,7 @@ async function fetchGdeltAIPulseArticles(limit) {
   try {
     const response = await fetch(gdeltUrl, {
       headers: {
-        'User-Agent': 'TruthPulse/1.0 (+https://localhost)'
+        'User-Agent': 'Argus/1.0 (+https://localhost)'
       }
     });
 
@@ -1181,7 +1181,7 @@ app.get('/api/ai-safety-pulse', async (req, res) => {
 });
 
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', service: 'truthpulse-api', timestamp: new Date().toISOString() });
+  res.json({ status: 'ok', service: 'argus-api', timestamp: new Date().toISOString() });
 });
 
 app.get('/api/signals', (req, res) => {
@@ -1381,5 +1381,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`TruthPulse app is running on http://localhost:${port}`);
+  console.log(`Argus app is running on http://localhost:${port}`);
 });

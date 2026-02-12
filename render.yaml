@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: truthpulse-web
+    name: argus-web
     runtime: node
     plan: free
     autoDeploy: true

@@ -1,9 +1,9 @@
-# TruthPulse
+# Argus
 Real-Time Intelligence on Emerging Digital Harm/ Tracking Patterns. Protecting Truth.
 
-TruthPulse is a real-time civic risk intelligence platform focused on detecting emerging misinformation campaigns, coordinated hate activity, and online exploitation risks across India’s digital ecosystem.
+Argus is a real-time civic risk intelligence platform focused on detecting emerging misinformation campaigns, coordinated hate activity, and online exploitation risks across India’s digital ecosystem.
 
-Operating as a 24/7 signal dashboard, TruthPulse aggregates publicly available data, verified reports, and trend signals to identify coordinated narrative amplification and harmful campaign patterns.
+Operating as a 24/7 signal dashboard, Argus aggregates publicly available data, verified reports, and trend signals to identify coordinated narrative amplification and harmful campaign patterns.
 
 The platform is designed to prioritize behavioral analysis and ecosystem-level insights rather than amplifying harmful content.
 
@@ -11,7 +11,7 @@ The platform is designed to prioritize behavioral analysis and ecosystem-level i
 
 Strengthen digital resilience by helping institutions and civil society identify, understand, and respond to evolving online harms responsibly.
 
-## What TruthPulse Does
+## What Argus Does
 
 - Monitors early signals of coordinated misinformation and manipulation campaigns.
 - Tracks harmful amplification behavior and campaign infrastructure patterns.
@@ -34,7 +34,7 @@ Strengthen digital resilience by helping institutions and civil society identify
 
 ## Platform Focus
 
-TruthPulse is built to provide timely, actionable intelligence on online risk dynamics while maintaining a clear commitment to responsible analysis, public-interest outcomes, and digital ecosystem resilience in India.
+Argus is built to provide timely, actionable intelligence on online risk dynamics while maintaining a clear commitment to responsible analysis, public-interest outcomes, and digital ecosystem resilience in India.
 
 ## Quick Start
 
@@ -74,24 +74,24 @@ This is the closest to localhost behavior: one URL serves both frontend and API.
 ### 1) Deploy from blueprint
 
 - Open Render dashboard → **New +** → **Blueprint**
-- Select this repo (`sindhu-M-Valerie/TruthPulse`)
+- Select this repo in your GitHub account
 - Render will use [render.yaml](render.yaml) and create a Node web service
 
 ### 2) Wait for first deploy
 
 Render gives you a live URL like:
 
-`https://truthpulse-web.onrender.com`
+`https://argus-web.onrender.com`
 
 ### 3) Verify endpoints
 
-- `https://truthpulse-web.onrender.com/api/health`
-- `https://truthpulse-web.onrender.com/api/signals`
-- `https://truthpulse-web.onrender.com/api/live-sources?type=news&limit=5`
+- `https://argus-web.onrender.com/api/health`
+- `https://argus-web.onrender.com/api/signals`
+- `https://argus-web.onrender.com/api/live-sources?type=news&limit=5`
 
 ### 4) Use the same app URL for UI
 
-- `https://truthpulse-web.onrender.com`
+- `https://argus-web.onrender.com`
 
 This serves the same Express app as local `npm start` and keeps link rendering behavior consistent.
 
@@ -100,7 +100,7 @@ This serves the same Express app as local `npm start` and keeps link rendering b
 If you still want Pages for frontend hosting, set [public/runtime-config.js](public/runtime-config.js):
 
 ```js
-window.TRUTHPULSE_API_BASE = 'https://truthpulse-web.onrender.com';
+window.ARGUS_API_BASE = 'https://argus-web.onrender.com';
 ```
 
 Then push to `main` so Pages picks up the API base.

@@ -1,4 +1,4 @@
-name: Deploy TruthPulse to GitHub Pages
+name: Deploy Argus to GitHub Pages
 
 on:
   push:

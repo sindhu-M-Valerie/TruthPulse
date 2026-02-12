@@ -27,7 +27,7 @@ jobs:
 
       - name: Start app server
         run: |
-          npm start > /tmp/truthpulse-server.log 2>&1 &
+          npm start > /tmp/argus-server.log 2>&1 &
           for i in {1..20}; do
             if curl -fsS http://localhost:3000/api/health >/dev/null; then
               echo "Server is ready"
@@ -36,7 +36,7 @@ jobs:
             sleep 2
           done
           echo "Server failed to start"
-          cat /tmp/truthpulse-server.log
+          cat /tmp/argus-server.log
           exit 1
 
       - name: Refresh snapshots
