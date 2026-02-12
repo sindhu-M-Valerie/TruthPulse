@@ -92,3 +92,39 @@ window.TRUTHPULSE_API_BASE = 'https://your-backend-host.com';
 ```
 
 If left empty, the frontend calls relative `/api/*` routes (works for local Node server).
+
+## Deploy Backend on Render
+
+Use Render for the Node API while keeping the frontend on GitHub Pages.
+
+### 1) Create the Render service
+
+- Open Render dashboard and choose **New + → Blueprint**
+- Connect this repo (`sindhu-M-Valerie/TruthPulse`)
+- Render will detect [render.yaml](render.yaml) and create `truthpulse-api`
+
+### 2) Wait for deploy and copy API URL
+
+After deployment, your API URL will look like:
+
+`https://truthpulse-api.onrender.com`
+
+Test it:
+
+- `https://truthpulse-api.onrender.com/api/health`
+- `https://truthpulse-api.onrender.com/api/live-sources?type=news&limit=5`
+
+### 3) Point GitHub Pages frontend to Render API
+
+Update [public/runtime-config.js](public/runtime-config.js):
+
+```js
+window.TRUTHPULSE_API_BASE = 'https://truthpulse-api.onrender.com';
+```
+
+Commit and push to `main` so GitHub Pages redeploys.
+
+### 4) Verify live app
+
+- Frontend: `https://sindhu-m-valerie.github.io/TruthPulse/`
+- API base: value in [public/runtime-config.js](public/runtime-config.js)
