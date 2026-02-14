@@ -8,7 +8,20 @@ let activeDataMode = 'live';
 let lastDataTimestamp = null;
 let selectedStreamCategory = 'all';
 let selectedStreamRegion = 'all';
-let selectedDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+
+/**
+ * Get today's date in IST timezone
+ * Used for initializing selectedDate to match the app's IST-based Daily Edition model
+ */
+function getTodayIST() {
+  const now = new Date();
+  const IST_OFFSET = 330; // minutes (UTC+5:30)
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+  const istTime = new Date(utc + (IST_OFFSET * 60000));
+  return istTime.toISOString().split('T')[0];
+}
+
+let selectedDate = getTodayIST(); // YYYY-MM-DD format (IST-aware)
 
 if (window.location.hash) {
   history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
@@ -868,12 +881,13 @@ async function initDateSelector() {
     return;
   }
 
-  // Set min/max dates: allow browsing from Nov 14, 2025 up to today
-  // Future dates become available only when that day arrives
+  // Set min/max dates: allow browsing from Nov 14, 2025 up to today (IST)
+  // selectedDate is now IST-aware via getTodayIST(), so max is correct
+  // Future dates become available only when that day arrives in IST
   dateSelector.min = '2025-11-14';
   dateSelector.max = selectedDate;
   dateSelector.value = selectedDate;
-  console.log(`✓ Date selector initialized with today: ${selectedDate}`);
+  console.log(`✓ Date selector initialized with today (IST): ${selectedDate}`);
   console.log(`🟡 About to attach 'change' event listener...`);
 
   /**
