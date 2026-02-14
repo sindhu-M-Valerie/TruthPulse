@@ -811,6 +811,7 @@ async function initDateSelector() {
     loadStreamStatus();
     loadRegionalAndIncidentInsights();
     loadAIEcosystemWatch();
+    loadSignals();
   });
 }
 
