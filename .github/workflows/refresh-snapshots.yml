@@ -1,4 +1,4 @@
-name: Refresh Snapshot Data
+name: Generate Daily Snapshot
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  refresh:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,10 +26,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate today's IST snapshot
-        run: node generate-daily-snapshot.js
+      - name: Generate snapshot
+        run: node scripts/generate-daily-snapshot.js
 
-      - name: Commit snapshot updates
+      - name: Commit files
         run: |
           if git diff --quiet -- public/data; then
             echo "No snapshot changes"
@@ -39,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data
-          git commit -m "chore: refresh snapshot data (IST daily edition)"
+          git commit -m "chore: daily snapshot update"
           git push

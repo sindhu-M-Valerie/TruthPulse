@@ -73,30 +73,6 @@ function apiUrl(path) {
   return `${apiBase}${path}`;
 }
 
-/**
- * Get IST date boundaries for the selected date
- * IST is UTC+5:30, so Feb 14 IST spans Feb 13 18:30 UTC to Feb 14 18:29:59 UTC
- * This matches the "Daily 06:00 IST Edition" model used for data grouping
- */
-function getISTDateBoundaries(selectedDate) {
-  // Create IST boundaries (UTC+5:30)
-  // Feb 14 IST: starts at 2026-02-13T18:30:00Z, ends at 2026-02-14T18:29:59.999Z
-  const start = new Date(`${selectedDate}T00:00:00+05:30`);
-  const end = new Date(`${selectedDate}T23:59:59.999+05:30`);
-  
-  return { start, end };
-}
-
-function filterArticlesByDate(articles, selectedDate) {
-  const { start, end } = getISTDateBoundaries(selectedDate);
-  
-  return articles.filter(item => {
-    if (!item.publishedAt) return false;
-    const pubDate = new Date(item.publishedAt);
-    return pubDate >= start && pubDate <= end;
-  });
-}
-
 async function fetchJson(primaryUrl, fallbackUrl) {
   try {
     const response = await fetch(primaryUrl, {
@@ -373,7 +349,7 @@ async function loadSignals() {
     
     // Try static JSON file first for GitHub Pages compatibility
     const { payload, mode } = await fetchJson(
-      `./data/live-sources-theme-${selectedTheme}.json?_cb=${Date.now()}`,
+      `./data/live-sources-theme-${selectedTheme}-${selectedDate}.json?_cb=${Date.now()}`,
       apiUrl(`/api/live-sources?theme=${encodeURIComponent(selectedTheme)}&type=news&limit=18&from=${from}&to=${to}&sort=newest`)
     );
     setDataMode(mode);
@@ -463,7 +439,7 @@ async function loadRegionalAndIncidentInsights() {
     
     // Try static JSON file first for GitHub Pages compatibility
     const { payload, mode } = await fetchJson(
-      `./data/live-sources-all.json?_cb=${Date.now()}`,
+      `./data/live-sources-all-${selectedDate}.json?_cb=${Date.now()}`,
       apiUrl(`/api/live-sources?type=news&limit=90&from=${from}&to=${to}&sort=newest`)
     );
     setDataMode(mode);
@@ -584,7 +560,7 @@ async function loadAIEcosystemWatch() {
     
     // Try static JSON file first for GitHub Pages compatibility
     const { payload, mode } = await fetchJson(
-      `./data/ai-safety-pulse.json?_cb=${Date.now()}`,
+      `./data/ai-safety-pulse-${selectedDate}.json?_cb=${Date.now()}`,
       apiUrl(`/api/ai-safety-pulse?from=${from}&to=${to}`)
     );
 
@@ -593,17 +569,8 @@ async function loadAIEcosystemWatch() {
 
     const cards = Array.isArray(payload.data) ? payload.data : [];
 
-    // Filter by selected date using IST boundaries (matches data grouping model)
-    const { start, end } = getISTDateBoundaries(selectedDate);
-    
-    const filteredByDate = cards.filter(card => {
-      if (!card.dateLabel) return true; // Keep cards without dates
-      // Parse date format like "2026-02-14" using IST boundaries
-      const cardDate = new Date(`${card.dateLabel}T00:00:00+05:30`);
-      return cardDate >= start && cardDate <= end;
-    });
-
-    renderCards(filteredByDate.length > 0 ? filteredByDate : createUnavailableCards());
+    // Data file is already date-correct — no frontend filtering needed
+    renderCards(cards.length > 0 ? cards : createUnavailableCards());
 
     updated.textContent = `AI safety pulse updated ${new Date(payload.generatedAt).toLocaleString()}`;
   } catch (error) {
