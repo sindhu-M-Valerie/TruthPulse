@@ -792,8 +792,8 @@ async function initDateSelector() {
     return;
   }
 
-  // Set max date to today (prevent future date selection)
-  dateSelector.max = selectedDate;
+  // Set min date to allow browsing from Nov 14, 2025 onwards
+  dateSelector.min = '2025-11-14';
   dateSelector.value = selectedDate;
   console.log(`✓ Date selector initialized with today: ${selectedDate}`);
 
@@ -814,12 +814,8 @@ async function initDateSelector() {
       return;
     }
     
-    // Prevent selecting future dates
-    if (selectedDateValue > selectedDate) {
-      console.warn('Future date rejected:', selectedDateValue);
-      dateSelector.value = selectedDate;
-      return;
-    }
+    // Allow selecting any date from Nov 14, 2025 onwards (including future dates)
+    // Data snapshots available through March 31, 2026
     
     // Update and fetch articles for selected date
     console.log(`   Old selectedDate: ${selectedDate}`);
