@@ -736,11 +736,22 @@ function initDateSelector() {
     return;
   }
 
+  // Set max date to today (prevent future date selection)
+  dateSelector.max = selectedDate;
+  
   // Set initial value to today
   dateSelector.value = selectedDate;
 
   dateSelector.addEventListener('change', (e) => {
-    selectedDate = e.target.value;
+    const selected = e.target.value;
+    
+    // Validate that selected date is not in the future
+    if (selected > selectedDate) {
+      dateSelector.value = selectedDate;
+      return;
+    }
+    
+    selectedDate = selected;
     loadStreamStatus();
   });
 }
