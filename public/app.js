@@ -587,12 +587,11 @@ async function loadStreamStatus() {
   try {
     // Build API URL with full ISO timestamps and cache busting
     const apiEndpoint = `/api/live-sources?type=news&limit=30&from=${from}&to=${to}&sort=newest&_cb=${Date.now()}`;
-    const fullApiUrl = apiBase ? apiUrl(apiEndpoint) : apiEndpoint;
     
     console.log(`Loading articles for ${selectedDate}`);
     console.log(`Time range: ${from} → ${to}`);
 
-    const response = await fetch(fullApiUrl, { cache: 'no-store' });
+    const response = await fetch(apiEndpoint, { cache: 'no-store' });
     
     if (!response.ok) {
       throw new Error(`API request failed with status ${response.status}`);
