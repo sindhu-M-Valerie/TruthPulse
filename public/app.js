@@ -549,6 +549,11 @@ async function loadStreamStatus() {
   const streamPanelTitle = document.getElementById('streamPanelTitle');
   streamPanelTitle.textContent = 'Live Trending News';
 
+  // Show loading state
+  if (misinfoNewsList) {
+    misinfoNewsList.innerHTML = '<div class="stream-loading"><span class="loading-spinner"></span><p>Fetching latest articles...</p></div>';
+  }
+
   try {
     // Build API URL with dynamic date, cache-busting, and sort parameters
     const cacheBuster = Date.now();

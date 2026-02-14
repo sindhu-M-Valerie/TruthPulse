@@ -1260,6 +1260,33 @@ a:active {
   color: #ff9999;
 }
 
+.stream-loading {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted-ink);
+}
+
+.stream-loading p {
+  margin: 0.8rem 0 0;
+  font-size: 0.95rem;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(106, 90, 67, 0.3);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .live-source-title {
   margin: 0;
   font-weight: 700;
