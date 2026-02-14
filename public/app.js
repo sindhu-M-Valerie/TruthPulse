@@ -354,9 +354,9 @@ async function loadSignals() {
       }
     });
 
-    // Filter by selected date
-    const start = new Date(`${selectedDate}T00:00:00`);
-    const end = new Date(`${selectedDate}T23:59:59.999`);
+    // Filter by selected date (strict UTC boundaries match UTC timestamps)
+    const start = new Date(`${selectedDate}T00:00:00Z`);
+    const end = new Date(`${selectedDate}T23:59:59.999Z`);
     
     const filteredByDate = uniqueItems.filter(item => {
       if (!item.publishedAt) return false;
@@ -444,9 +444,9 @@ async function loadRegionalAndIncidentInsights() {
       const uniqueByLink = [];
       const seenLinks = new Set();
       
-      // Create date boundaries for filtering
-      const start = new Date(`${selectedDate}T00:00:00`);
-      const end = new Date(`${selectedDate}T23:59:59.999`);
+      // Create UTC date boundaries for filtering
+      const start = new Date(`${selectedDate}T00:00:00Z`);
+      const end = new Date(`${selectedDate}T23:59:59.999Z`);
       
       items
         .filter((item) => {
@@ -572,13 +572,14 @@ async function loadAIEcosystemWatch() {
     const cards = Array.isArray(payload.data) ? payload.data : [];
 
     // Filter by selected date
-    const start = new Date(`${selectedDate}T00:00:00`);
-    const end = new Date(`${selectedDate}T23:59:59.999`);
+    // Filter by selected date (strict UTC boundaries match UTC timestamps)
+    const start = new Date(`${selectedDate}T00:00:00Z`);
+    const end = new Date(`${selectedDate}T23:59:59.999Z`);
     
     const filteredByDate = cards.filter(card => {
       if (!card.dateLabel) return true; // Keep cards without dates
-      // Parse date format like "2026-02-14" 
-      const cardDate = new Date(`${card.dateLabel}T00:00:00`);
+      // Parse date format like "2026-02-14" as UTC
+      const cardDate = new Date(`${card.dateLabel}T00:00:00Z`);
       return cardDate >= start && cardDate <= end;
     });
 
@@ -671,9 +672,9 @@ async function loadStreamStatus() {
       });
     }
 
-    // Filter by selected date (strict date boundary filtering)
-    const start = new Date(`${selectedDate}T00:00:00`);
-    const end = new Date(`${selectedDate}T23:59:59.999`);
+    // Filter by selected date (strict UTC date boundary filtering)
+    const start = new Date(`${selectedDate}T00:00:00Z`);
+    const end = new Date(`${selectedDate}T23:59:59.999Z`);
     
     const filteredByDate = uniqueItems.filter(item => {
       if (!item.publishedAt) return false;
