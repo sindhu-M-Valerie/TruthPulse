@@ -1282,7 +1282,9 @@ app.get('/api/live-sources', async (req, res) => {
     console.log(`   today: ${today}`);
 
     // Determine if we should use historical snapshots or live feeds
-    const isHistoricalRequest = fromDate && fromDate < today;
+    // Extract just the date part if fromDate is ISO format
+    const fromDateOnly = fromDate ? fromDate.split('T')[0] : null;
+    const isHistoricalRequest = fromDateOnly && fromDateOnly < today;
     
     let feedResults, gdeltItems;
 
@@ -1344,7 +1346,7 @@ app.get('/api/live-sources', async (req, res) => {
     // For historical dates, load from snapshot file instead of live feeds
     let snapshotData = [];
     if (isHistoricalRequest) {
-      const snapshot = loadHistoricalSnapshot(fromDate, selectedTheme);
+      const snapshot = loadHistoricalSnapshot(fromDateOnly, selectedTheme);
       if (snapshot && snapshot.data) {
         snapshotData = Array.isArray(snapshot.data) ? snapshot.data : [];
         console.log(`   → Loaded ${snapshotData.length} articles from snapshot`);
@@ -1370,10 +1372,27 @@ app.get('/api/live-sources', async (req, res) => {
 
     // Filter by date range if specified
     if (fromDate) {
-      const fromDateTime = new Date(`${fromDate}T00:00:00Z`).getTime();
-      const toDateTime = toDate 
-        ? new Date(`${toDate}T23:59:59Z`).getTime() 
-        : new Date(`${today}T23:59:59Z`).getTime();
+      // Handle both YYYY-MM-DD and full ISO timestamp formats
+      let fromDateTime, toDateTime;
+      
+      if (fromDate.includes('T')) {
+        // Already in ISO format (e.g., 2026-02-13T00:00:00.000Z)
+        fromDateTime = new Date(fromDate).getTime();
+      } else {
+        // Date-only format (e.g., 2026-02-13)
+        fromDateTime = new Date(`${fromDate}T00:00:00Z`).getTime();
+      }
+      
+      if (toDate && toDate.includes('T')) {
+        // Already in ISO format
+        toDateTime = new Date(toDate).getTime();
+      } else if (toDate) {
+        // Date-only format
+        toDateTime = new Date(`${toDate}T23:59:59.999Z`).getTime();
+      } else {
+        // Default to end of today
+        toDateTime = new Date(`${today}T23:59:59.999Z`).getTime();
+      }
       
       const beforeFilter = normalizedItems.length;
       normalizedItems = normalizedItems.filter((item) => {

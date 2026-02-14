@@ -574,7 +574,7 @@ async function loadStreamStatus() {
 
   try {
     // Build API URL with full ISO timestamps and cache busting
-    const apiUrl = `/api/live-sources?type=news&limit=30&from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&sort=newest&_cb=${Date.now()}`;
+    const apiUrl = `/api/live-sources?type=news&limit=30&from=${from}&to=${to}&sort=newest&_cb=${Date.now()}`;
     
     console.log(`Loading articles for ${selectedDate}`);
     console.log(`Time range: ${from} → ${to}`);
