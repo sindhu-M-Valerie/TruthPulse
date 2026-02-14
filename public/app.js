@@ -1,17 +1,24 @@
-/* ================================
-   ARGUS — Clean Date-Scoped Build
-   ================================ */
+/* =====================================
+   ARGUS — Single Snapshot Architecture
+   =====================================
+   ONE file per date: /data/live-sources-YYYY-MM-DD.json
+   Stream, Signals, Heatmap, AI Pulse all derive from it.
+   No theme files. No "all" files. Zero missing-file failures.
+   ===================================== */
 
 let selectedTheme = "all";
 let selectedDate = getTodayIST();
 
-let streamItems = [];
+let allItems = [];        // full snapshot (single source of truth)
+let streamItems = [];     // deduped + sorted
 let filteredStreamItems = [];
 let streamCurrentPage = 1;
 const streamPageSize = 5;
 
 let selectedStreamCategory = "all";
 let selectedStreamRegion = "all";
+
+let lastGeneratedAt = null;
 
 /* ================================
    UTILITIES
@@ -25,9 +32,10 @@ function getTodayIST() {
   return ist.toISOString().split("T")[0];
 }
 
-async function fetchSnapshot(filePath) {
-  const res = await fetch(`${filePath}?_cb=${Date.now()}`, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Missing file: ${filePath}`);
+async function fetchSnapshot() {
+  const url = `./data/live-sources-${selectedDate}.json?_cb=${Date.now()}`;
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Snapshot missing: ${url}`);
   return await res.json();
 }
 
@@ -38,14 +46,28 @@ function safeSetText(id, text) {
 
 function setFreshness(generatedAt) {
   if (!generatedAt) return;
+  lastGeneratedAt = generatedAt;
   const stamp = new Date(generatedAt).toLocaleString();
   safeSetText("dataFreshness", `Last Updated: ${stamp}`);
   safeSetText("topDataFreshness", `Last Updated: ${stamp}`);
-
+  safeSetText("dataModeStatus", "Data Mode: Snapshot Data");
   const editionStamp = document.getElementById("editionStamp");
   if (editionStamp) {
     editionStamp.textContent = `Edition Stamp: ${new Date(generatedAt).toLocaleDateString()} • Daily 06:00 IST Edition`;
   }
+}
+
+function dedupe(items) {
+  const seen = new Set();
+  return items.filter((a) => {
+    if (!a.link || seen.has(a.link)) return false;
+    seen.add(a.link);
+    return true;
+  });
+}
+
+function containsAny(text, terms) {
+  return terms.some((t) => text.includes(t));
 }
 
 /* ================================
@@ -78,23 +100,12 @@ const themeDisplayNames = {
 ================================ */
 
 const riskBaselineByTheme = {
-  violence: "high",
-  "child-abuse-nudity": "high",
-  "sexual-exploitation": "high",
-  "human-exploitation": "high",
-  "human-trafficking": "high",
-  ncii: "high",
-  "dangerous-organizations": "high",
-  "dangerous-misinformation": "high",
-  malware: "high",
-  cybersecurity: "high",
-  "fraud-impersonation": "high",
-  tvec: "high",
-  "harassment-bullying": "medium",
-  "violent-speech": "medium",
-  "illegal-goods": "medium",
-  "spam-inauthentic": "medium",
-  "suicide-self-harm": "medium",
+  violence: "high", "child-abuse-nudity": "high", "sexual-exploitation": "high",
+  "human-exploitation": "high", "human-trafficking": "high", ncii: "high",
+  "dangerous-organizations": "high", "dangerous-misinformation": "high",
+  malware: "high", cybersecurity: "high", "fraud-impersonation": "high", tvec: "high",
+  "harassment-bullying": "medium", "violent-speech": "medium",
+  "illegal-goods": "medium", "spam-inauthentic": "medium", "suicide-self-harm": "medium",
 };
 
 const highRiskTerms = [
@@ -114,13 +125,8 @@ const highConfidenceSources = [
 ];
 
 const mediumConfidenceSources = [
-  "google news", "gdelt", "hindustan times", "times of india",
-  "the week", "india today",
+  "google news", "gdelt", "hindustan times", "times of india", "the week", "india today",
 ];
-
-function containsAny(text, terms) {
-  return terms.some((t) => text.includes(t));
-}
 
 function getRiskMeta(item) {
   const theme = (item.theme || "").toLowerCase();
@@ -192,294 +198,80 @@ function getStreamCategory(item) {
 }
 
 /* ================================
-   LOAD RISK SIGNALS
+   SINGLE LOAD — EVERYTHING FROM ONE FILE
 ================================ */
 
-async function loadSignals() {
-  const list = document.getElementById("signalsList");
-  if (!list) return;
-
-  if (selectedTheme === "all") {
-    list.innerHTML = '<p class="signals-empty">Select a label to view article links in this section.</p>';
-    return;
-  }
-
-  const label = themeDisplayNames[selectedTheme] || "Risk Signals";
-
-  try {
-    const data = await fetchSnapshot(
-      `./data/live-sources-theme-${selectedTheme}-${selectedDate}.json`
-    );
-
-    const items = (data.data || []).filter((a, i, arr) =>
-      arr.findIndex((b) => b.link === a.link) === i
-    );
-    setFreshness(data.generatedAt);
-    renderMiniTrend(items, data.generatedAt);
-
-    list.innerHTML = "";
-
-    if (!items.length) {
-      list.innerHTML = `<p class="signals-empty">No article links available for ${label} on ${selectedDate}.</p>`;
-      return;
-    }
-
-    items.slice(0, 12).forEach((item) => {
-      const row = document.createElement("article");
-      row.className = "signal-item link-only";
-      row.innerHTML = `
-        <p class="signal-link-title"><a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a></p>
-        <p class="signal-link-meta">${item.source} • ${new Date(item.publishedAt).toLocaleString()}</p>
-      `;
-      list.appendChild(row);
-    });
-  } catch {
-    list.innerHTML = '<p class="signals-empty">Snapshot missing for this theme/date.</p>';
-  }
-}
-
-/* ================================
-   MINI TREND
-================================ */
-
-function renderMiniTrend(items, generatedAt) {
-  const chart = document.getElementById("miniTrendChart");
-  const updated = document.getElementById("miniTrendUpdated");
-  if (!chart || !updated) return;
-
-  if (!items.length) {
-    chart.innerHTML = '<p class="signals-empty">No trend data available.</p>';
-    updated.textContent = "24h signal trend unavailable";
-    return;
-  }
-
-  const counts = new Map();
-  items.forEach((i) => {
-    const label = themeDisplayNames[(i.theme || "").toLowerCase()] || "Other";
-    counts.set(label, (counts.get(label) || 0) + 1);
-  });
-
-  const rows = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 6);
-  const max = rows[0] ? rows[0][1] : 1;
-
-  chart.innerHTML = rows
-    .map(([label, count]) => {
-      const width = Math.max(6, Math.round((count / max) * 100));
-      return `
-        <div class="mini-trend-row">
-          <span class="mini-trend-label">${label}</span>
-          <div class="mini-trend-bar-track"><div class="mini-trend-bar" style="width:${width}%"></div></div>
-          <span class="mini-trend-value">${count}</span>
-        </div>
-      `;
-    })
-    .join("");
-
-  const stamp = generatedAt ? new Date(generatedAt).toLocaleTimeString() : "";
-  updated.textContent = `24h signal trend updated ${stamp}`;
-}
-
-/* ================================
-   LOAD HEATMAP
-================================ */
-
-async function loadHeatmap() {
-  const container = document.getElementById("geoHeatmapList");
-  const geoUpdated = document.getElementById("geoUpdated");
-  if (!container) return;
-
-  try {
-    const data = await fetchSnapshot(
-      `./data/live-sources-all-${selectedDate}.json`
-    );
-
-    const items = data.data || [];
-    setFreshness(data.generatedAt);
-    container.innerHTML = "";
-
-    // Build region → articles map using forgiving matching
-    const regionMap = {};
-    for (const region of Object.keys(regionRules)) regionMap[region] = [];
-
-    const seenByRegion = {};
-    for (const region of Object.keys(regionRules)) seenByRegion[region] = new Set();
-
-    items.forEach((item) => {
-      const text = `${item.title || ""} ${item.snippet || ""}`.toLowerCase();
-      for (const [region, keywords] of Object.entries(regionRules)) {
-        if (keywords.some((kw) => text.includes(kw))) {
-          if (!seenByRegion[region].has(item.link)) {
-            seenByRegion[region].add(item.link);
-            regionMap[region].push(item);
-          }
-        }
-      }
-    });
-
-    const regionCounts = Object.entries(regionMap)
-      .map(([region, matched]) => {
-        matched.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-        return {
-          region,
-          count: matched.length,
-          level: calculateHeatLevel(matched.length),
-          links: matched.slice(0, 3),
-        };
-      })
-      .filter((entry) => entry.count > 0);
-
-    regionCounts.forEach((entry) => {
-      const row = document.createElement("article");
-      row.className = `geo-heatmap-item ${entry.level}`;
-
-      const articleLinks = entry.links.length
-        ? entry.links.map((a) => `<li><a href="${a.link}" target="_blank" rel="noopener noreferrer">${a.title}</a></li>`).join("")
-        : "<li>No matched articles in the latest scan.</li>";
-
-      row.innerHTML = `
-        <div>
-          <p class="geo-region">${entry.region}</p>
-          <p class="geo-count">${entry.count} relevant articles</p>
-          <ul class="geo-article-links">${articleLinks}</ul>
-          <p class="geo-more-link"><a href="${regionSearchLinks[entry.region]}" target="_blank" rel="noopener noreferrer">Open full ${entry.region} news search</a></p>
-        </div>
-        <span class="geo-level ${entry.level}">${entry.level}</span>
-      `;
-      container.appendChild(row);
-    });
-
-    if (geoUpdated) {
-      geoUpdated.textContent = `Live article scan updated ${new Date(data.generatedAt).toLocaleTimeString()}`;
-    }
-  } catch {
-    if (geoUpdated) geoUpdated.textContent = "Unable to load regional heatmap.";
-    if (container) container.innerHTML = '<p class="signals-empty">Heatmap snapshot missing for this date.</p>';
-  }
-}
-
-/* ================================
-   LOAD AI SAFETY PULSE
-================================ */
-
-async function loadAIWatch() {
-  const updated = document.getElementById("aiWatchUpdated");
-  const list = document.getElementById("aiWatchList");
-  if (!updated || !list) return;
-
-  function renderCards(cards) {
-    list.innerHTML = cards
-      .map((card) => {
-        const sourceMarkup = card.sourceLink
-          ? `<a href="${card.sourceLink}" target="_blank" rel="noopener noreferrer">${card.sourceTitle}</a>`
-          : card.sourceTitle;
-        return `
-          <article class="ai-watch-item">
-            <p class="ai-watch-title">${card.title}</p>
-            <p class="ai-watch-meta">Date: ${card.dateLabel} • Category: ${card.category}</p>
-            <p class="ai-watch-summary">${card.summary}</p>
-            <p class="ai-watch-source">Source: ${sourceMarkup}</p>
-          </article>
-        `;
-      })
-      .join("");
-  }
-
-  function placeholderCards() {
-    const dateLabel = selectedDate;
-    return [
-      { title: "📰 New Tool Launch", category: "New AI Moderation Tools" },
-      { title: "💰 Startup Funding", category: "Trust & Safety Startups" },
-      { title: "📄 Research Paper Release", category: "Adversarial & Red-Team Research" },
-      { title: "🤖 New Agent Deployment", category: "New AI Agents" },
-      { title: "📊 Transparency Report", category: "Platform Transparency Reports" },
-    ].map((t) => ({
-      ...t,
-      dateLabel,
-      summary: "Feed is temporarily unavailable. Check back shortly.",
-      sourceTitle: "No direct source available",
-      sourceLink: null,
-    }));
-  }
-
-  try {
-    const data = await fetchSnapshot(
-      `./data/ai-safety-pulse-${selectedDate}.json`
-    );
-
-    const cards = data.data || [];
-    setFreshness(data.generatedAt);
-    renderCards(cards.length > 0 ? cards : placeholderCards());
-    updated.textContent = `AI safety pulse updated ${new Date(data.generatedAt).toLocaleString()}`;
-  } catch {
-    renderCards(placeholderCards());
-    updated.textContent = "AI safety pulse snapshot missing for this date.";
-  }
-}
-
-/* ================================
-   LOAD STREAM
-================================ */
-
-async function loadStream() {
+async function loadAll() {
   const list = document.getElementById("misinfoNewsList");
   const title = document.getElementById("streamPanelTitle");
-  if (!list) return;
 
-  // Clear old state
-  list.innerHTML = "";
+  // Clear all panels
+  allItems = [];
   streamItems = [];
   filteredStreamItems = [];
   streamCurrentPage = 1;
 
-  const formattedDate = new Date(selectedDate).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+  const formattedDate = new Date(`${selectedDate}T12:00:00`).toLocaleDateString("en-US", {
+    year: "numeric", month: "long", day: "numeric",
   });
   if (title) title.textContent = `Articles from ${formattedDate}`;
 
-  list.innerHTML = `
-    <div class="stream-loading">
-      <span class="loading-spinner"></span>
-      <p>Fetching articles from ${selectedDate}...</p>
-    </div>
-  `;
-
-  try {
-    const data = await fetchSnapshot(
-      `./data/live-sources-${selectedDate}.json`
-    );
-
-    setFreshness(data.generatedAt);
-    safeSetText("dataModeStatus", "Data Mode: Snapshot Data");
-
-    // Dedupe by link
-    const seen = new Set();
-    const unique = (data.data || []).filter((a) => {
-      if (!a.link || seen.has(a.link)) return false;
-      seen.add(a.link);
-      return true;
-    });
-
-    unique.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
-
-    streamItems = unique;
-    refreshStreamFilterOptions();
-    renderStreamPage();
-  } catch {
+  if (list) {
     list.innerHTML = `
-      <div class="stream-error-message">
-        <p><strong>⚠ Unable to fetch articles</strong></p>
-        <p>Could not load articles for ${selectedDate}.</p>
-        <p style="font-size:0.9em;margin-top:8px;color:#999;">Try selecting a different date.</p>
+      <div class="stream-loading">
+        <span class="loading-spinner"></span>
+        <p>Fetching articles for ${selectedDate}...</p>
       </div>
     `;
+  }
+
+  try {
+    const data = await fetchSnapshot();
+    const items = data.data || [];
+
+    setFreshness(data.generatedAt);
+    allItems = dedupe(items);
+    allItems.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    streamItems = allItems;
+
+    // Render all panels from the single dataset
+    renderStream();
+    renderSignals();
+    renderHeatmap();
+    renderMiniTrend();
+    renderAIWatch();
+  } catch (err) {
+    console.error("Snapshot load failed:", err.message);
+
+    if (list) {
+      list.innerHTML = `
+        <div class="stream-error-message">
+          <p><strong>⚠ Unable to fetch articles</strong></p>
+          <p>Could not load snapshot for ${selectedDate}.</p>
+          <p style="font-size:0.9em;margin-top:8px;color:#999;">Try selecting a different date.</p>
+        </div>
+      `;
+    }
+
+    // Clear other panels gracefully
+    safeSetText("signalsList", "");
+    const sl = document.getElementById("signalsList");
+    if (sl) sl.innerHTML = '<p class="signals-empty">Snapshot missing for this date.</p>';
+
+    const hm = document.getElementById("geoHeatmapList");
+    if (hm) hm.innerHTML = '<p class="signals-empty">Heatmap unavailable.</p>';
+    safeSetText("geoUpdated", "Regional data unavailable.");
   }
 }
 
 /* ================================
-   STREAM FILTERS & PAGINATION
+   RENDER STREAM (with pagination, badges, filters)
 ================================ */
+
+function renderStream() {
+  refreshStreamFilterOptions();
+  renderStreamPage();
+}
 
 function refreshStreamFilterOptions() {
   const catSelect = document.getElementById("streamCategoryFilter");
@@ -557,6 +349,218 @@ function renderStreamPage() {
 }
 
 /* ================================
+   RENDER SIGNALS (filtered from allItems in frontend)
+================================ */
+
+function renderSignals() {
+  const list = document.getElementById("signalsList");
+  if (!list) return;
+
+  if (selectedTheme === "all") {
+    list.innerHTML = '<p class="signals-empty">Select a label to view article links in this section.</p>';
+    return;
+  }
+
+  const label = themeDisplayNames[selectedTheme] || "Risk Signals";
+
+  // Filter by theme from the single snapshot
+  const filtered = allItems.filter((item) => {
+    const theme = (item.theme || "").toLowerCase();
+    const text = `${item.title || ""} ${item.snippet || ""}`.toLowerCase();
+    return theme === selectedTheme || text.includes(selectedTheme.replace(/-/g, " "));
+  });
+
+  list.innerHTML = "";
+
+  if (!filtered.length) {
+    list.innerHTML = `<p class="signals-empty">No article links available for ${label} on ${selectedDate}.</p>`;
+    return;
+  }
+
+  filtered.slice(0, 12).forEach((item) => {
+    const row = document.createElement("article");
+    row.className = "signal-item link-only";
+    row.innerHTML = `
+      <p class="signal-link-title"><a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a></p>
+      <p class="signal-link-meta">${item.source} • ${new Date(item.publishedAt).toLocaleString()}</p>
+    `;
+    list.appendChild(row);
+  });
+}
+
+/* ================================
+   RENDER MINI TREND (from allItems)
+================================ */
+
+function renderMiniTrend() {
+  const chart = document.getElementById("miniTrendChart");
+  const updated = document.getElementById("miniTrendUpdated");
+  if (!chart || !updated) return;
+
+  if (!allItems.length) {
+    chart.innerHTML = '<p class="signals-empty">No trend data available.</p>';
+    updated.textContent = "24h signal trend unavailable";
+    return;
+  }
+
+  const counts = new Map();
+  allItems.forEach((i) => {
+    const label = themeDisplayNames[(i.theme || "").toLowerCase()] || "Other";
+    counts.set(label, (counts.get(label) || 0) + 1);
+  });
+
+  const rows = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  const max = rows[0] ? rows[0][1] : 1;
+
+  chart.innerHTML = rows
+    .map(([label, count]) => {
+      const width = Math.max(6, Math.round((count / max) * 100));
+      return `
+        <div class="mini-trend-row">
+          <span class="mini-trend-label">${label}</span>
+          <div class="mini-trend-bar-track"><div class="mini-trend-bar" style="width:${width}%"></div></div>
+          <span class="mini-trend-value">${count}</span>
+        </div>
+      `;
+    })
+    .join("");
+
+  const stamp = lastGeneratedAt ? new Date(lastGeneratedAt).toLocaleTimeString() : "";
+  updated.textContent = `24h signal trend updated ${stamp}`;
+}
+
+/* ================================
+   RENDER HEATMAP (from allItems)
+================================ */
+
+function renderHeatmap() {
+  const container = document.getElementById("geoHeatmapList");
+  const geoUpdated = document.getElementById("geoUpdated");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  // Multi-region matching: each article can match multiple regions
+  const regionMap = {};
+  const seenByRegion = {};
+  for (const region of Object.keys(regionRules)) {
+    regionMap[region] = [];
+    seenByRegion[region] = new Set();
+  }
+
+  allItems.forEach((item) => {
+    const text = `${item.title || ""} ${item.snippet || ""}`.toLowerCase();
+    for (const [region, keywords] of Object.entries(regionRules)) {
+      if (keywords.some((kw) => text.includes(kw))) {
+        if (!seenByRegion[region].has(item.link)) {
+          seenByRegion[region].add(item.link);
+          regionMap[region].push(item);
+        }
+      }
+    }
+  });
+
+  const regionCounts = Object.entries(regionMap)
+    .map(([region, matched]) => {
+      matched.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+      return {
+        region,
+        count: matched.length,
+        level: calculateHeatLevel(matched.length),
+        links: matched.slice(0, 3),
+      };
+    })
+    .filter((entry) => entry.count > 0);
+
+  if (!regionCounts.length) {
+    container.innerHTML = '<p class="signals-empty">No regional data available.</p>';
+  } else {
+    regionCounts.forEach((entry) => {
+      const row = document.createElement("article");
+      row.className = `geo-heatmap-item ${entry.level}`;
+
+      const articleLinks = entry.links
+        .map((a) => `<li><a href="${a.link}" target="_blank" rel="noopener noreferrer">${a.title}</a></li>`)
+        .join("");
+
+      row.innerHTML = `
+        <div>
+          <p class="geo-region">${entry.region}</p>
+          <p class="geo-count">${entry.count} relevant articles</p>
+          <ul class="geo-article-links">${articleLinks}</ul>
+          <p class="geo-more-link"><a href="${regionSearchLinks[entry.region] || "#"}" target="_blank" rel="noopener noreferrer">Open full ${entry.region} news search</a></p>
+        </div>
+        <span class="geo-level ${entry.level}">${entry.level}</span>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  if (geoUpdated) {
+    const stamp = lastGeneratedAt ? new Date(lastGeneratedAt).toLocaleTimeString() : "—";
+    geoUpdated.textContent = `Live article scan updated ${stamp}`;
+  }
+}
+
+/* ================================
+   RENDER AI SAFETY PULSE (from allItems)
+================================ */
+
+function renderAIWatch() {
+  const updated = document.getElementById("aiWatchUpdated");
+  const list = document.getElementById("aiWatchList");
+  if (!updated || !list) return;
+
+  // Build AI pulse cards from the snapshot data's AI-related articles
+  const aiKeywords = ["ai ", "artificial intelligence", "machine learning", "llm", "deepfake",
+    "generative ai", "gpt", "language model", "neural", "transformer", "safety",
+    "alignment", "moderation", "content policy", "trust & safety", "red team"];
+
+  const aiArticles = allItems.filter((item) => {
+    const text = `${item.title || ""} ${item.snippet || ""}`.toLowerCase();
+    return aiKeywords.some((kw) => text.includes(kw));
+  });
+
+  if (!aiArticles.length) {
+    // Show placeholder cards
+    const placeholders = [
+      { title: "📰 New Tool Launch", category: "New AI Moderation Tools" },
+      { title: "💰 Startup Funding", category: "Trust & Safety Startups" },
+      { title: "📄 Research Paper Release", category: "Adversarial & Red-Team Research" },
+      { title: "🤖 New Agent Deployment", category: "New AI Agents" },
+      { title: "📊 Transparency Report", category: "Platform Transparency Reports" },
+    ];
+
+    list.innerHTML = placeholders
+      .map((t) => `
+        <article class="ai-watch-item">
+          <p class="ai-watch-title">${t.title}</p>
+          <p class="ai-watch-meta">Date: ${selectedDate} • Category: ${t.category}</p>
+          <p class="ai-watch-summary">Feed is temporarily unavailable. Check back shortly.</p>
+          <p class="ai-watch-source">Source: No direct source available</p>
+        </article>
+      `)
+      .join("");
+    updated.textContent = "AI safety pulse: no AI-related articles found for this date.";
+    return;
+  }
+
+  list.innerHTML = aiArticles.slice(0, 5)
+    .map((item) => `
+      <article class="ai-watch-item">
+        <p class="ai-watch-title">${item.title}</p>
+        <p class="ai-watch-meta">Date: ${selectedDate} • Category: AI Safety</p>
+        <p class="ai-watch-summary">${item.snippet || "No summary available."}</p>
+        <p class="ai-watch-source">Source: <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.source}</a></p>
+      </article>
+    `)
+    .join("");
+
+  const stamp = lastGeneratedAt ? new Date(lastGeneratedAt).toLocaleString() : "—";
+  updated.textContent = `AI safety pulse updated ${stamp}`;
+}
+
+/* ================================
    DATE SELECTOR
 ================================ */
 
@@ -580,7 +584,7 @@ function initDateSelector() {
 }
 
 /* ================================
-   INIT
+   THEME BAR
 ================================ */
 
 function initThemeBar() {
@@ -595,10 +599,14 @@ function initThemeBar() {
       selectedTheme = theme;
       buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-      loadSignals();
+      renderSignals(); // No re-fetch needed — just re-filter allItems
     });
   });
 }
+
+/* ================================
+   STREAM PAGINATION & FILTERS
+================================ */
 
 function initStreamPagination() {
   const prev = document.getElementById("streamPrevBtn");
@@ -606,21 +614,24 @@ function initStreamPagination() {
   const catFilter = document.getElementById("streamCategoryFilter");
   const regFilter = document.getElementById("streamRegionFilter");
 
-  if (prev) prev.addEventListener("click", () => { if (streamCurrentPage > 1) { streamCurrentPage--; renderStreamPage(); } });
+  if (prev) prev.addEventListener("click", () => {
+    if (streamCurrentPage > 1) { streamCurrentPage--; renderStreamPage(); }
+  });
   if (next) next.addEventListener("click", () => {
     const total = Math.max(1, Math.ceil(filteredStreamItems.length / streamPageSize));
     if (streamCurrentPage < total) { streamCurrentPage++; renderStreamPage(); }
   });
-  if (catFilter) catFilter.addEventListener("change", () => { selectedStreamCategory = catFilter.value; streamCurrentPage = 1; renderStreamPage(); });
-  if (regFilter) regFilter.addEventListener("change", () => { selectedStreamRegion = regFilter.value; streamCurrentPage = 1; renderStreamPage(); });
+  if (catFilter) catFilter.addEventListener("change", () => {
+    selectedStreamCategory = catFilter.value; streamCurrentPage = 1; renderStreamPage();
+  });
+  if (regFilter) regFilter.addEventListener("change", () => {
+    selectedStreamRegion = regFilter.value; streamCurrentPage = 1; renderStreamPage();
+  });
 }
 
-function loadAll() {
-  loadStream();
-  loadHeatmap();
-  loadSignals();
-  loadAIWatch();
-}
+/* ================================
+   INIT
+================================ */
 
 function initApp() {
   initDateSelector();
