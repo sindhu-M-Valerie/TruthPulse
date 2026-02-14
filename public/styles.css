@@ -892,6 +892,8 @@ a:active {
   border-left: 3px solid var(--rule);
   background: rgba(13, 33, 76, 0.9);
   padding: 0.45rem 0.65rem;
+  position: relative;
+  z-index: 2;
 }
 
 .geo-heatmap-item.medium {
@@ -924,14 +926,18 @@ a:active {
   margin-bottom: 0.18rem;
 }
 
-.geo-article-links a {
-  color: var(--accent);
+.geo-article-links a,
+.geo-article-links a:visited {
+  color: var(--accent) !important;
+  text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .geo-article-links a:hover {
-  color: var(--alert);
+  color: var(--alert) !important;
 }
 
 .geo-more-link {
