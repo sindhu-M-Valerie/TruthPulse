@@ -599,6 +599,10 @@ async function loadStreamStatus() {
     
     const payload = await response.json();
     
+    console.log(`📰 API Response received:`);
+    console.log(`   Articles in response: ${payload.data.length}`);
+    console.log(`   First article: ${payload.data[0]?.title?.substring(0, 50)}...`);
+    
     // Set data source mode
     setDataMode(payload.data && payload.data.length > 0 ? 'live' : 'snapshot');
     setDataFreshness(payload.generatedAt);
@@ -621,7 +625,8 @@ async function loadStreamStatus() {
 
     streamItems = uniqueItems;
     console.log(`✓ Loaded ${uniqueItems.length} unique articles for ${selectedDate}`);
-
+    console.log(`   Articles after dedup: ${streamItems.length}`);
+    
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
     renderStreamPage();
@@ -791,6 +796,9 @@ async function initDateSelector() {
   dateSelector.addEventListener('change', (e) => {
     const selectedDateValue = e.target.value;
     
+    console.log(`📅 DATE PICKER CHANGE EVENT FIRED`);
+    console.log(`   Input value: ${selectedDateValue}`);
+    
     // Validate date format (YYYY-MM-DD)
     if (!selectedDateValue || !/^\d{4}-\d{2}-\d{2}$/.test(selectedDateValue)) {
       console.error('Invalid date format, must be YYYY-MM-DD');
@@ -806,8 +814,11 @@ async function initDateSelector() {
     }
     
     // Update and fetch articles for selected date
+    console.log(`   Old selectedDate: ${selectedDate}`);
     selectedDate = selectedDateValue;
-    console.log(`📅 User selected date: ${selectedDate}`);
+    console.log(`   New selectedDate: ${selectedDate}`);
+    console.log(`📅 Calling all load functions...`);
+    
     loadStreamStatus();
     loadRegionalAndIncidentInsights();
     loadAIEcosystemWatch();
