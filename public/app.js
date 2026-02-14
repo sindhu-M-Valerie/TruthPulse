@@ -547,75 +547,95 @@ loadAIEcosystemWatch();
 async function loadStreamStatus() {
   const misinfoNewsList = document.getElementById('misinfoNewsList');
   const streamPanelTitle = document.getElementById('streamPanelTitle');
-  
-  // Update title with selected date
+
+  // Get selected date and convert to full ISO timestamps for exact day match
   const dateObj = new Date(selectedDate + 'T00:00:00Z');
   const formattedDate = dateObj.toLocaleDateString('en-US', { 
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
   });
+  
+  // Create timestamps: 00:00:00.000 to 23:59:59.999 for the selected date
+  const from = new Date(selectedDate + 'T00:00:00Z').toISOString();
+  const to = new Date(selectedDate + 'T23:59:59.999Z').toISOString();
+  
   streamPanelTitle.textContent = `Articles from ${formattedDate}`;
 
-  // Show loading state
+  // Clear and show loading state
   if (misinfoNewsList) {
-    misinfoNewsList.innerHTML = '<div class="stream-loading"><span class="loading-spinner"></span><p>Fetching latest articles...</p></div>';
+    misinfoNewsList.innerHTML = `
+      <div class="stream-loading">
+        <span class="loading-spinner"></span>
+        <p>Fetching articles from ${selectedDate}...</p>
+      </div>
+    `;
   }
 
   try {
-    // Build API URL with dynamic date, cache-busting, and sort parameters
-    const cacheBuster = Date.now();
-    const apiUrl = `/api/live-sources?type=news&limit=30&from=${selectedDate}&to=${selectedDate}&sort=newest&_cb=${cacheBuster}`;
+    // Build API URL with full ISO timestamps and cache busting
+    const apiUrl = `/api/live-sources?type=news&limit=30&from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&sort=newest&_cb=${Date.now()}`;
     
-    const { payload, mode } = await fetchJson(
-      apiUrl,
-      './data/live-sources-all.json'
-    );
-    setDataMode(mode);
+    console.log(`Loading articles for ${selectedDate}`);
+    console.log(`Time range: ${from} → ${to}`);
 
+    const response = await fetch(apiUrl, { cache: 'no-store' });
+    
+    if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+    
+    const payload = await response.json();
+    
+    // Set data source mode
+    setDataMode(payload.data && payload.data.length > 0 ? 'live' : 'snapshot');
     setDataFreshness(payload.generatedAt);
+
+    // Deduplicate articles by link
     const uniqueItems = [];
     const seenLinks = new Set();
-    (Array.isArray(payload.data) ? payload.data : []).forEach((item) => {
-      if (item.link && !seenLinks.has(item.link)) {
-        seenLinks.add(item.link);
-        uniqueItems.push(item);
-      }
-    });
+    
+    if (Array.isArray(payload.data)) {
+      payload.data.forEach((item) => {
+        if (item.link && !seenLinks.has(item.link)) {
+          seenLinks.add(item.link);
+          uniqueItems.push(item);
+        }
+      });
+    }
+
+    // Sort by most recent first
+    uniqueItems.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
     streamItems = uniqueItems;
-    // Sort by most recent first
-    streamItems.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    console.log(`✓ Loaded ${uniqueItems.length} unique articles for ${selectedDate}`);
+
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
     renderStreamPage();
     
-    // Clear any persistent error message
-    const streamErrorMsg = document.getElementById('streamErrorMessage');
-    if (streamErrorMsg) {
-      streamErrorMsg.style.display = 'none';
-    }
   } catch (error) {
-    console.error('Error loading stream status:', error);
+    console.error('Error fetching news:', error.message);
+    
     streamItems = [];
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
     renderStreamPage();
     
-    // Show error message to user
+    // Show error to user
     const misinfoNewsList = document.getElementById('misinfoNewsList');
     if (misinfoNewsList) {
-      const errorMsg = document.createElement('div');
-      errorMsg.id = 'streamErrorMessage';
-      errorMsg.className = 'stream-error-message';
-      errorMsg.innerHTML = `
+      const errorDiv = document.createElement('div');
+      errorDiv.id = 'streamErrorMessage';
+      errorDiv.className = 'stream-error-message';
+      errorDiv.innerHTML = `
         <p><strong>⚠ Unable to fetch articles</strong></p>
-        <p>Could not load articles for ${selectedDate}. The service may be temporarily unavailable.</p>
+        <p>Could not load articles for ${selectedDate}.</p>
         <p style="font-size: 0.9em; margin-top: 8px; color: #999;">
           Try refreshing or selecting a different date.
         </p>
       `;
-      misinfoNewsList.insertBefore(errorMsg, misinfoNewsList.firstChild);
+      misinfoNewsList.appendChild(errorDiv);
     }
   }
 }
@@ -740,7 +760,7 @@ function initThemeFilterBar() {
 
 initThemeFilterBar();
 
-function initDateSelector() {
+async function initDateSelector() {
   const dateSelector = document.getElementById('dateSelector');
   if (!dateSelector) {
     console.warn('Date selector element not found');
@@ -749,15 +769,12 @@ function initDateSelector() {
 
   // Set max date to today (prevent future date selection)
   dateSelector.max = selectedDate;
-  
-  // Set initial value to today
   dateSelector.value = selectedDate;
-  console.log(`Date selector initialized with today's date: ${selectedDate}`);
+  console.log(`✓ Date selector initialized with today: ${selectedDate}`);
 
   /**
    * Event listener for date selection
-   * Converts selected date to YYYY-MM-DD format and fetches articles
-   * Prevents selecting future dates and validates date format
+   * Fetches articles for the selected date with full ISO timestamps
    */
   dateSelector.addEventListener('change', (e) => {
     const selectedDateValue = e.target.value;
@@ -776,9 +793,9 @@ function initDateSelector() {
       return;
     }
     
-    // Update global selectedDate and fetch articles for that date
-    console.log(`User selected date: ${selectedDateValue}`);
+    // Update and fetch articles for selected date
     selectedDate = selectedDateValue;
+    console.log(`📅 User selected date: ${selectedDate}`);
     loadStreamStatus();
   });
 }
