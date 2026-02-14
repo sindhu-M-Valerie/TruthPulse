@@ -1,227 +1,379 @@
 {
-  "generatedAt": "2026-02-14T03:13:24.836Z",
+  "generatedAt": "2026-02-14T16:36:24.291122Z",
   "filters": {
     "theme": null,
     "type": "news"
   },
-  "stats": {
-    "total": 120,
-    "news": 120,
-    "publicConversations": 0
-  },
-  "sourceStatus": [
-    {
-      "label": "Google News • Violence and Violent Crime",
-      "theme": "violence",
-      "type": "News",
-      "status": "online",
-      "itemCount": 74
-    },
-    {
-      "label": "Google News • Child Abuse and Nudity Safety",
-      "theme": "child-abuse-nudity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Sexual Exploitation Online",
-      "theme": "sexual-exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 77
-    },
-    {
-      "label": "Google News • Human Exploitation Abuse",
-      "theme": "human-exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 59
-    },
-    {
-      "label": "Google News • Misinformation (India)",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Fact Check (India)",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Online Hate (India)",
-      "theme": "hate",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Online Exploitation (India)",
-      "theme": "exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 41
-    },
-    {
-      "label": "Google News • Suicide and Self-Harm (India)",
-      "theme": "suicide-self-harm",
-      "type": "News",
-      "status": "online",
-      "itemCount": 75
-    },
-    {
-      "label": "Google News • Violent Speech (India)",
-      "theme": "violent-speech",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • TVEC Terrorism (India)",
-      "theme": "tvec",
-      "type": "News",
-      "status": "online",
-      "itemCount": 62
-    },
-    {
-      "label": "Google News • Illegal Goods (India)",
-      "theme": "illegal-goods",
-      "type": "News",
-      "status": "online",
-      "itemCount": 63
-    },
-    {
-      "label": "Google News • Human Trafficking (South Asia)",
-      "theme": "human-trafficking",
-      "type": "News",
-      "status": "online",
-      "itemCount": 72
-    },
-    {
-      "label": "Google News • NCII / Revenge Porn (APAC)",
-      "theme": "ncii",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • Dangerous Criminal Organizations",
-      "theme": "dangerous-organizations",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • Harassment and Bullying",
-      "theme": "harassment-bullying",
-      "type": "News",
-      "status": "online",
-      "itemCount": 79
-    },
-    {
-      "label": "Google News • Dangerous Misinformation Endangerment",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 72
-    },
-    {
-      "label": "Google News • Spam and Inauthentic Behavior",
-      "theme": "spam-inauthentic",
-      "type": "News",
-      "status": "online",
-      "itemCount": 47
-    },
-    {
-      "label": "Google News • Malware and Abuseware Campaigns",
-      "theme": "malware",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • Cybersecurity Incidents",
-      "theme": "cybersecurity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • Fraud and Impersonation",
-      "theme": "fraud-impersonation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 70
-    },
-    {
-      "label": "PIB Fact Check",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "offline",
-      "itemCount": 0
-    },
-    {
-      "label": "BOOM Live • Fact Check",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • AI Safety Research Releases",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 65
-    },
-    {
-      "label": "Google News • AI Agent Launches",
-      "theme": "spam-inauthentic",
-      "type": "News",
-      "status": "online",
-      "itemCount": 62
-    },
-    {
-      "label": "Google News • Trust & Safety Startup Funding",
-      "theme": "fraud-impersonation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 70
-    },
-    {
-      "label": "Google News • Platform Transparency Reports",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 75
-    },
-    {
-      "label": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 333
-    },
-    {
-      "label": "Hugging Face Blog",
-      "theme": "cybersecurity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 734
-    },
-    {
-      "label": "GDELT Public News API",
-      "theme": "all",
-      "type": "News",
-      "status": "offline",
-      "itemCount": 0
-    }
-  ],
   "data": [
+    {
+      "title": "HybridRAG: A Practical LLM-based ChatBot Framework based on Pre-Generated Q&A over Raw Unstructured Documents",
+      "link": "https://arxiv.org/abs/2602.11156",
+      "snippet": "arXiv:2602.11156v1 Announce Type: cross \nAbstract: Retrieval-Augmented Generation (RAG) has emerged as a powerful approach for grounding Large Language Model (LLM)-based chatbot responses on external knowledge. However, existing RAG studies typically assume well-structured textual sources (e.g. Wikipedia or curated datasets) and perform retrieval and generation at query time, which can limit their applicability in real-world chatbot scenarios. In this paper, we present HybridRAG, a novel and practical RAG framework towards more accurate and faster chatbot responses. First, HybridRAG ingests raw, unstructured PDF documents containing complex layouts (text, tables, figures) via Optical Character Recognition (OCR) and layout analysis, and convert them into hierarchical text chunks. Then, it pre-generates a plausible question-answer (QA) knowledge base from the organized chunks using an LLM. At query time, user questions are matched against this QA bank to retrieve immediate answers when possible, and only if no suitable QA match is found does our framework fall back to an on-the-fly response generation. Experiments on OHRBench demonstrate that our HybridRAG provides higher answer quality and lower latency compared to a standard RAG baseline. We believe that HybridRAG could be a practical solution for real-world chatbot applications that must handle large volumes of unstructured documents and lots of users under limited computational resources.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Methodological Variation in Studying Staff and Student Perceptions of AI",
+      "link": "https://arxiv.org/abs/2602.11158",
+      "snippet": "arXiv:2602.11158v1 Announce Type: cross \nAbstract: In this paper, we compare methodological approaches for comparing student and staff perceptions, and ask: how much do these measures vary across different approaches? We focus on the case of AI perceptions, which are generally assessed via a single quantitative or qualitative measure, or with a mixed methods approach that compares two distinct data sources - e.g. a quantitative questionnaire with qualitative comments. To compare different approaches, we collect two forms of qualitative data: standalone comments and structured focus groups. We conduct two analyses for each data source: with a sentiment and stance analysis, we measure overall negativity/positivity of the comments and focus group conversations, respectively. Meanwhile, word clouds from the comments and a thematic analysis of the focus groups provide further detail on the content of this qualitative data - particularly the thematic analysis, which includes both similarities and differences between students and staff. We show that different analyses can produce different results - for a single data source. This variation stems from the construct being evaluated - an overall measure of positivity/negativity can produce a different picture from more detailed content-based analyses. We discuss the implications of this variation for institutional contexts, and for the comparisons from previous studies.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "BIRD: A Museum Open Dataset Combining Behavior Patterns and Identity Types to Better Model Visitors' Experience",
+      "link": "https://arxiv.org/abs/2602.11160",
+      "snippet": "arXiv:2602.11160v1 Announce Type: cross \nAbstract: Lack of data is a recurring problem in Artificial Intelligence, as it is essential for training and validating models. This is particularly true in the field of cultural heritage, where the number of open datasets is relatively limited and where the data collected does not always allow for holistic modeling of visitors' experience due to the fact that data are ad hoc (i.e. restricted to the sole characteristics required for the evaluation of a specific model). To overcome this lack, we conducted a study between February and March 2019 aimed at obtaining comprehensive and detailed information about visitors, their visit experience and their feedback. We equipped 51 participants with eye-tracking glasses, leaving them free to explore the 3 floors of the museum for an average of 57 minutes, and to discover an exhibition of more than 400 artworks. On this basis, we built an open dataset combining contextual data (demographic data, preferences, visiting habits, motivations, social context. . . ), behavioral data (spatiotemporal trajectories, gaze data) and feedback (satisfaction, fatigue, liked artworks, verbatim. . . ). Our analysis made it possible to re-enact visitor identities combining the majority of characteristics found in the literature and to reproduce the Veron and Levasseur profiles. This dataset will ultimately make it possible to improve the quality of recommended paths in museums by personalizing the number of points of interest (POIs), the time spent at these different POIs, and the amount of information to be provided to each visitor based on their level of interest.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Nested Named Entity Recognition in Plasma Physics Research Articles",
+      "link": "https://arxiv.org/abs/2602.11163",
+      "snippet": "arXiv:2602.11163v1 Announce Type: cross \nAbstract: Named Entity Recognition (NER) is an important task in natural language processing that aims to identify and extract key entities from unstructured text. We present a novel application of NER in plasma physics research articles and address the challenges of extracting specialized entities from scientific text in this domain. Research articles in plasma physics often contain highly complex and context-rich content that must be extracted to enable, e.g., advanced search. We propose a lightweight approach based on encoder-transformers and conditional random fields to extract (nested) named entities from plasma physics research articles. First, we annotate a plasma physics corpus with 16 classes specifically designed for the nested NER task. Second, we evaluate an entity-specific model specialization approach, where independent BERT-CRF models are trained to recognize individual entity types in plasma physics text. Third, we integrate an optimization process to systematically fine-tune hyperparameters and enhance model performance. Our work contributes to the advancement of entity recognition in plasma physics and also provides a foundation to support researchers in navigating and analyzing scientific literature.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Automated Optimization Modeling via a Localizable Error-Driven Perspective",
+      "link": "https://arxiv.org/abs/2602.11164",
+      "snippet": "arXiv:2602.11164v1 Announce Type: cross \nAbstract: Automated optimization modeling via Large Language Models (LLMs) has emerged as a promising approach to assist complex human decision-making. While post-training has become a pivotal technique to enhance LLMs' capabilities in this domain, its effectiveness is severely constrained by the scarcity and underutilization of high-quality training data. However, through a detailed profiling of error patterns across various problem-response pairs drawn from post-training, we identify two fundamental limitations of existing automated optimization modeling approaches: (L1) the sparsity of error-specific problems and (L2) the sparse rewards associated with difficult problems. We demonstrate that these limitations can result in suboptimal performance in domain-specific post-training for LLMs. To tackle the above two limitations, we propose a novel error-driven learning framework -- namely, auto\\textbf{m}ated opt\\textbf{i}mization modeli\\textbf{n}g via a localizable error-\\textbf{d}riven perspective (MIND) -- that customizes the whole model training framework from data synthesis to post-training. MIND is based on our key observation of the unique localizable patterns in error propagation of optimization modelings, that is, modeling errors may remain localized to specific semantic segments and do not propagate throughout the entire solution. Thus, in contrast to holistic reasoning tasks such as mathematical proofs, MIND leverages the construction of a focused, high-density training corpus and proposes \\textbf{D}ynamic Supervised \\textbf{F}ine-Tuning \\textbf{P}olicy \\textbf{O}ptimization (DFPO) to tackle difficult problems through localized refinement. Experiments on six benchmarks demonstrate that MIND consistently outperforms all the state-of-the-art automated optimization modeling approaches.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Assessing LLM Reliability on Temporally Recent Open-Domain Questions",
+      "link": "https://arxiv.org/abs/2602.11165",
+      "snippet": "arXiv:2602.11165v1 Announce Type: cross \nAbstract: Large Language Models (LLMs) are increasingly deployed for open-domain question answering, yet their alignment with human perspectives on temporally recent information remains underexplored. We introduce RECOM (Reddit Evaluation for Correspondence of Models), a benchmark dataset of 15,000 recent Reddit questions from September 2025 paired with community-derived reference answers. We investigate how four open-source LLMs (Llama3.1-8B, Mistral-7B, Gemma-2-9B, and GPT-OSS-20B) respond to these questions, evaluating alignment using lexical metrics (BLEU, ROUGE), semantic similarity (BERTScore, MoverScore, cosine similarity), and logical inference (NLI). Our central finding is a striking semantic-lexical paradox: all models achieve over 99% cosine similarity with references despite less than 8% BLEU-1 overlap, a 90+ percentage point gap indicating that models preserve meaning through extensive paraphrasing rather than lexical reproduction. MoverScore (51-53%) confirms this pattern, occupying an intermediate position that reflects the optimal transport cost of semantic alignment. Furthermore, model scale does not predict performance: Mistral-7B (7B parameters) outperforms GPT-OSS-20B (20B parameters) across all metrics. NLI analysis reveals that contradiction rates remain below 7%, suggesting models rarely generate content that directly conflicts with human consensus. These findings challenge the reliability of lexical metrics for evaluating abstractive generation and argue for multi-dimensional evaluation frameworks that capture semantic fidelity beyond surface-level text matching. The RECOM dataset is publicly available at https://anonymous.4open.science/r/recom-D4B0",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Small Updates, Big Doubts: Does Parameter-Efficient Fine-tuning Enhance Hallucination Detection ?",
+      "link": "https://arxiv.org/abs/2602.11166",
+      "snippet": "arXiv:2602.11166v1 Announce Type: cross \nAbstract: Parameter-efficient fine-tuning (PEFT) methods are widely used to adapt large language models (LLMs) to downstream tasks and are often assumed to improve factual correctness. However, how the parameter-efficient fine-tuning methods affect hallucination behavior remains insufficiently understood, especially on QA datasets. In this work, we systematically investigate the impact of PEFT on hallucination detection through a comprehensive empirical study across three open-weight LLM backbones and three fact-seeking QA benchmarks. For each model, we evaluate performance using seven unsupervised hallucination detection methods spanning three complementary approaches: semantic consistency based detectors, confidence based detectors, and entropy based detectors. This multifaceted evaluation enables us to characterize how PEFT reshapes uncertainty across different detection paradigms. In conclusion, our experimental results show that PEFT consistently strengthens hallucination detection ability, substantially improving AUROC across a wide range of hallucination detectors. Besides, further analyses using linear probes and representation diagnostics indicate that PEFT methods primarily reshapes how uncertainty is encoded and surfaced, comparing with injecting new factual knowledge into the models.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Visualizing and Benchmarking LLM Factual Hallucination Tendencies via Internal State Analysis and Clustering",
+      "link": "https://arxiv.org/abs/2602.11167",
+      "snippet": "arXiv:2602.11167v1 Announce Type: cross \nAbstract: Large Language Models (LLMs) often hallucinate, generating nonsensical or false information that can be especially harmful in sensitive fields such as medicine or law. To study this phenomenon systematically, we introduce FalseCite, a curated dataset designed to capture and benchmark hallucinated responses induced by misleading or fabricated citations. Running GPT-4o-mini, Falcon-7B, and Mistral 7-B through FalseCite, we observed a noticeable increase in hallucination activity for false claims with deceptive citations, especially in GPT-4o-mini. Using the responses from FalseCite, we can also analyze the internal states of hallucinating models, visualizing and clustering the hidden state vectors. From this analysis, we noticed that the hidden state vectors, regardless of hallucination or non-hallucination, tend to trace out a distinct horn-like shape. Our work underscores FalseCite's potential as a foundation for evaluating and mitigating hallucinations in future LLM research.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Enhancing SDG-Text Classification with Combinatorial Fusion Analysis and Generative AI",
+      "link": "https://arxiv.org/abs/2602.11168",
+      "snippet": "arXiv:2602.11168v1 Announce Type: cross \nAbstract: (Natural Language Processing) NLP techniques such as text classification and topic discovery are very useful in many application areas including information retrieval, knowledge discovery, policy formulation, and decision-making. However, it remains a challenging problem in cases where the categories are unavailable, difficult to differentiate, or are interrelated. Social analysis with human context is an area that can benefit from text classification, as it relies substantially on text data. The focus of this paper is to enhance the classification of text according to the UN's Sustainable Development Goals (SDGs) by collecting and combining intelligence from multiple models. Combinatorial Fusion Analysis (CFA), a system fusion paradigm using a rank-score characteristic (RSC) function and cognitive diversity (CD), has been used to enhance classifier methods by combining a set of relatively good and mutually diverse classification models. We use a generative AI model to generate synthetic data for model training and then apply CFA to this classification task. The CFA technique achieves 96.73% performance, outperforming the best individual model. We compare the outcomes with those obtained from human domain experts. It is demonstrated that combining intelligence from multiple ML/AI models using CFA and getting input from human experts can, not only complement, but also enhance each other.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Disentangling Direction and Magnitude in Transformer Representations: A Double Dissociation Through L2-Matched Perturbation Analysis",
+      "link": "https://arxiv.org/abs/2602.11169",
+      "snippet": "arXiv:2602.11169v1 Announce Type: cross \nAbstract: Transformer hidden states encode information as high-dimensional vectors, yet whether direction (orientation in representational space) and magnitude (vector norm) serve distinct functional roles remains unclear. Studying Pythia-family models, we discover a striking cross-over dissociation: angular perturbations cause up to 42.9 more damage to language modeling loss, while magnitude perturbations cause disproportionately more damage to syntactic processing (20.4% vs.1.6% accuracy drop on subject-verb agreement).This finding is enabled by L2-matched perturbation analysis, a methodology ensuring that an gular and magnitude perturbations achieve identical Euclidean displacements. Causal intervention reveals that angular damage flows substantially through the attention pathways (28.4% loss recovery via attention repair), while magnitude damage flows partly through the LayerNorm pathways(29.9% recovery via LayerNorm repair). These patterns replicate across scales within the Pythia architecture family. These findings provide evidence that direction and magnitude support partially distinct computational roles in LayerNorm based architectures. The direction preferentially affects attentional routing, while magnitude modulates processing intensity for fine-grained syntactic judgments. We find different patterns in RMSNorm-based architectures, suggesting that the dissociation depends on architectural choices. Our results refine the linear representation hypothesis and have implications for model editing and interpretability research",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Efficient Hyper-Parameter Search for LoRA via Language-aided Bayesian Optimization",
+      "link": "https://arxiv.org/abs/2602.11171",
+      "snippet": "arXiv:2602.11171v1 Announce Type: cross \nAbstract: Fine-tuning Large Language Models (LLMs) with Low-Rank Adaptation (LoRA) enables resource-efficient personalization or specialization, but it comes at the expense of additional hyperparameter tuning. Although LoRA makes fine-tuning efficient, it is highly sensitive to the choice of hyperparameters, and exhaustive hyperparameter search is still computationally very demanding. To address these challenges, we propose a framework that integrates the domain knowledge of pre-trained LLMs into Bayesian Optimization (BO) to efficiently search for LoRA hyperparameters. To leverage the informed knowledge of LLMs, we repurpose LLMs as a discrete-to-continuous mapping to link the hyperparameters and their domain knowledge with a continuous vector space, where BO is conducted. We design and control the mapping by language prompting, where we provide a domain-aware textual prompt describing the relationships among hyperparameters and their respective roles; thereby, we explicitly inject domain knowledge about LoRA into the LLM in natural language. Also, we model the residual information that is hard to linguistically describe in the prompt with an additional learnable token. This aids BO to sample more high-performing hyperparameters. In addition, by leveraging the observation of the strong correlation between the respective performance obtained from full and subset training datasets in LoRA training regimes, we introduce proxy training and evaluation with a data subset. This further increases the efficiency of our method. We demonstrate that our hyperparameter found with only about 30 iterations achieves more than 20% performance improvement over standard hyperparameters found from about 45,000 combinations.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "The Script Tax: Measuring Tokenization-Driven Efficiency and Latency Disparities in Multilingual Language Models",
+      "link": "https://arxiv.org/abs/2602.11174",
+      "snippet": "arXiv:2602.11174v1 Announce Type: cross \nAbstract: Pretrained multilingual language models are often assumed to be script-agnostic, yet their tokenizers can impose systematic costs on certain writing systems. We quantify this script tax by comparing two orthographic variants with identical linguistic content. Across mBERT and XLM-R, the higher-fragmentation orthography shows a ~3.4x increase in fertility (6.73-6.85 vs. 2.10-2.35 tokens/word), leading to a 16.5x inference slowdown (0.23 vs. 3.8 sentences/second) on identical hardware. Using bits per character (BPC) to avoid the \"NLL paradox\" from subword fragmentation, we find a substantial increase in information cost: +19.7% for mBERT (8.06->9.65) and +47.1% for XLM-R (12.19->17.94). A round-trip conversion check (CER_rt=0.31) suggests these gaps reflect orthography-conditioned processing rather than mapping noise. Our results highlight tokenization as a key source of inequity in multilingual NLP and motivate script-aware tokenization and pretraining.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Evaluating Few-Shot Temporal Reasoning of LLMs for Human Activity Prediction in Smart Environments",
+      "link": "https://arxiv.org/abs/2602.11176",
+      "snippet": "arXiv:2602.11176v1 Announce Type: cross \nAbstract: Anticipating human activities and their durations is essential in applications such as smart-home automation, simulation-based architectural and urban design, activity-based transportation system simulation, and human-robot collaboration, where adaptive systems must respond to human activities. Existing data-driven agent-based models--from rule-based to deep learning--struggle in low-data environments, limiting their practicality. This paper investigates whether large language models, pre-trained on broad human knowledge, can fill this gap by reasoning about everyday activities from compact contextual cues. We adopt a retrieval-augmented prompting strategy that integrates four sources of context--temporal, spatial, behavioral history, and persona--and evaluate it on the CASAS Aruba smart-home dataset. The evaluation spans two complementary tasks: next-activity prediction with duration estimation, and multi-step daily sequence generation, each tested with various numbers of few-shot examples provided in the prompt. Analyzing few-shot effects reveals how much contextual supervision is sufficient to balance data efficiency and predictive accuracy, particularly in low-data environments. Results show that large language models exhibit strong inherent temporal understanding of human behavior: even in zero-shot settings, they produce coherent daily activity predictions, while adding one or two demonstrations further refines duration calibration and categorical accuracy. Beyond a few examples, performance saturates, indicating diminishing returns. Sequence-level evaluation confirms consistent temporal alignment across few-shot conditions. These findings suggest that pre-trained language models can serve as promising temporal reasoners, capturing both recurring routines and context-dependent behavioral variations, thereby strengthening the behavioral modules of agent-based models.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "What Do LLMs Know About Alzheimer's Disease? Fine-Tuning, Probing, and Data Synthesis for AD Detection",
+      "link": "https://arxiv.org/abs/2602.11177",
+      "snippet": "arXiv:2602.11177v1 Announce Type: cross \nAbstract: Reliable early detection of Alzheimer's disease (AD) is challenging, particularly due to limited availability of labeled data. While large language models (LLMs) have shown strong transfer capabilities across domains, adapting them to the AD domain through supervised fine-tuning remains largely unexplored. In this work, we fine-tune an LLM for AD detection and investigate how task-relevant information is encoded within its internal representations. We employ probing techniques to analyze intermediate activations across transformer layers, and we observe that, after fine-tuning, the probing values of specific words and special markers change substantially, indicating that these elements assume a crucial role in the model's improved detection performance. Guided by this insight, we design a curated set of task-aware special markers and train a sequence-to-sequence model as a data-synthesis tool that leverages these markers to generate structurally consistent and diagnostically informative synthetic samples. We evaluate the synthesized data both intrinsically and by incorporating it into downstream training pipelines.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "From Instruction to Output: The Role of Prompting in Modern NLG",
+      "link": "https://arxiv.org/abs/2602.11179",
+      "snippet": "arXiv:2602.11179v1 Announce Type: cross \nAbstract: Prompt engineering has emerged as an integral technique for extending the strengths and abilities of Large Language Models (LLMs) to gain significant performance gains in various Natural Language Processing (NLP) tasks. This approach, which requires instructions to be composed in natural language to bring out the knowledge from LLMs in a structured way, has driven breakthroughs in various NLP tasks. Yet there is still no structured framework or coherent understanding of the varied prompt engineering methods and techniques, particularly in the field of Natural Language Generation (NLG).\n  This survey aims to help fill that gap by outlining recent developments in prompt engineering, and their effect on different NLG tasks. It reviews recent advances in prompting methods and their impact on NLG tasks, presenting prompt design as an input-level control mechanism that complements fine-tuning and decoding approaches. The paper introduces a taxonomy of prompting paradigms, a decision framework for prompt selection based on varying factors for the practitioners, outlines emerging trends and challenges, and proposes a framework that links design, optimization, and evaluation to support more controllable and generalizable NLG.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
+      "link": "https://arxiv.org/abs/2602.11184",
+      "snippet": "arXiv:2602.11184v1 Announce Type: cross \nAbstract: Mixture of Experts (MoE) models have achieved great success by significantly improving performance while maintaining computational efficiency through sparse expert activation. However, their enormous parameter sizes and memory demands pose major challenges for deployment in resource-constrained environments. Vector Quantization (VQ) offers a promising approach for ultra-low-bit compression in Large Language Models (LLMs) by leveraging a codebook, where weight vectors are mapped to the most similar discrete codewords. Yet, directly applying VQ to MoEs often leads to substantial performance degradation due to two critical obstacles: (1) redundant representations among experts cause VQ to repeatedly quantize similar representations for each expert, resulting in inefficient use of limited codebook capacity; and (2) cumulative output bias is amplified by expert aggregation in MoE layers, leading to distributional shifts in the quantized outputs. To address these issues, we propose KBVQ-MoE, a novel VQ framework to enhance extremely low-bit quantization for MoE-based LLMs. KBVQ-MoE integrates two techniques: (1) input-driven redundancy elimination, where a Karhunen-Loeve Transform (KLT) guided singular value decomposition (SVD) extracts dominant weight components and shares them across experts; and (2) bias-corrected output stabilization, where vector quantization is applied only to expert-specific (non-redundant) representations and the quantized outputs are corrected via channel-wise affine compensation. Experiments on various MoE LLMs demonstrate that KBVQ-MoE preserves accuracy substantially better than existing quantization methods. For example, 3-bit quantization of Qwen1.5-MoE-A2.7B achieves an average accuracy of 67.99, nearly identical to the FP16 baseline of 68.07, underscoring KBVQ-MoE's potential for efficient deployment on edge devices and other resource-constrained platforms.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Spectra: Rethinking Optimizers for LLMs Under Spectral Anisotropy",
+      "link": "https://arxiv.org/abs/2602.11185",
+      "snippet": "arXiv:2602.11185v1 Announce Type: cross \nAbstract: Gradient signals in LLM training are highly anisotropic: recurrent linguistic structure concentrates energy into a small set of dominant spectral directions, while context specific information resides in a long tail. We show that this spike tail separation persists throughout training, with the spike occupying only about 1.5% of directions yet dominating optimizer statistics. This dominance suppresses tail learning by contracting tail updates through second moment normalization and tightening the globally stable learning rate bound. Motivated by this analysis, we propose Spectra, a spike aware optimizer that suppresses the dominant low rank spike subspace without amplifying the noise sensitive spectral tail. Spectra tracks the spike subspace via cached, warm started power iteration and applies low rank spectral shaping with negligible overhead and substantially reduced optimizer state memory. On LLaMA3 8B trained on 50B tokens, Spectra reaches the same target loss 30% faster than AdamW, reduces per step end to end overhead by 0.7%, cuts optimizer state memory by 49.25%, and improves average downstream accuracy by 1.62%. Compared to Muon, Spectra is 5.1x faster in optimizer processing time, achieves a lower final loss, and improves average accuracy by 0.66%.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "TDPNavigator-Placer: Thermal- and Wirelength-Aware Chiplet Placement in 2.5D Systems Through Multi-Agent Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2602.11187",
+      "snippet": "arXiv:2602.11187v1 Announce Type: cross \nAbstract: The rapid growth of electronics has accelerated the adoption of 2.5D integrated circuits, where effective automated chiplet placement is essential as systems scale to larger and more heterogeneous chiplet assemblies. Existing placement methods typically focus on minimizing wirelength or transforming multi-objective optimization into a single objective through weighted sum, which limits their ability to handle competing design requirements. Wirelength reduction and thermal management are inherently conflicting objectives, making prior approaches inadequate for practical deployment. To address this challenge, we propose TDPNavigator-Placer, a novel multi-agent reinforcement learning framework that dynamically optimizes placement based on chiplet's thermal design power (TDP). This approach explicitly assigns these inherently conflicting objectives to specialized agents, each operating under distinct reward mechanisms and environmental constraints within a unified placement paradigm. Experimental results demonstrate that TDPNavigator-Placer delivers a significantly improved Pareto front over state-of-the-art methods, enabling more balanced trade-offs between wirelength and thermal performance.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "MuCO: Generative Peptide Cyclization Empowered by Multi-stage Conformation Optimization",
+      "link": "https://arxiv.org/abs/2602.11189",
+      "snippet": "arXiv:2602.11189v1 Announce Type: cross \nAbstract: Modeling peptide cyclization is critical for the virtual screening of candidate peptides with desirable physical and pharmaceutical properties. This task is challenging because a cyclic peptide often exhibits diverse, ring-shaped conformations, which cannot be well captured by deterministic prediction models derived from linear peptide folding. In this study, we propose MuCO (Multi-stage Conformation Optimization), a generative peptide cyclization method that models the distribution of cyclic peptide conformations conditioned on the corresponding linear peptide. In principle, MuCO decouples the peptide cyclization task into three stages: topology-aware backbone design, generative side-chain packing, and physics-aware all-atom optimization, thereby generating and optimizing conformations of cyclic peptides in a coarse-to-fine manner. This multi-stage framework enables an efficient parallel sampling strategy for conformation generation and allows for rapid exploration of diverse, low-energy conformations. Experiments on the large-scale CPSea dataset demonstrate that MuCO significantly outperforms state-of-the-art methods in consistently in physical stability, structural diversity, secondary structure recovery, and computational efficiency, making it a promising computational tool for exploring and designing cyclic peptides.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Time-TK: A Multi-Offset Temporal Interaction Framework Combining Transformer and Kolmogorov-Arnold Networks for Time Series Forecasting",
+      "link": "https://arxiv.org/abs/2602.11190",
+      "snippet": "arXiv:2602.11190v1 Announce Type: cross \nAbstract: Time series forecasting is crucial for the World Wide Web and represents a core technical challenge in ensuring the stable and efficient operation of modern web services, such as intelligent transportation and website throughput. However, we have found that existing methods typically employ a strategy of embedding each time step as an independent token. This paradigm introduces a fundamental information bottleneck when processing long sequences, the root cause of which is that independent token embedding destroys a crucial structure within the sequence - what we term as multi-offset temporal correlation. This refers to the fine-grained dependencies embedded within the sequence that span across different time steps, which is especially prevalent in regular Web data. To fundamentally address this issue, we propose a new perspective on time series embedding. We provide an upper bound on the approximate reconstruction performance of token embedding, which guides our design of a concise yet effective Multi-Offset Time Embedding method to mitigate the performance degradation caused by standard token embedding. Furthermore, our MOTE can be integrated into various existing models and serve as a universal building block. Based on this paradigm, we further design a novel forecasting architecture named Time-TK. This architecture first utilizes a Multi-Offset Interactive KAN to learn and represent specific temporal patterns among multiple offset sub-sequences. Subsequently, it employs an efficient Multi-Offset Temporal Interaction mechanism to effectively capture the complex dependencies between these sub-sequences, achieving global information integration. Extensive experiments on 14 real-world benchmark datasets, covering domains such as traffic flow and BTC/USDT throughput, demonstrate that Time-TK significantly outperforms all baseline models, achieving state-of-the-art forecasting accuracy.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models",
+      "link": "https://arxiv.org/abs/2602.11192",
+      "snippet": "arXiv:2602.11192v1 Announce Type: cross \nAbstract: Mixture-of-Experts (MoE) model architectures can significantly reduce the number of activated parameters per token, enabling computationally efficient training and inference. However, their large overall parameter counts and model sizes have precluded their widespread usage in resource-constrained settings as all of the parameters must still be loaded into GPU memory. Prior works aim to address this memory bottleneck by offloading certain experts into CPU memory and porting them to GPU memory only when they are activated. In practice, these methods suffer from the significant I/O latency incurred by expert transfer. We present MELINOE, a method that fine-tunes an MoE model to more strongly prefer activating a smaller number of experts per sequence. Caching these preferred experts in GPU memory reduces expert churn and CPU-GPU transfer overhead. MELINOE increases throughput by $1.2-3\\times$ over efficient baselines and up to $14.7\\times$ over transfer-heavy baselines while retaining or even improving the performance of the model on a downstream task, making it a reliable method for improving MoE inference efficiency.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Position-Aware Self-supervised Representation Learning for Cross-mode Radar Signal Recognition",
+      "link": "https://arxiv.org/abs/2602.11196",
+      "snippet": "arXiv:2602.11196v1 Announce Type: cross \nAbstract: Radar signal recognition in open electromagnetic environments is challenging due to diverse operating modes and unseen radar types. Existing methods often overlook position relations in pulse sequences, limiting their ability to capture semantic dependencies over time. We propose RadarPos, a position-aware self-supervised framework that leverages pulse-level temporal dynamics without complex augmentations or masking, providing improved position relation modeling over contrastive learning or masked reconstruction. Using this framework, we evaluate cross-mode radar signal recognition under the long-tailed setting to assess adaptability and generalization. Experimental results demonstrate enhanced discriminability and robustness, highlighting practical applicability in real-world electromagnetic environments.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Hybrid operator learning of wave scattering maps in high-contrast media",
+      "link": "https://arxiv.org/abs/2602.11197",
+      "snippet": "arXiv:2602.11197v1 Announce Type: cross \nAbstract: Surrogate modeling of wave propagation and scattering (i.e. the wave speed and source to wave field map) in heterogeneous media has significant potential in applications such as seismic imaging and inversion. High-contrast settings, such as subsurface models with salt bodies, exhibit strong scattering and phase sensitivity that challenge existing neural operators. We propose a hybrid architecture that decomposes the scattering operator into two separate contributions: a smooth background propagation and a high-contrast scattering correction. The smooth component is learned with a Fourier Neural Operator (FNO), which produces globally coupled feature tokens encoding background wave propagation; these tokens are then passed to a vision transformer, where attention is used to model the high-contrast scattering correction dominated by strong, spatial interactions. Evaluated on high-frequency Helmholtz problems with strong contrasts, the hybrid model achieves substantially improved phase and amplitude accuracy compared to standalone FNOs or transformers, with favorable accuracy-parameter scaling.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "DDL2PropBank Agent: Benchmarking Multi-Agent Frameworks' Developer Experience Through a Novel Relational Schema Mapping Task",
+      "link": "https://arxiv.org/abs/2602.11198",
+      "snippet": "arXiv:2602.11198v1 Announce Type: cross \nAbstract: Multi-agent frameworks promise to simplify LLM-driven software development, yet there is no principled way to evaluate their developer experience in a controlled setting. We introduce DDL2PropBank, a novel benchmark task that maps relational database schemas to PropBank rolesets, requiring autonomous retrieval of candidate frames and fine-grained linguistic reasoning over table names, columns, and relations. Using the Agent-as-a-Tool pattern, we implement identical agent logic across 10 frameworks and evaluate along two dimensions: (i) code complexity via static analysis, and (ii) AI-assistability -- the extent to which LLMs can autonomously generate correct, framework-specific code. Our results reveal a threefold complexity spectrum, with Pydantic AI and Agno requiring the least implementation overhead. For AI-assistability, structural alignment scores reliably proxy runtime success for frameworks with single canonical patterns, but overestimate correctness for multi-pattern frameworks. Agno emerges as the strongest overall performer, combining lowest complexity with highest structural alignment and 83% pass@1.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "interwhen: A Generalizable Framework for Verifiable Reasoning with Test-time Monitors",
+      "link": "https://arxiv.org/abs/2602.11202",
+      "snippet": "arXiv:2602.11202v1 Announce Type: cross \nAbstract: We present a test-time verification framework, interwhen, that ensures that the output of a reasoning model is valid wrt. a given set of verifiers. Verified reasoning is an important goal in high-stakes scenarios such as deploying agents in the physical world or in domains such as law and finance. However, current techniques either rely on the generate-test paradigm that verifies only after the final answer is produced, or verify partial output through a step-extraction paradigm where the task execution is externally broken down into structured steps. The former is inefficient while the latter artificially restricts a model's problem solving strategies. Instead, we propose to verify a model's reasoning trace as-is, taking full advantage of a model's reasoning capabilities while verifying and steering the model's output only when needed. The key idea is meta-prompting, identifying the verifiable properties that any partial solution should satisfy and then prompting the model to follow a custom format in its trace such that partial outputs can be easily parsed and checked. We consider both self-verification and external verification and find that interwhen provides a useful abstraction to provide feedback and steer reasoning models in each case. Using self-verification, interwhen obtains state-of-the-art results on early stopping reasoning models, without any loss in accuracy. Using external verifiers, interwhen obtains 10 p.p. improvement in accuracy over test-time scaling methods, while ensuring 100% soundness and being 4x more efficient. The code for interwhen is available at https://github.com/microsoft/interwhen",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Zero-Sacrifice Persistent-Robustness Adversarial Defense for Pre-Trained Encoders",
+      "link": "https://arxiv.org/abs/2602.11204",
+      "snippet": "arXiv:2602.11204v1 Announce Type: cross \nAbstract: The widespread use of publicly available pre-trained encoders from self-supervised learning (SSL) has exposed a critical vulnerability: their susceptibility to downstream-agnostic adversarial examples (DAEs), which are crafted without knowledge of the downstream tasks but capable of misleading downstream models. While several defense methods have been explored recently, they rely primarily on task-specific adversarial fine-tuning, which inevitably limits generalizability and causes catastrophic forgetting and deteriorates benign performance. Different with previous works, we propose a more rigorous defense goal that requires only a single tuning for diverse downstream tasks to defend against DAEs and preserve benign performance. To achieve this defense goal, we introduce Zero-Sacrifice Persistent-Robustness Adversarial Defense (ZePAD), which is inspired by the inherent sensitivity of neural networks to data characteristics. Specifically, ZePAD is a dual-branch structure, which consists of a Multi-Pattern Adversarial Enhancement Branch (MPAE-Branch) that uses two adversarially fine-tuned encoders to strengthen adversarial resistance. The Benign Memory Preservation Branch (BMP-Branch) is trained on local data to ensure adversarial robustness does not compromise benign performance. Surprisingly, we find that ZePAD can directly detect DAEs by evaluating branch confidence, without introducing any adversarial exsample identification task during training. Notably, by enriching feature diversity, our method enables a single adversarial fine-tuning to defend against DAEs across downstream tasks, thereby achieving persistent robustness. Extensive experiments on 11 SSL methods and 6 datasets validate its effectiveness. In certain cases, it achieves a 29.20% improvement in benign performance and a 73.86% gain in adversarial robustness, highlighting its zero-sacrifice property.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "UltraLIF: Fully Differentiable Spiking Neural Networks via Ultradiscretization and Max-Plus Algebra",
+      "link": "https://arxiv.org/abs/2602.11206",
+      "snippet": "arXiv:2602.11206v1 Announce Type: cross \nAbstract: Spiking Neural Networks (SNNs) offer energy-efficient, biologically plausible computation but suffer from non-differentiable spike generation, necessitating reliance on heuristic surrogate gradients. This paper introduces UltraLIF, a principled framework that replaces surrogate gradients with ultradiscretization, a mathematical formalism from tropical geometry providing continuous relaxations of discrete dynamics. The central insight is that the max-plus semiring underlying ultradiscretization naturally models neural threshold dynamics: the log-sum-exp function serves as a differentiable soft-maximum that converges to hard thresholding as a learnable temperature parameter $\\eps \\to 0$. Two neuron models are derived from distinct dynamical systems: UltraLIF from the LIF ordinary differential equation (temporal dynamics) and UltraDLIF from the diffusion equation modeling gap junction coupling across neuronal populations (spatial dynamics). Both yield fully differentiable SNNs trainable via standard backpropagation with no forward-backward mismatch. Theoretical analysis establishes pointwise convergence to classical LIF dynamics with quantitative error bounds and bounded non-vanishing gradients. Experiments on six benchmarks spanning static images, neuromorphic vision, and audio demonstrate improvements over surrogate gradient baselines, with gains most pronounced in single-timestep ($T{=}1$) settings on neuromorphic and temporal datasets. An optional sparsity penalty enables significant energy reduction while maintaining competitive accuracy.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "SWE-MiniSandbox: Container-Free Reinforcement Learning for Building Software Engineering Agents",
+      "link": "https://arxiv.org/abs/2602.11210",
+      "snippet": "arXiv:2602.11210v1 Announce Type: cross \nAbstract: Reinforcement learning (RL) has become a key paradigm for training software engineering (SWE) agents, but existing pipelines typically rely on per-task containers for isolation. At scale, pre-built container images incur substantial storage overhead, slow environment setup, and require container-management privileges. We propose SWE-MiniSandbox, a lightweight, container-free method that enables scalable RL training of SWE agents without sacrificing isolation. Instead of relying on per-instance containers, SWE-MiniSandbox executes each task in an isolated workspace backed by kernel-level mechanisms, substantially reducing system overhead. It leverages lightweight environment pre-caching techniques to eliminate the need for bulky container images. As a result, our approach lowers disk usage to approximately 5\\% of that required by container-based pipelines and reduces environment preparation time to about 25\\% of the container baseline. Empirical results demonstrate that SWE-MiniSandbox achieves evaluation performance comparable to standard container-based pipelines. By removing the dependency on heavy container infrastructure, SWE-MiniSandbox offers a practical and accessible foundation for scaling RL-based SWE agents, particularly in resource-constrained research environments.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Credal Concept Bottleneck Models: Structural Separation of Epistemic and Aleatoric Uncertainty",
+      "link": "https://arxiv.org/abs/2602.11219",
+      "snippet": "arXiv:2602.11219v1 Announce Type: cross \nAbstract: Decomposing predictive uncertainty into epistemic (model ignorance) and aleatoric (data ambiguity) components is central to reliable decision making, yet most methods estimate both from the same predictive distribution. Recent empirical and theoretical results show these estimates are typically strongly correlated, so changes in predictive spread simultaneously affect both components and blur their semantics. We propose a credal-set formulation in which uncertainty is represented as a set of predictive distributions, so that epistemic and aleatoric uncertainty correspond to distinct geometric properties: the size of the set versus the noise within its elements. We instantiate this idea in a Variational Credal Concept Bottleneck Model with two disjoint uncertainty heads trained by disjoint objectives and non-overlapping gradient paths, yielding separation by construction rather than post hoc decomposition. Across multi-annotator benchmarks, our approach reduces the correlation between epistemic and aleatoric uncertainty by over an order of magnitude compared to standard methods, while improving the alignment of epistemic uncertainty with prediction error and aleatoric uncertainty with ground-truth ambiguity.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "AI-Driven Clinical Decision Support System for Enhanced Diabetes Diagnosis and Management",
+      "link": "https://arxiv.org/abs/2602.11237",
+      "snippet": "arXiv:2602.11237v1 Announce Type: cross \nAbstract: Identifying type 2 diabetes mellitus can be challenging, particularly for primary care physicians. Clinical decision support systems incorporating artificial intelligence (AI-CDSS) can assist medical professionals in diagnosing type 2 diabetes with high accuracy. This study aimed to assess an AI-CDSS specifically developed for the diagnosis of type 2 diabetes by employing a hybrid approach that integrates expert-driven insights with machine learning techniques. The AI-CDSS was developed (training dataset: n = 650) and tested (test dataset: n = 648) using a dataset of 1298 patients with and without type 2 diabetes. To generate predictions, the algorithm utilized key features such as body mass index, plasma fasting glucose, and hemoglobin A1C. Furthermore, a clinical pilot study involving 105 patients was conducted to assess the diagnostic accuracy of the system in comparison to non-endocrinology specialists. The AI-CDSS showed a high degree of accuracy, with 99.8% accuracy in predicting diabetes, 99.3% in predicting prediabetes, 99.2% in identifying at-risk individuals, and 98.8% in predicting no diabetes. The test dataset revealed a 98.8% agreement between endocrinology specialists and the AI-CDSS. Type 2 diabetes was identified in 45% of 105 individuals in the pilot study. Compared with diabetes specialists, the AI-CDSS scored a 98.5% concordance rate, greatly exceeding that of nonendocrinology specialists, who had an 85% agreement rate. These findings indicate that the AI-CDSS has the potential to be a useful tool for accurately identifying type 2 diabetes, especially in situations in which diabetes specialists are not readily available.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Toward Reliable Tea Leaf Disease Diagnosis Using Deep Learning Model: Enhancing Robustness With Explainable AI and Adversarial Training",
+      "link": "https://arxiv.org/abs/2602.11239",
+      "snippet": "arXiv:2602.11239v1 Announce Type: cross \nAbstract: Tea is a valuable asset for the economy of Bangladesh. So, tea cultivation plays an important role to boost the economy. These valuable plants are vulnerable to various kinds of leaf infections which may cause less production and low quality. It is not so easy to detect these diseases manually. It may take time and there could be some errors in the detection.Therefore, the purpose of the study is to develop an automated deep learning model for tea leaf disease classification based on the teaLeafBD dataset so that anyone can detect the diseases more easily and efficiently. There are 5,278 high-resolution images in this dataset. The images are classified into seven categories. Six of them represents various diseases and the rest one represents healthy leaves. The proposed pipeline contains data preprocessing, data splitting, adversarial training, augmentation, model training, evaluation, and comprehension made possible with Explainable AI strategies. DenseNet201 and EfficientNetB3 were employed to perform the classification task. To prepare the model more robustly, we applied adversarial training so it can operate effectively even with noisy or disturbed inputs. In addition, Grad-CAM visualization was executed to analyze the model's predictions by identifying the most influential regions of each image. Our experimental outcomes revealed that EfficientNetB3 achieved the highest classification accuracy of 93%, while DenseNet201 reached 91%. The outcomes prove that the effectiveness of the proposed approach can accurately detect tea leaf diseases and provide a practical solution for advanced agricultural management.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "How Many Features Can a Language Model Store Under the Linear Representation Hypothesis?",
+      "link": "https://arxiv.org/abs/2602.11246",
+      "snippet": "arXiv:2602.11246v1 Announce Type: cross \nAbstract: We introduce a mathematical framework for the linear representation hypothesis (LRH), which asserts that intermediate layers of language models store features linearly. We separate the hypothesis into two claims: linear representation (features are linearly embedded in neuron activations) and linear accessibility (features can be linearly decoded). We then ask: How many neurons $d$ suffice to both linearly represent and linearly access $m$ features? Classical results in compressed sensing imply that for $k$-sparse inputs, $d = O(k\\log (m/k))$ suffices if we allow non-linear decoding algorithms (Candes and Tao, 2006; Candes et al., 2006; Donoho, 2006). However, the additional requirement of linear decoding takes the problem out of the classical compressed sensing, into linear compressed sensing.\n  Our main theoretical result establishes nearly-matching upper and lower bounds for linear compressed sensing. We prove that $d = \\Omega_\\epsilon(\\frac{k^2}{\\log k}\\log (m/k))$ is required while $d = O_\\epsilon(k^2\\log m)$ suffices. The lower bound establishes a quantitative gap between classical and linear compressed setting, illustrating how linear accessibility is a meaningfully stronger hypothesis than linear representation alone. The upper bound confirms that neurons can store an exponential number of features under the LRH, giving theoretical evidence for the \"superposition hypothesis\" (Elhage et al., 2022).\n  The upper bound proof uses standard random constructions of matrices with approximately orthogonal columns. The lower bound proof uses rank bounds for near-identity matrices (Alon, 2003) together with Tur\\'an's theorem (bounding the number of edges in clique-free graphs). We also show how our results do and do not constrain the geometry of feature representations and extend our results to allow decoders with an activation function and bias.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "DeepRed: an architecture for redshift estimation",
+      "link": "https://arxiv.org/abs/2602.11281",
+      "snippet": "arXiv:2602.11281v1 Announce Type: cross \nAbstract: Estimating redshift is a central task in astrophysics, but its measurement is costly and time-consuming. In addition, current image-based methods are often validated on homogeneous datasets. The development and comparison of networks able generalize across different morphologies, ranging from galaxies to gravitationally-lensed transients, and observational conditions, remain an open challenge. This work proposes DeepRed, a deep learning pipeline that demonstrates how modern computer vision architectures, including ResNet, EfficientNet, Swin Transformer, and MLP-Mixer, can estimate redshifts from images of galaxies, gravitational lenses, and gravitationally-lensed supernovae. We compare these architectures and their ensemble to both neural networks (A1, A3, NetZ, and PhotoZ) and a feature-based method (HOG+SVR) on simulated (DeepGraviLens) and real (KiDS, SDSS) datasets. Our approach achieves state-of-the-art results on all datasets. On DeepGraviLens, DeepRed achieves a significant improvement in the Normalized Mean Absolute Deviation compared to the best baseline (PhotoZ): 55% on DES-deep (using EfficientNet), 51% on DES-wide (Ensemble), 52% on DESI-DOT (Ensemble), and 46% on LSST-wide (Ensemble). On real observations from the KiDS survey, the pipeline outperforms the best baseline (NetZ), improving NMAD by 16% on a general test set without high-probability lenses (Ensemble) and 27% on high-probability lenses (Ensemble). For non-lensed galaxies in the SDSS dataset, the MLP-Mixer architecture achieves a 5% improvement over the best baselines (A3 and NetZ). SHAP shows that the models correctly focus on the objects of interest with over 95% localization accuracy on high-quality images, validating the reliability of the predictions. These findings suggest that deep learning is a scalable, robust, and interpretable solution for redshift estimation in large-scale surveys.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "HiFloat4 Format for Language Model Inference",
+      "link": "https://arxiv.org/abs/2602.11287",
+      "snippet": "arXiv:2602.11287v1 Announce Type: cross \nAbstract: This paper introduces HiFloat4 (HiF4), a block floating-point data format tailored for deep learning. Each HiF4 unit packs 64 4-bit elements with 32 bits of shared scaling metadata, averaging 4.5 bits per value. The metadata specifies a three-level scaling hierarchy, capturing inter- and intra-group dynamic range while improving the utilization of the representational space. In addition, the large 64-element group size enables matrix multiplications to be executed in a highly fixed-point manner, significantly reducing hardware area and power consumption. To evaluate the proposed format, we conducted inference experiments on several language models, including LLaMA, Qwen, Mistral, DeepSeek-V3.1 and LongCat. Results show that HiF4 achieves higher average accuracy than the state-of-the-art NVFP4 format across multiple models and diverse downstream tasks.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
+      "link": "https://arxiv.org/abs/2602.11304",
+      "snippet": "arXiv:2602.11304v1 Announce Type: cross \nAbstract: Modern analyst agents must reason over complex, high token inputs, including dozens of retrieved documents, tool outputs, and time sensitive data. While prior work has produced tool calling benchmarks and examined factuality in knowledge augmented systems, relatively little work studies their intersection: settings where LLMs must integrate large volumes of dynamic, structured and unstructured multi tool outputs. We investigate LLM failure modes in this regime using crypto as a representative high data density domain. We introduce (1) CryptoAnalystBench, an analyst aligned benchmark of 198 production crypto and DeFi queries spanning 11 categories; (2) an agentic harness equipped with relevant crypto and DeFi tools to generate responses across multiple frontier LLMs; and (3) an evaluation pipeline with citation verification and an LLM as a judge rubric spanning four user defined success dimensions: relevance, temporal relevance, depth, and data consistency. Using human annotation, we develop a taxonomy of seven higher order error types that are not reliably captured by factuality checks or LLM based quality scoring. We find that these failures persist even in state of the art systems and can compromise high stakes decisions. Based on this taxonomy, we refine the judge rubric to better capture these errors. While the judge does not align with human annotators on precise scoring across rubric iterations, it reliably identifies critical failure modes, enabling scalable feedback for developers and researchers studying analyst style agents. We release CryptoAnalystBench with annotated queries, the evaluation pipeline, judge rubrics, and the error taxonomy, and outline mitigation strategies and open challenges in evaluating long form, multi tool augmented systems.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Predictive Associative Memory: Retrieval Beyond Similarity Through Temporal Co-occurrence",
+      "link": "https://arxiv.org/abs/2602.11322",
+      "snippet": "arXiv:2602.11322v1 Announce Type: cross \nAbstract: Current approaches to memory in neural systems rely on similarity-based retrieval: given a query, find the most representationally similar stored state. This assumption -- that useful memories are similar memories -- fails to capture a fundamental property of biological memory: association through temporal co-occurrence. We propose Predictive Associative Memory (PAM), an architecture in which a JEPA-style predictor, trained on temporal co-occurrence within a continuous experience stream, learns to navigate the associative structure of an embedding space. We introduce an Inward JEPA that operates over stored experience (predicting associatively reachable past states) as the complement to the standard Outward JEPA that operates over incoming sensory data (predicting future states). We evaluate PAM as an associative recall system -- testing faithfulness of recall for experienced associations -- rather than as a retrieval system evaluated on generalisation to unseen associations. On a synthetic benchmark, the predictor's top retrieval is a true temporal associate 97% of the time (Association Precision@1 = 0.970); it achieves cross-boundary Recall@20 = 0.421 where cosine similarity scores zero; and it separates experienced-together from never-experienced-together states with a discrimination AUC of 0.916 (cosine: 0.789). Even restricted to cross-room pairs where embedding similarity is uninformative, the predictor achieves AUC = 0.849 (cosine: 0.503, chance). A temporal shuffle control confirms the signal is genuine temporal co-occurrence structure, not embedding geometry: shuffling collapses cross-boundary recall by 90%, replicated across training seeds. All results are stable across seeds (SD < 0.006) and query selections (SD $\\leq$ 0.012).",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP",
+      "link": "https://arxiv.org/abs/2602.11327",
+      "snippet": "arXiv:2602.11327v1 Announce Type: cross \nAbstract: The rapid development of the AI agent communication protocols, including the Model Context Protocol (MCP), Agent2Agent (A2A), Agora, and Agent Network Protocol (ANP), is reshaping how AI agents communicate with tools, services, and each other. While these protocols support scalable multi-agent interaction and cross-organizational interoperability, their security principles remain understudied, and standardized threat modeling is limited; no protocol-centric risk assessment framework has been established yet. This paper presents a systematic security analysis of four emerging AI agent communication protocols. First, we develop a structured threat modeling analysis that examines protocol architectures, trust assumptions, interaction patterns, and lifecycle behaviors to identify protocol-specific and cross-protocol risk surfaces. Second, we introduce a qualitative risk assessment framework that identifies twelve protocol-level risks and evaluates security posture across the creation, operation, and update phases through systematic assessment of likelihood, impact, and overall protocol risk, with implications for secure deployment and future standardization. Third, we provide a measurement-driven case study on MCP that formalizes the risk of missing mandatory validation/attestation for executable components as a falsifiable security claim by quantifying wrong-provider tool execution under multi-server composition across representative resolver policies. Collectively, our results highlight key design-induced risk surfaces and provide actionable guidance for secure deployment and future standardization of agent communication ecosystems.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+      "link": "https://arxiv.org/abs/2602.11337",
+      "snippet": "arXiv:2602.11337v1 Announce Type: cross \nAbstract: Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets and tooling, we provide a foundation for scalable data generation, policy training, and benchmark creation for robot learning research.",
+      "publishedAt": "2026-02-04T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026 - Zee News",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONy0tY0UwQkJnSUFjWGxvMHVRVjhGUjZRcW5QZEZ0dmdBWUpnNmctemgtUHhkRGplM2E0QzZOV2JYZGREcHRJN3Ntd1Y1dE5yYkszc05wNFRuZHZqZ2x4akRTM2pQdGpYSmN6ZUs3aGJyNE56VFY5WmR6RWhMeHZ3Z3RMWUlSWk5qb1FSR2w0OW9JLS1xckprMlM5eUVCcDQw0gGmAUFVX3lxTE1Ma19nd1hJV1dBdVRuRXFzeUJxXzVSelM4RjZsUVFPZTczenlmZlgyc21tQUVfRGV4Z2prWWhBSl9RTjNSS1VQZ2xIVHFjbkFQcTh3d2ZLOGRINW5QTFNZWVpldFJjQTRqUTZhcnlVOGljRXgyaWhRNEdCc3ZzYlZfQk9oOHhrcm4wSDZvNzlWOUdCZkNnUzZKaHNzSzFzOUFpYzZlNFE?oc=5",
+      "snippet": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026\u00a0\u00a0Zee News",
+      "publishedAt": "2026-02-04T02:54:41.000Z",
+      "source": "Google News \u2022 Fact Check (India)",
+      "theme": "misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Union Minister Pradhan vows to protect farmers; slams Congress for \u2018misinformation\u2019 - The New Indian Express",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOW1KRzhDd3QtNklSQzJQcXl4SkRWVXJBT3F3ZXVPbmlQM2J6M3RvV01PeXJFTkRoOFpxamp6SG9sOWpreXVNdWlDV2lyZWdrd25jc1B2ZllvblpETkw1cDRhcjNJU2VmMFp6Qkhvck5DUVMwMFhzLVNwcGNYNHVRVUF3LTZwdTZPXzJXdlNzN1R4bE4xUzd3UmZTakJxckR3NUI5MjMzRFpTYlBScG9HQjZxdnp2RDlLb0xNWWdwbUdBOWV0R0RXUEg1RDPSAdoBQVVfeXFMTjZ4a2ZON3NjUllqZHNSc2tBb2N3cmNENGw2VlZFcGhmYUdwTjJHb04tLW1PcGZ0dTR2S0FXX2hSeVJTMU9kUGhKaVhlNFJrQ1VJREU3WVo5U3hWLVdQVTJzOGNEMmpkN3cwemd5SFhiTVFlSlQ2VXpSaTJ6dmt1aEFsaEI4aTNFV1Q2bzBuQUZYNzVHMlJzLXhiV3lyUUNncmlyY3pNLVRBVU55RHBiQWVFd21Id2dZZV9iUEF5OXB0dFFtZ19lY29lcjQ1WUdLZTlJdWloVlpLUFE?oc=5",
+      "snippet": "Union Minister Pradhan vows to protect farmers; slams Congress for \u2018misinformation\u2019\u00a0\u00a0The New Indian Express",
+      "publishedAt": "2026-02-04T02:45:47.000Z",
+      "source": "Google News \u2022 Misinformation (India)",
+      "theme": "misinformation",
+      "type": "News"
+    },
+    {
+      "title": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms - The Logical Indian",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWUxKMzU1Vzd3X0xyeHUtWk9xYVZYdEx6WnJSZ2ZNY3hqdmVHTkdrMHM2T3FCclNDVGJEUEpQUmJRVnBmNUlyODRkc1pzSXFBTlgtYjhnc2pGVkRzUmJlVFc2THo2UXI5V01uMHdJQ0x3SjZHVGY4VmJMSmhvQVpOQU1jUVZDUV81Z3hyUXFrRXgwYnFnRHE4WVAxQlpoX0tKR0FxRlgteEU4YjBLM195c2lCMXFDMkZ5QzFoRi1zb0lUYjVwSFVxTWhERlNmaU0?oc=5",
+      "snippet": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms\u00a0\u00a0The Logical Indian",
+      "publishedAt": "2026-02-04T06:00:18.000Z",
+      "source": "Google News \u2022 Misinformation (India)",
+      "theme": "misinformation",
+      "type": "News"
+    },
     {
       "title": "Explaining AI Without Code: A User Study on Explainable AI",
       "link": "https://arxiv.org/abs/2602.11159",
@@ -931,375 +1083,6 @@
       "publishedAt": "2026-02-04T05:00:00.000Z",
       "source": "arXiv cs.AI Recent Papers",
       "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "HybridRAG: A Practical LLM-based ChatBot Framework based on Pre-Generated Q&A over Raw Unstructured Documents",
-      "link": "https://arxiv.org/abs/2602.11156",
-      "snippet": "arXiv:2602.11156v1 Announce Type: cross \nAbstract: Retrieval-Augmented Generation (RAG) has emerged as a powerful approach for grounding Large Language Model (LLM)-based chatbot responses on external knowledge. However, existing RAG studies typically assume well-structured textual sources (e.g. Wikipedia or curated datasets) and perform retrieval and generation at query time, which can limit their applicability in real-world chatbot scenarios. In this paper, we present HybridRAG, a novel and practical RAG framework towards more accurate and faster chatbot responses. First, HybridRAG ingests raw, unstructured PDF documents containing complex layouts (text, tables, figures) via Optical Character Recognition (OCR) and layout analysis, and convert them into hierarchical text chunks. Then, it pre-generates a plausible question-answer (QA) knowledge base from the organized chunks using an LLM. At query time, user questions are matched against this QA bank to retrieve immediate answers when possible, and only if no suitable QA match is found does our framework fall back to an on-the-fly response generation. Experiments on OHRBench demonstrate that our HybridRAG provides higher answer quality and lower latency compared to a standard RAG baseline. We believe that HybridRAG could be a practical solution for real-world chatbot applications that must handle large volumes of unstructured documents and lots of users under limited computational resources.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Methodological Variation in Studying Staff and Student Perceptions of AI",
-      "link": "https://arxiv.org/abs/2602.11158",
-      "snippet": "arXiv:2602.11158v1 Announce Type: cross \nAbstract: In this paper, we compare methodological approaches for comparing student and staff perceptions, and ask: how much do these measures vary across different approaches? We focus on the case of AI perceptions, which are generally assessed via a single quantitative or qualitative measure, or with a mixed methods approach that compares two distinct data sources - e.g. a quantitative questionnaire with qualitative comments. To compare different approaches, we collect two forms of qualitative data: standalone comments and structured focus groups. We conduct two analyses for each data source: with a sentiment and stance analysis, we measure overall negativity/positivity of the comments and focus group conversations, respectively. Meanwhile, word clouds from the comments and a thematic analysis of the focus groups provide further detail on the content of this qualitative data - particularly the thematic analysis, which includes both similarities and differences between students and staff. We show that different analyses can produce different results - for a single data source. This variation stems from the construct being evaluated - an overall measure of positivity/negativity can produce a different picture from more detailed content-based analyses. We discuss the implications of this variation for institutional contexts, and for the comparisons from previous studies.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "BIRD: A Museum Open Dataset Combining Behavior Patterns and Identity Types to Better Model Visitors' Experience",
-      "link": "https://arxiv.org/abs/2602.11160",
-      "snippet": "arXiv:2602.11160v1 Announce Type: cross \nAbstract: Lack of data is a recurring problem in Artificial Intelligence, as it is essential for training and validating models. This is particularly true in the field of cultural heritage, where the number of open datasets is relatively limited and where the data collected does not always allow for holistic modeling of visitors' experience due to the fact that data are ad hoc (i.e. restricted to the sole characteristics required for the evaluation of a specific model). To overcome this lack, we conducted a study between February and March 2019 aimed at obtaining comprehensive and detailed information about visitors, their visit experience and their feedback. We equipped 51 participants with eye-tracking glasses, leaving them free to explore the 3 floors of the museum for an average of 57 minutes, and to discover an exhibition of more than 400 artworks. On this basis, we built an open dataset combining contextual data (demographic data, preferences, visiting habits, motivations, social context. . . ), behavioral data (spatiotemporal trajectories, gaze data) and feedback (satisfaction, fatigue, liked artworks, verbatim. . . ). Our analysis made it possible to re-enact visitor identities combining the majority of characteristics found in the literature and to reproduce the Veron and Levasseur profiles. This dataset will ultimately make it possible to improve the quality of recommended paths in museums by personalizing the number of points of interest (POIs), the time spent at these different POIs, and the amount of information to be provided to each visitor based on their level of interest.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Nested Named Entity Recognition in Plasma Physics Research Articles",
-      "link": "https://arxiv.org/abs/2602.11163",
-      "snippet": "arXiv:2602.11163v1 Announce Type: cross \nAbstract: Named Entity Recognition (NER) is an important task in natural language processing that aims to identify and extract key entities from unstructured text. We present a novel application of NER in plasma physics research articles and address the challenges of extracting specialized entities from scientific text in this domain. Research articles in plasma physics often contain highly complex and context-rich content that must be extracted to enable, e.g., advanced search. We propose a lightweight approach based on encoder-transformers and conditional random fields to extract (nested) named entities from plasma physics research articles. First, we annotate a plasma physics corpus with 16 classes specifically designed for the nested NER task. Second, we evaluate an entity-specific model specialization approach, where independent BERT-CRF models are trained to recognize individual entity types in plasma physics text. Third, we integrate an optimization process to systematically fine-tune hyperparameters and enhance model performance. Our work contributes to the advancement of entity recognition in plasma physics and also provides a foundation to support researchers in navigating and analyzing scientific literature.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Automated Optimization Modeling via a Localizable Error-Driven Perspective",
-      "link": "https://arxiv.org/abs/2602.11164",
-      "snippet": "arXiv:2602.11164v1 Announce Type: cross \nAbstract: Automated optimization modeling via Large Language Models (LLMs) has emerged as a promising approach to assist complex human decision-making. While post-training has become a pivotal technique to enhance LLMs' capabilities in this domain, its effectiveness is severely constrained by the scarcity and underutilization of high-quality training data. However, through a detailed profiling of error patterns across various problem-response pairs drawn from post-training, we identify two fundamental limitations of existing automated optimization modeling approaches: (L1) the sparsity of error-specific problems and (L2) the sparse rewards associated with difficult problems. We demonstrate that these limitations can result in suboptimal performance in domain-specific post-training for LLMs. To tackle the above two limitations, we propose a novel error-driven learning framework -- namely, auto\\textbf{m}ated opt\\textbf{i}mization modeli\\textbf{n}g via a localizable error-\\textbf{d}riven perspective (MIND) -- that customizes the whole model training framework from data synthesis to post-training. MIND is based on our key observation of the unique localizable patterns in error propagation of optimization modelings, that is, modeling errors may remain localized to specific semantic segments and do not propagate throughout the entire solution. Thus, in contrast to holistic reasoning tasks such as mathematical proofs, MIND leverages the construction of a focused, high-density training corpus and proposes \\textbf{D}ynamic Supervised \\textbf{F}ine-Tuning \\textbf{P}olicy \\textbf{O}ptimization (DFPO) to tackle difficult problems through localized refinement. Experiments on six benchmarks demonstrate that MIND consistently outperforms all the state-of-the-art automated optimization modeling approaches.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Assessing LLM Reliability on Temporally Recent Open-Domain Questions",
-      "link": "https://arxiv.org/abs/2602.11165",
-      "snippet": "arXiv:2602.11165v1 Announce Type: cross \nAbstract: Large Language Models (LLMs) are increasingly deployed for open-domain question answering, yet their alignment with human perspectives on temporally recent information remains underexplored. We introduce RECOM (Reddit Evaluation for Correspondence of Models), a benchmark dataset of 15,000 recent Reddit questions from September 2025 paired with community-derived reference answers. We investigate how four open-source LLMs (Llama3.1-8B, Mistral-7B, Gemma-2-9B, and GPT-OSS-20B) respond to these questions, evaluating alignment using lexical metrics (BLEU, ROUGE), semantic similarity (BERTScore, MoverScore, cosine similarity), and logical inference (NLI). Our central finding is a striking semantic-lexical paradox: all models achieve over 99% cosine similarity with references despite less than 8% BLEU-1 overlap, a 90+ percentage point gap indicating that models preserve meaning through extensive paraphrasing rather than lexical reproduction. MoverScore (51-53%) confirms this pattern, occupying an intermediate position that reflects the optimal transport cost of semantic alignment. Furthermore, model scale does not predict performance: Mistral-7B (7B parameters) outperforms GPT-OSS-20B (20B parameters) across all metrics. NLI analysis reveals that contradiction rates remain below 7%, suggesting models rarely generate content that directly conflicts with human consensus. These findings challenge the reliability of lexical metrics for evaluating abstractive generation and argue for multi-dimensional evaluation frameworks that capture semantic fidelity beyond surface-level text matching. The RECOM dataset is publicly available at https://anonymous.4open.science/r/recom-D4B0",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Small Updates, Big Doubts: Does Parameter-Efficient Fine-tuning Enhance Hallucination Detection ?",
-      "link": "https://arxiv.org/abs/2602.11166",
-      "snippet": "arXiv:2602.11166v1 Announce Type: cross \nAbstract: Parameter-efficient fine-tuning (PEFT) methods are widely used to adapt large language models (LLMs) to downstream tasks and are often assumed to improve factual correctness. However, how the parameter-efficient fine-tuning methods affect hallucination behavior remains insufficiently understood, especially on QA datasets. In this work, we systematically investigate the impact of PEFT on hallucination detection through a comprehensive empirical study across three open-weight LLM backbones and three fact-seeking QA benchmarks. For each model, we evaluate performance using seven unsupervised hallucination detection methods spanning three complementary approaches: semantic consistency based detectors, confidence based detectors, and entropy based detectors. This multifaceted evaluation enables us to characterize how PEFT reshapes uncertainty across different detection paradigms. In conclusion, our experimental results show that PEFT consistently strengthens hallucination detection ability, substantially improving AUROC across a wide range of hallucination detectors. Besides, further analyses using linear probes and representation diagnostics indicate that PEFT methods primarily reshapes how uncertainty is encoded and surfaced, comparing with injecting new factual knowledge into the models.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Visualizing and Benchmarking LLM Factual Hallucination Tendencies via Internal State Analysis and Clustering",
-      "link": "https://arxiv.org/abs/2602.11167",
-      "snippet": "arXiv:2602.11167v1 Announce Type: cross \nAbstract: Large Language Models (LLMs) often hallucinate, generating nonsensical or false information that can be especially harmful in sensitive fields such as medicine or law. To study this phenomenon systematically, we introduce FalseCite, a curated dataset designed to capture and benchmark hallucinated responses induced by misleading or fabricated citations. Running GPT-4o-mini, Falcon-7B, and Mistral 7-B through FalseCite, we observed a noticeable increase in hallucination activity for false claims with deceptive citations, especially in GPT-4o-mini. Using the responses from FalseCite, we can also analyze the internal states of hallucinating models, visualizing and clustering the hidden state vectors. From this analysis, we noticed that the hidden state vectors, regardless of hallucination or non-hallucination, tend to trace out a distinct horn-like shape. Our work underscores FalseCite's potential as a foundation for evaluating and mitigating hallucinations in future LLM research.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Enhancing SDG-Text Classification with Combinatorial Fusion Analysis and Generative AI",
-      "link": "https://arxiv.org/abs/2602.11168",
-      "snippet": "arXiv:2602.11168v1 Announce Type: cross \nAbstract: (Natural Language Processing) NLP techniques such as text classification and topic discovery are very useful in many application areas including information retrieval, knowledge discovery, policy formulation, and decision-making. However, it remains a challenging problem in cases where the categories are unavailable, difficult to differentiate, or are interrelated. Social analysis with human context is an area that can benefit from text classification, as it relies substantially on text data. The focus of this paper is to enhance the classification of text according to the UN's Sustainable Development Goals (SDGs) by collecting and combining intelligence from multiple models. Combinatorial Fusion Analysis (CFA), a system fusion paradigm using a rank-score characteristic (RSC) function and cognitive diversity (CD), has been used to enhance classifier methods by combining a set of relatively good and mutually diverse classification models. We use a generative AI model to generate synthetic data for model training and then apply CFA to this classification task. The CFA technique achieves 96.73% performance, outperforming the best individual model. We compare the outcomes with those obtained from human domain experts. It is demonstrated that combining intelligence from multiple ML/AI models using CFA and getting input from human experts can, not only complement, but also enhance each other.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Disentangling Direction and Magnitude in Transformer Representations: A Double Dissociation Through L2-Matched Perturbation Analysis",
-      "link": "https://arxiv.org/abs/2602.11169",
-      "snippet": "arXiv:2602.11169v1 Announce Type: cross \nAbstract: Transformer hidden states encode information as high-dimensional vectors, yet whether direction (orientation in representational space) and magnitude (vector norm) serve distinct functional roles remains unclear. Studying Pythia-family models, we discover a striking cross-over dissociation: angular perturbations cause up to 42.9 more damage to language modeling loss, while magnitude perturbations cause disproportionately more damage to syntactic processing (20.4% vs.1.6% accuracy drop on subject-verb agreement).This finding is enabled by L2-matched perturbation analysis, a methodology ensuring that an gular and magnitude perturbations achieve identical Euclidean displacements. Causal intervention reveals that angular damage flows substantially through the attention pathways (28.4% loss recovery via attention repair), while magnitude damage flows partly through the LayerNorm pathways(29.9% recovery via LayerNorm repair). These patterns replicate across scales within the Pythia architecture family. These findings provide evidence that direction and magnitude support partially distinct computational roles in LayerNorm based architectures. The direction preferentially affects attentional routing, while magnitude modulates processing intensity for fine-grained syntactic judgments. We find different patterns in RMSNorm-based architectures, suggesting that the dissociation depends on architectural choices. Our results refine the linear representation hypothesis and have implications for model editing and interpretability research",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Efficient Hyper-Parameter Search for LoRA via Language-aided Bayesian Optimization",
-      "link": "https://arxiv.org/abs/2602.11171",
-      "snippet": "arXiv:2602.11171v1 Announce Type: cross \nAbstract: Fine-tuning Large Language Models (LLMs) with Low-Rank Adaptation (LoRA) enables resource-efficient personalization or specialization, but it comes at the expense of additional hyperparameter tuning. Although LoRA makes fine-tuning efficient, it is highly sensitive to the choice of hyperparameters, and exhaustive hyperparameter search is still computationally very demanding. To address these challenges, we propose a framework that integrates the domain knowledge of pre-trained LLMs into Bayesian Optimization (BO) to efficiently search for LoRA hyperparameters. To leverage the informed knowledge of LLMs, we repurpose LLMs as a discrete-to-continuous mapping to link the hyperparameters and their domain knowledge with a continuous vector space, where BO is conducted. We design and control the mapping by language prompting, where we provide a domain-aware textual prompt describing the relationships among hyperparameters and their respective roles; thereby, we explicitly inject domain knowledge about LoRA into the LLM in natural language. Also, we model the residual information that is hard to linguistically describe in the prompt with an additional learnable token. This aids BO to sample more high-performing hyperparameters. In addition, by leveraging the observation of the strong correlation between the respective performance obtained from full and subset training datasets in LoRA training regimes, we introduce proxy training and evaluation with a data subset. This further increases the efficiency of our method. We demonstrate that our hyperparameter found with only about 30 iterations achieves more than 20% performance improvement over standard hyperparameters found from about 45,000 combinations.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "The Script Tax: Measuring Tokenization-Driven Efficiency and Latency Disparities in Multilingual Language Models",
-      "link": "https://arxiv.org/abs/2602.11174",
-      "snippet": "arXiv:2602.11174v1 Announce Type: cross \nAbstract: Pretrained multilingual language models are often assumed to be script-agnostic, yet their tokenizers can impose systematic costs on certain writing systems. We quantify this script tax by comparing two orthographic variants with identical linguistic content. Across mBERT and XLM-R, the higher-fragmentation orthography shows a ~3.4x increase in fertility (6.73-6.85 vs. 2.10-2.35 tokens/word), leading to a 16.5x inference slowdown (0.23 vs. 3.8 sentences/second) on identical hardware. Using bits per character (BPC) to avoid the \"NLL paradox\" from subword fragmentation, we find a substantial increase in information cost: +19.7% for mBERT (8.06->9.65) and +47.1% for XLM-R (12.19->17.94). A round-trip conversion check (CER_rt=0.31) suggests these gaps reflect orthography-conditioned processing rather than mapping noise. Our results highlight tokenization as a key source of inequity in multilingual NLP and motivate script-aware tokenization and pretraining.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Evaluating Few-Shot Temporal Reasoning of LLMs for Human Activity Prediction in Smart Environments",
-      "link": "https://arxiv.org/abs/2602.11176",
-      "snippet": "arXiv:2602.11176v1 Announce Type: cross \nAbstract: Anticipating human activities and their durations is essential in applications such as smart-home automation, simulation-based architectural and urban design, activity-based transportation system simulation, and human-robot collaboration, where adaptive systems must respond to human activities. Existing data-driven agent-based models--from rule-based to deep learning--struggle in low-data environments, limiting their practicality. This paper investigates whether large language models, pre-trained on broad human knowledge, can fill this gap by reasoning about everyday activities from compact contextual cues. We adopt a retrieval-augmented prompting strategy that integrates four sources of context--temporal, spatial, behavioral history, and persona--and evaluate it on the CASAS Aruba smart-home dataset. The evaluation spans two complementary tasks: next-activity prediction with duration estimation, and multi-step daily sequence generation, each tested with various numbers of few-shot examples provided in the prompt. Analyzing few-shot effects reveals how much contextual supervision is sufficient to balance data efficiency and predictive accuracy, particularly in low-data environments. Results show that large language models exhibit strong inherent temporal understanding of human behavior: even in zero-shot settings, they produce coherent daily activity predictions, while adding one or two demonstrations further refines duration calibration and categorical accuracy. Beyond a few examples, performance saturates, indicating diminishing returns. Sequence-level evaluation confirms consistent temporal alignment across few-shot conditions. These findings suggest that pre-trained language models can serve as promising temporal reasoners, capturing both recurring routines and context-dependent behavioral variations, thereby strengthening the behavioral modules of agent-based models.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "What Do LLMs Know About Alzheimer's Disease? Fine-Tuning, Probing, and Data Synthesis for AD Detection",
-      "link": "https://arxiv.org/abs/2602.11177",
-      "snippet": "arXiv:2602.11177v1 Announce Type: cross \nAbstract: Reliable early detection of Alzheimer's disease (AD) is challenging, particularly due to limited availability of labeled data. While large language models (LLMs) have shown strong transfer capabilities across domains, adapting them to the AD domain through supervised fine-tuning remains largely unexplored. In this work, we fine-tune an LLM for AD detection and investigate how task-relevant information is encoded within its internal representations. We employ probing techniques to analyze intermediate activations across transformer layers, and we observe that, after fine-tuning, the probing values of specific words and special markers change substantially, indicating that these elements assume a crucial role in the model's improved detection performance. Guided by this insight, we design a curated set of task-aware special markers and train a sequence-to-sequence model as a data-synthesis tool that leverages these markers to generate structurally consistent and diagnostically informative synthetic samples. We evaluate the synthesized data both intrinsically and by incorporating it into downstream training pipelines.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "From Instruction to Output: The Role of Prompting in Modern NLG",
-      "link": "https://arxiv.org/abs/2602.11179",
-      "snippet": "arXiv:2602.11179v1 Announce Type: cross \nAbstract: Prompt engineering has emerged as an integral technique for extending the strengths and abilities of Large Language Models (LLMs) to gain significant performance gains in various Natural Language Processing (NLP) tasks. This approach, which requires instructions to be composed in natural language to bring out the knowledge from LLMs in a structured way, has driven breakthroughs in various NLP tasks. Yet there is still no structured framework or coherent understanding of the varied prompt engineering methods and techniques, particularly in the field of Natural Language Generation (NLG).\n  This survey aims to help fill that gap by outlining recent developments in prompt engineering, and their effect on different NLG tasks. It reviews recent advances in prompting methods and their impact on NLG tasks, presenting prompt design as an input-level control mechanism that complements fine-tuning and decoding approaches. The paper introduces a taxonomy of prompting paradigms, a decision framework for prompt selection based on varying factors for the practitioners, outlines emerging trends and challenges, and proposes a framework that links design, optimization, and evaluation to support more controllable and generalizable NLG.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
-      "link": "https://arxiv.org/abs/2602.11184",
-      "snippet": "arXiv:2602.11184v1 Announce Type: cross \nAbstract: Mixture of Experts (MoE) models have achieved great success by significantly improving performance while maintaining computational efficiency through sparse expert activation. However, their enormous parameter sizes and memory demands pose major challenges for deployment in resource-constrained environments. Vector Quantization (VQ) offers a promising approach for ultra-low-bit compression in Large Language Models (LLMs) by leveraging a codebook, where weight vectors are mapped to the most similar discrete codewords. Yet, directly applying VQ to MoEs often leads to substantial performance degradation due to two critical obstacles: (1) redundant representations among experts cause VQ to repeatedly quantize similar representations for each expert, resulting in inefficient use of limited codebook capacity; and (2) cumulative output bias is amplified by expert aggregation in MoE layers, leading to distributional shifts in the quantized outputs. To address these issues, we propose KBVQ-MoE, a novel VQ framework to enhance extremely low-bit quantization for MoE-based LLMs. KBVQ-MoE integrates two techniques: (1) input-driven redundancy elimination, where a Karhunen-Loeve Transform (KLT) guided singular value decomposition (SVD) extracts dominant weight components and shares them across experts; and (2) bias-corrected output stabilization, where vector quantization is applied only to expert-specific (non-redundant) representations and the quantized outputs are corrected via channel-wise affine compensation. Experiments on various MoE LLMs demonstrate that KBVQ-MoE preserves accuracy substantially better than existing quantization methods. For example, 3-bit quantization of Qwen1.5-MoE-A2.7B achieves an average accuracy of 67.99, nearly identical to the FP16 baseline of 68.07, underscoring KBVQ-MoE's potential for efficient deployment on edge devices and other resource-constrained platforms.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Spectra: Rethinking Optimizers for LLMs Under Spectral Anisotropy",
-      "link": "https://arxiv.org/abs/2602.11185",
-      "snippet": "arXiv:2602.11185v1 Announce Type: cross \nAbstract: Gradient signals in LLM training are highly anisotropic: recurrent linguistic structure concentrates energy into a small set of dominant spectral directions, while context specific information resides in a long tail. We show that this spike tail separation persists throughout training, with the spike occupying only about 1.5% of directions yet dominating optimizer statistics. This dominance suppresses tail learning by contracting tail updates through second moment normalization and tightening the globally stable learning rate bound. Motivated by this analysis, we propose Spectra, a spike aware optimizer that suppresses the dominant low rank spike subspace without amplifying the noise sensitive spectral tail. Spectra tracks the spike subspace via cached, warm started power iteration and applies low rank spectral shaping with negligible overhead and substantially reduced optimizer state memory. On LLaMA3 8B trained on 50B tokens, Spectra reaches the same target loss 30% faster than AdamW, reduces per step end to end overhead by 0.7%, cuts optimizer state memory by 49.25%, and improves average downstream accuracy by 1.62%. Compared to Muon, Spectra is 5.1x faster in optimizer processing time, achieves a lower final loss, and improves average accuracy by 0.66%.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "TDPNavigator-Placer: Thermal- and Wirelength-Aware Chiplet Placement in 2.5D Systems Through Multi-Agent Reinforcement Learning",
-      "link": "https://arxiv.org/abs/2602.11187",
-      "snippet": "arXiv:2602.11187v1 Announce Type: cross \nAbstract: The rapid growth of electronics has accelerated the adoption of 2.5D integrated circuits, where effective automated chiplet placement is essential as systems scale to larger and more heterogeneous chiplet assemblies. Existing placement methods typically focus on minimizing wirelength or transforming multi-objective optimization into a single objective through weighted sum, which limits their ability to handle competing design requirements. Wirelength reduction and thermal management are inherently conflicting objectives, making prior approaches inadequate for practical deployment. To address this challenge, we propose TDPNavigator-Placer, a novel multi-agent reinforcement learning framework that dynamically optimizes placement based on chiplet's thermal design power (TDP). This approach explicitly assigns these inherently conflicting objectives to specialized agents, each operating under distinct reward mechanisms and environmental constraints within a unified placement paradigm. Experimental results demonstrate that TDPNavigator-Placer delivers a significantly improved Pareto front over state-of-the-art methods, enabling more balanced trade-offs between wirelength and thermal performance.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "MuCO: Generative Peptide Cyclization Empowered by Multi-stage Conformation Optimization",
-      "link": "https://arxiv.org/abs/2602.11189",
-      "snippet": "arXiv:2602.11189v1 Announce Type: cross \nAbstract: Modeling peptide cyclization is critical for the virtual screening of candidate peptides with desirable physical and pharmaceutical properties. This task is challenging because a cyclic peptide often exhibits diverse, ring-shaped conformations, which cannot be well captured by deterministic prediction models derived from linear peptide folding. In this study, we propose MuCO (Multi-stage Conformation Optimization), a generative peptide cyclization method that models the distribution of cyclic peptide conformations conditioned on the corresponding linear peptide. In principle, MuCO decouples the peptide cyclization task into three stages: topology-aware backbone design, generative side-chain packing, and physics-aware all-atom optimization, thereby generating and optimizing conformations of cyclic peptides in a coarse-to-fine manner. This multi-stage framework enables an efficient parallel sampling strategy for conformation generation and allows for rapid exploration of diverse, low-energy conformations. Experiments on the large-scale CPSea dataset demonstrate that MuCO significantly outperforms state-of-the-art methods in consistently in physical stability, structural diversity, secondary structure recovery, and computational efficiency, making it a promising computational tool for exploring and designing cyclic peptides.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Time-TK: A Multi-Offset Temporal Interaction Framework Combining Transformer and Kolmogorov-Arnold Networks for Time Series Forecasting",
-      "link": "https://arxiv.org/abs/2602.11190",
-      "snippet": "arXiv:2602.11190v1 Announce Type: cross \nAbstract: Time series forecasting is crucial for the World Wide Web and represents a core technical challenge in ensuring the stable and efficient operation of modern web services, such as intelligent transportation and website throughput. However, we have found that existing methods typically employ a strategy of embedding each time step as an independent token. This paradigm introduces a fundamental information bottleneck when processing long sequences, the root cause of which is that independent token embedding destroys a crucial structure within the sequence - what we term as multi-offset temporal correlation. This refers to the fine-grained dependencies embedded within the sequence that span across different time steps, which is especially prevalent in regular Web data. To fundamentally address this issue, we propose a new perspective on time series embedding. We provide an upper bound on the approximate reconstruction performance of token embedding, which guides our design of a concise yet effective Multi-Offset Time Embedding method to mitigate the performance degradation caused by standard token embedding. Furthermore, our MOTE can be integrated into various existing models and serve as a universal building block. Based on this paradigm, we further design a novel forecasting architecture named Time-TK. This architecture first utilizes a Multi-Offset Interactive KAN to learn and represent specific temporal patterns among multiple offset sub-sequences. Subsequently, it employs an efficient Multi-Offset Temporal Interaction mechanism to effectively capture the complex dependencies between these sub-sequences, achieving global information integration. Extensive experiments on 14 real-world benchmark datasets, covering domains such as traffic flow and BTC/USDT throughput, demonstrate that Time-TK significantly outperforms all baseline models, achieving state-of-the-art forecasting accuracy.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models",
-      "link": "https://arxiv.org/abs/2602.11192",
-      "snippet": "arXiv:2602.11192v1 Announce Type: cross \nAbstract: Mixture-of-Experts (MoE) model architectures can significantly reduce the number of activated parameters per token, enabling computationally efficient training and inference. However, their large overall parameter counts and model sizes have precluded their widespread usage in resource-constrained settings as all of the parameters must still be loaded into GPU memory. Prior works aim to address this memory bottleneck by offloading certain experts into CPU memory and porting them to GPU memory only when they are activated. In practice, these methods suffer from the significant I/O latency incurred by expert transfer. We present MELINOE, a method that fine-tunes an MoE model to more strongly prefer activating a smaller number of experts per sequence. Caching these preferred experts in GPU memory reduces expert churn and CPU-GPU transfer overhead. MELINOE increases throughput by $1.2-3\\times$ over efficient baselines and up to $14.7\\times$ over transfer-heavy baselines while retaining or even improving the performance of the model on a downstream task, making it a reliable method for improving MoE inference efficiency.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Position-Aware Self-supervised Representation Learning for Cross-mode Radar Signal Recognition",
-      "link": "https://arxiv.org/abs/2602.11196",
-      "snippet": "arXiv:2602.11196v1 Announce Type: cross \nAbstract: Radar signal recognition in open electromagnetic environments is challenging due to diverse operating modes and unseen radar types. Existing methods often overlook position relations in pulse sequences, limiting their ability to capture semantic dependencies over time. We propose RadarPos, a position-aware self-supervised framework that leverages pulse-level temporal dynamics without complex augmentations or masking, providing improved position relation modeling over contrastive learning or masked reconstruction. Using this framework, we evaluate cross-mode radar signal recognition under the long-tailed setting to assess adaptability and generalization. Experimental results demonstrate enhanced discriminability and robustness, highlighting practical applicability in real-world electromagnetic environments.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Hybrid operator learning of wave scattering maps in high-contrast media",
-      "link": "https://arxiv.org/abs/2602.11197",
-      "snippet": "arXiv:2602.11197v1 Announce Type: cross \nAbstract: Surrogate modeling of wave propagation and scattering (i.e. the wave speed and source to wave field map) in heterogeneous media has significant potential in applications such as seismic imaging and inversion. High-contrast settings, such as subsurface models with salt bodies, exhibit strong scattering and phase sensitivity that challenge existing neural operators. We propose a hybrid architecture that decomposes the scattering operator into two separate contributions: a smooth background propagation and a high-contrast scattering correction. The smooth component is learned with a Fourier Neural Operator (FNO), which produces globally coupled feature tokens encoding background wave propagation; these tokens are then passed to a vision transformer, where attention is used to model the high-contrast scattering correction dominated by strong, spatial interactions. Evaluated on high-frequency Helmholtz problems with strong contrasts, the hybrid model achieves substantially improved phase and amplitude accuracy compared to standalone FNOs or transformers, with favorable accuracy-parameter scaling.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "DDL2PropBank Agent: Benchmarking Multi-Agent Frameworks' Developer Experience Through a Novel Relational Schema Mapping Task",
-      "link": "https://arxiv.org/abs/2602.11198",
-      "snippet": "arXiv:2602.11198v1 Announce Type: cross \nAbstract: Multi-agent frameworks promise to simplify LLM-driven software development, yet there is no principled way to evaluate their developer experience in a controlled setting. We introduce DDL2PropBank, a novel benchmark task that maps relational database schemas to PropBank rolesets, requiring autonomous retrieval of candidate frames and fine-grained linguistic reasoning over table names, columns, and relations. Using the Agent-as-a-Tool pattern, we implement identical agent logic across 10 frameworks and evaluate along two dimensions: (i) code complexity via static analysis, and (ii) AI-assistability -- the extent to which LLMs can autonomously generate correct, framework-specific code. Our results reveal a threefold complexity spectrum, with Pydantic AI and Agno requiring the least implementation overhead. For AI-assistability, structural alignment scores reliably proxy runtime success for frameworks with single canonical patterns, but overestimate correctness for multi-pattern frameworks. Agno emerges as the strongest overall performer, combining lowest complexity with highest structural alignment and 83% pass@1.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "interwhen: A Generalizable Framework for Verifiable Reasoning with Test-time Monitors",
-      "link": "https://arxiv.org/abs/2602.11202",
-      "snippet": "arXiv:2602.11202v1 Announce Type: cross \nAbstract: We present a test-time verification framework, interwhen, that ensures that the output of a reasoning model is valid wrt. a given set of verifiers. Verified reasoning is an important goal in high-stakes scenarios such as deploying agents in the physical world or in domains such as law and finance. However, current techniques either rely on the generate-test paradigm that verifies only after the final answer is produced, or verify partial output through a step-extraction paradigm where the task execution is externally broken down into structured steps. The former is inefficient while the latter artificially restricts a model's problem solving strategies. Instead, we propose to verify a model's reasoning trace as-is, taking full advantage of a model's reasoning capabilities while verifying and steering the model's output only when needed. The key idea is meta-prompting, identifying the verifiable properties that any partial solution should satisfy and then prompting the model to follow a custom format in its trace such that partial outputs can be easily parsed and checked. We consider both self-verification and external verification and find that interwhen provides a useful abstraction to provide feedback and steer reasoning models in each case. Using self-verification, interwhen obtains state-of-the-art results on early stopping reasoning models, without any loss in accuracy. Using external verifiers, interwhen obtains 10 p.p. improvement in accuracy over test-time scaling methods, while ensuring 100% soundness and being 4x more efficient. The code for interwhen is available at https://github.com/microsoft/interwhen",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Zero-Sacrifice Persistent-Robustness Adversarial Defense for Pre-Trained Encoders",
-      "link": "https://arxiv.org/abs/2602.11204",
-      "snippet": "arXiv:2602.11204v1 Announce Type: cross \nAbstract: The widespread use of publicly available pre-trained encoders from self-supervised learning (SSL) has exposed a critical vulnerability: their susceptibility to downstream-agnostic adversarial examples (DAEs), which are crafted without knowledge of the downstream tasks but capable of misleading downstream models. While several defense methods have been explored recently, they rely primarily on task-specific adversarial fine-tuning, which inevitably limits generalizability and causes catastrophic forgetting and deteriorates benign performance. Different with previous works, we propose a more rigorous defense goal that requires only a single tuning for diverse downstream tasks to defend against DAEs and preserve benign performance. To achieve this defense goal, we introduce Zero-Sacrifice Persistent-Robustness Adversarial Defense (ZePAD), which is inspired by the inherent sensitivity of neural networks to data characteristics. Specifically, ZePAD is a dual-branch structure, which consists of a Multi-Pattern Adversarial Enhancement Branch (MPAE-Branch) that uses two adversarially fine-tuned encoders to strengthen adversarial resistance. The Benign Memory Preservation Branch (BMP-Branch) is trained on local data to ensure adversarial robustness does not compromise benign performance. Surprisingly, we find that ZePAD can directly detect DAEs by evaluating branch confidence, without introducing any adversarial exsample identification task during training. Notably, by enriching feature diversity, our method enables a single adversarial fine-tuning to defend against DAEs across downstream tasks, thereby achieving persistent robustness. Extensive experiments on 11 SSL methods and 6 datasets validate its effectiveness. In certain cases, it achieves a 29.20% improvement in benign performance and a 73.86% gain in adversarial robustness, highlighting its zero-sacrifice property.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "UltraLIF: Fully Differentiable Spiking Neural Networks via Ultradiscretization and Max-Plus Algebra",
-      "link": "https://arxiv.org/abs/2602.11206",
-      "snippet": "arXiv:2602.11206v1 Announce Type: cross \nAbstract: Spiking Neural Networks (SNNs) offer energy-efficient, biologically plausible computation but suffer from non-differentiable spike generation, necessitating reliance on heuristic surrogate gradients. This paper introduces UltraLIF, a principled framework that replaces surrogate gradients with ultradiscretization, a mathematical formalism from tropical geometry providing continuous relaxations of discrete dynamics. The central insight is that the max-plus semiring underlying ultradiscretization naturally models neural threshold dynamics: the log-sum-exp function serves as a differentiable soft-maximum that converges to hard thresholding as a learnable temperature parameter $\\eps \\to 0$. Two neuron models are derived from distinct dynamical systems: UltraLIF from the LIF ordinary differential equation (temporal dynamics) and UltraDLIF from the diffusion equation modeling gap junction coupling across neuronal populations (spatial dynamics). Both yield fully differentiable SNNs trainable via standard backpropagation with no forward-backward mismatch. Theoretical analysis establishes pointwise convergence to classical LIF dynamics with quantitative error bounds and bounded non-vanishing gradients. Experiments on six benchmarks spanning static images, neuromorphic vision, and audio demonstrate improvements over surrogate gradient baselines, with gains most pronounced in single-timestep ($T{=}1$) settings on neuromorphic and temporal datasets. An optional sparsity penalty enables significant energy reduction while maintaining competitive accuracy.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "SWE-MiniSandbox: Container-Free Reinforcement Learning for Building Software Engineering Agents",
-      "link": "https://arxiv.org/abs/2602.11210",
-      "snippet": "arXiv:2602.11210v1 Announce Type: cross \nAbstract: Reinforcement learning (RL) has become a key paradigm for training software engineering (SWE) agents, but existing pipelines typically rely on per-task containers for isolation. At scale, pre-built container images incur substantial storage overhead, slow environment setup, and require container-management privileges. We propose SWE-MiniSandbox, a lightweight, container-free method that enables scalable RL training of SWE agents without sacrificing isolation. Instead of relying on per-instance containers, SWE-MiniSandbox executes each task in an isolated workspace backed by kernel-level mechanisms, substantially reducing system overhead. It leverages lightweight environment pre-caching techniques to eliminate the need for bulky container images. As a result, our approach lowers disk usage to approximately 5\\% of that required by container-based pipelines and reduces environment preparation time to about 25\\% of the container baseline. Empirical results demonstrate that SWE-MiniSandbox achieves evaluation performance comparable to standard container-based pipelines. By removing the dependency on heavy container infrastructure, SWE-MiniSandbox offers a practical and accessible foundation for scaling RL-based SWE agents, particularly in resource-constrained research environments.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Credal Concept Bottleneck Models: Structural Separation of Epistemic and Aleatoric Uncertainty",
-      "link": "https://arxiv.org/abs/2602.11219",
-      "snippet": "arXiv:2602.11219v1 Announce Type: cross \nAbstract: Decomposing predictive uncertainty into epistemic (model ignorance) and aleatoric (data ambiguity) components is central to reliable decision making, yet most methods estimate both from the same predictive distribution. Recent empirical and theoretical results show these estimates are typically strongly correlated, so changes in predictive spread simultaneously affect both components and blur their semantics. We propose a credal-set formulation in which uncertainty is represented as a set of predictive distributions, so that epistemic and aleatoric uncertainty correspond to distinct geometric properties: the size of the set versus the noise within its elements. We instantiate this idea in a Variational Credal Concept Bottleneck Model with two disjoint uncertainty heads trained by disjoint objectives and non-overlapping gradient paths, yielding separation by construction rather than post hoc decomposition. Across multi-annotator benchmarks, our approach reduces the correlation between epistemic and aleatoric uncertainty by over an order of magnitude compared to standard methods, while improving the alignment of epistemic uncertainty with prediction error and aleatoric uncertainty with ground-truth ambiguity.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "AI-Driven Clinical Decision Support System for Enhanced Diabetes Diagnosis and Management",
-      "link": "https://arxiv.org/abs/2602.11237",
-      "snippet": "arXiv:2602.11237v1 Announce Type: cross \nAbstract: Identifying type 2 diabetes mellitus can be challenging, particularly for primary care physicians. Clinical decision support systems incorporating artificial intelligence (AI-CDSS) can assist medical professionals in diagnosing type 2 diabetes with high accuracy. This study aimed to assess an AI-CDSS specifically developed for the diagnosis of type 2 diabetes by employing a hybrid approach that integrates expert-driven insights with machine learning techniques. The AI-CDSS was developed (training dataset: n = 650) and tested (test dataset: n = 648) using a dataset of 1298 patients with and without type 2 diabetes. To generate predictions, the algorithm utilized key features such as body mass index, plasma fasting glucose, and hemoglobin A1C. Furthermore, a clinical pilot study involving 105 patients was conducted to assess the diagnostic accuracy of the system in comparison to non-endocrinology specialists. The AI-CDSS showed a high degree of accuracy, with 99.8% accuracy in predicting diabetes, 99.3% in predicting prediabetes, 99.2% in identifying at-risk individuals, and 98.8% in predicting no diabetes. The test dataset revealed a 98.8% agreement between endocrinology specialists and the AI-CDSS. Type 2 diabetes was identified in 45% of 105 individuals in the pilot study. Compared with diabetes specialists, the AI-CDSS scored a 98.5% concordance rate, greatly exceeding that of nonendocrinology specialists, who had an 85% agreement rate. These findings indicate that the AI-CDSS has the potential to be a useful tool for accurately identifying type 2 diabetes, especially in situations in which diabetes specialists are not readily available.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Toward Reliable Tea Leaf Disease Diagnosis Using Deep Learning Model: Enhancing Robustness With Explainable AI and Adversarial Training",
-      "link": "https://arxiv.org/abs/2602.11239",
-      "snippet": "arXiv:2602.11239v1 Announce Type: cross \nAbstract: Tea is a valuable asset for the economy of Bangladesh. So, tea cultivation plays an important role to boost the economy. These valuable plants are vulnerable to various kinds of leaf infections which may cause less production and low quality. It is not so easy to detect these diseases manually. It may take time and there could be some errors in the detection.Therefore, the purpose of the study is to develop an automated deep learning model for tea leaf disease classification based on the teaLeafBD dataset so that anyone can detect the diseases more easily and efficiently. There are 5,278 high-resolution images in this dataset. The images are classified into seven categories. Six of them represents various diseases and the rest one represents healthy leaves. The proposed pipeline contains data preprocessing, data splitting, adversarial training, augmentation, model training, evaluation, and comprehension made possible with Explainable AI strategies. DenseNet201 and EfficientNetB3 were employed to perform the classification task. To prepare the model more robustly, we applied adversarial training so it can operate effectively even with noisy or disturbed inputs. In addition, Grad-CAM visualization was executed to analyze the model's predictions by identifying the most influential regions of each image. Our experimental outcomes revealed that EfficientNetB3 achieved the highest classification accuracy of 93%, while DenseNet201 reached 91%. The outcomes prove that the effectiveness of the proposed approach can accurately detect tea leaf diseases and provide a practical solution for advanced agricultural management.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "How Many Features Can a Language Model Store Under the Linear Representation Hypothesis?",
-      "link": "https://arxiv.org/abs/2602.11246",
-      "snippet": "arXiv:2602.11246v1 Announce Type: cross \nAbstract: We introduce a mathematical framework for the linear representation hypothesis (LRH), which asserts that intermediate layers of language models store features linearly. We separate the hypothesis into two claims: linear representation (features are linearly embedded in neuron activations) and linear accessibility (features can be linearly decoded). We then ask: How many neurons $d$ suffice to both linearly represent and linearly access $m$ features? Classical results in compressed sensing imply that for $k$-sparse inputs, $d = O(k\\log (m/k))$ suffices if we allow non-linear decoding algorithms (Candes and Tao, 2006; Candes et al., 2006; Donoho, 2006). However, the additional requirement of linear decoding takes the problem out of the classical compressed sensing, into linear compressed sensing.\n  Our main theoretical result establishes nearly-matching upper and lower bounds for linear compressed sensing. We prove that $d = \\Omega_\\epsilon(\\frac{k^2}{\\log k}\\log (m/k))$ is required while $d = O_\\epsilon(k^2\\log m)$ suffices. The lower bound establishes a quantitative gap between classical and linear compressed setting, illustrating how linear accessibility is a meaningfully stronger hypothesis than linear representation alone. The upper bound confirms that neurons can store an exponential number of features under the LRH, giving theoretical evidence for the \"superposition hypothesis\" (Elhage et al., 2022).\n  The upper bound proof uses standard random constructions of matrices with approximately orthogonal columns. The lower bound proof uses rank bounds for near-identity matrices (Alon, 2003) together with Tur\\'an's theorem (bounding the number of edges in clique-free graphs). We also show how our results do and do not constrain the geometry of feature representations and extend our results to allow decoders with an activation function and bias.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "DeepRed: an architecture for redshift estimation",
-      "link": "https://arxiv.org/abs/2602.11281",
-      "snippet": "arXiv:2602.11281v1 Announce Type: cross \nAbstract: Estimating redshift is a central task in astrophysics, but its measurement is costly and time-consuming. In addition, current image-based methods are often validated on homogeneous datasets. The development and comparison of networks able generalize across different morphologies, ranging from galaxies to gravitationally-lensed transients, and observational conditions, remain an open challenge. This work proposes DeepRed, a deep learning pipeline that demonstrates how modern computer vision architectures, including ResNet, EfficientNet, Swin Transformer, and MLP-Mixer, can estimate redshifts from images of galaxies, gravitational lenses, and gravitationally-lensed supernovae. We compare these architectures and their ensemble to both neural networks (A1, A3, NetZ, and PhotoZ) and a feature-based method (HOG+SVR) on simulated (DeepGraviLens) and real (KiDS, SDSS) datasets. Our approach achieves state-of-the-art results on all datasets. On DeepGraviLens, DeepRed achieves a significant improvement in the Normalized Mean Absolute Deviation compared to the best baseline (PhotoZ): 55% on DES-deep (using EfficientNet), 51% on DES-wide (Ensemble), 52% on DESI-DOT (Ensemble), and 46% on LSST-wide (Ensemble). On real observations from the KiDS survey, the pipeline outperforms the best baseline (NetZ), improving NMAD by 16% on a general test set without high-probability lenses (Ensemble) and 27% on high-probability lenses (Ensemble). For non-lensed galaxies in the SDSS dataset, the MLP-Mixer architecture achieves a 5% improvement over the best baselines (A3 and NetZ). SHAP shows that the models correctly focus on the objects of interest with over 95% localization accuracy on high-quality images, validating the reliability of the predictions. These findings suggest that deep learning is a scalable, robust, and interpretable solution for redshift estimation in large-scale surveys.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "HiFloat4 Format for Language Model Inference",
-      "link": "https://arxiv.org/abs/2602.11287",
-      "snippet": "arXiv:2602.11287v1 Announce Type: cross \nAbstract: This paper introduces HiFloat4 (HiF4), a block floating-point data format tailored for deep learning. Each HiF4 unit packs 64 4-bit elements with 32 bits of shared scaling metadata, averaging 4.5 bits per value. The metadata specifies a three-level scaling hierarchy, capturing inter- and intra-group dynamic range while improving the utilization of the representational space. In addition, the large 64-element group size enables matrix multiplications to be executed in a highly fixed-point manner, significantly reducing hardware area and power consumption. To evaluate the proposed format, we conducted inference experiments on several language models, including LLaMA, Qwen, Mistral, DeepSeek-V3.1 and LongCat. Results show that HiF4 achieves higher average accuracy than the state-of-the-art NVFP4 format across multiple models and diverse downstream tasks.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
-      "link": "https://arxiv.org/abs/2602.11304",
-      "snippet": "arXiv:2602.11304v1 Announce Type: cross \nAbstract: Modern analyst agents must reason over complex, high token inputs, including dozens of retrieved documents, tool outputs, and time sensitive data. While prior work has produced tool calling benchmarks and examined factuality in knowledge augmented systems, relatively little work studies their intersection: settings where LLMs must integrate large volumes of dynamic, structured and unstructured multi tool outputs. We investigate LLM failure modes in this regime using crypto as a representative high data density domain. We introduce (1) CryptoAnalystBench, an analyst aligned benchmark of 198 production crypto and DeFi queries spanning 11 categories; (2) an agentic harness equipped with relevant crypto and DeFi tools to generate responses across multiple frontier LLMs; and (3) an evaluation pipeline with citation verification and an LLM as a judge rubric spanning four user defined success dimensions: relevance, temporal relevance, depth, and data consistency. Using human annotation, we develop a taxonomy of seven higher order error types that are not reliably captured by factuality checks or LLM based quality scoring. We find that these failures persist even in state of the art systems and can compromise high stakes decisions. Based on this taxonomy, we refine the judge rubric to better capture these errors. While the judge does not align with human annotators on precise scoring across rubric iterations, it reliably identifies critical failure modes, enabling scalable feedback for developers and researchers studying analyst style agents. We release CryptoAnalystBench with annotated queries, the evaluation pipeline, judge rubrics, and the error taxonomy, and outline mitigation strategies and open challenges in evaluating long form, multi tool augmented systems.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Predictive Associative Memory: Retrieval Beyond Similarity Through Temporal Co-occurrence",
-      "link": "https://arxiv.org/abs/2602.11322",
-      "snippet": "arXiv:2602.11322v1 Announce Type: cross \nAbstract: Current approaches to memory in neural systems rely on similarity-based retrieval: given a query, find the most representationally similar stored state. This assumption -- that useful memories are similar memories -- fails to capture a fundamental property of biological memory: association through temporal co-occurrence. We propose Predictive Associative Memory (PAM), an architecture in which a JEPA-style predictor, trained on temporal co-occurrence within a continuous experience stream, learns to navigate the associative structure of an embedding space. We introduce an Inward JEPA that operates over stored experience (predicting associatively reachable past states) as the complement to the standard Outward JEPA that operates over incoming sensory data (predicting future states). We evaluate PAM as an associative recall system -- testing faithfulness of recall for experienced associations -- rather than as a retrieval system evaluated on generalisation to unseen associations. On a synthetic benchmark, the predictor's top retrieval is a true temporal associate 97% of the time (Association Precision@1 = 0.970); it achieves cross-boundary Recall@20 = 0.421 where cosine similarity scores zero; and it separates experienced-together from never-experienced-together states with a discrimination AUC of 0.916 (cosine: 0.789). Even restricted to cross-room pairs where embedding similarity is uninformative, the predictor achieves AUC = 0.849 (cosine: 0.503, chance). A temporal shuffle control confirms the signal is genuine temporal co-occurrence structure, not embedding geometry: shuffling collapses cross-boundary recall by 90%, replicated across training seeds. All results are stable across seeds (SD < 0.006) and query selections (SD $\\leq$ 0.012).",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP",
-      "link": "https://arxiv.org/abs/2602.11327",
-      "snippet": "arXiv:2602.11327v1 Announce Type: cross \nAbstract: The rapid development of the AI agent communication protocols, including the Model Context Protocol (MCP), Agent2Agent (A2A), Agora, and Agent Network Protocol (ANP), is reshaping how AI agents communicate with tools, services, and each other. While these protocols support scalable multi-agent interaction and cross-organizational interoperability, their security principles remain understudied, and standardized threat modeling is limited; no protocol-centric risk assessment framework has been established yet. This paper presents a systematic security analysis of four emerging AI agent communication protocols. First, we develop a structured threat modeling analysis that examines protocol architectures, trust assumptions, interaction patterns, and lifecycle behaviors to identify protocol-specific and cross-protocol risk surfaces. Second, we introduce a qualitative risk assessment framework that identifies twelve protocol-level risks and evaluates security posture across the creation, operation, and update phases through systematic assessment of likelihood, impact, and overall protocol risk, with implications for secure deployment and future standardization. Third, we provide a measurement-driven case study on MCP that formalizes the risk of missing mandatory validation/attestation for executable components as a falsifiable security claim by quantifying wrong-provider tool execution under multi-server composition across representative resolver policies. Collectively, our results highlight key design-induced risk surfaces and provide actionable guidance for secure deployment and future standardization of agent communication ecosystems.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
-      "link": "https://arxiv.org/abs/2602.11337",
-      "snippet": "arXiv:2602.11337v1 Announce Type: cross \nAbstract: Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets and tooling, we provide a foundation for scalable data generation, policy training, and benchmark creation for robot learning research.",
-      "publishedAt": "2026-02-04T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026 - Zee News",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONy0tY0UwQkJnSUFjWGxvMHVRVjhGUjZRcW5QZEZ0dmdBWUpnNmctemgtUHhkRGplM2E0QzZOV2JYZGREcHRJN3Ntd1Y1dE5yYkszc05wNFRuZHZqZ2x4akRTM2pQdGpYSmN6ZUs3aGJyNE56VFY5WmR6RWhMeHZ3Z3RMWUlSWk5qb1FSR2w0OW9JLS1xckprMlM5eUVCcDQw0gGmAUFVX3lxTE1Ma19nd1hJV1dBdVRuRXFzeUJxXzVSelM4RjZsUVFPZTczenlmZlgyc21tQUVfRGV4Z2prWWhBSl9RTjNSS1VQZ2xIVHFjbkFQcTh3d2ZLOGRINW5QTFNZWVpldFJjQTRqUTZhcnlVOGljRXgyaWhRNEdCc3ZzYlZfQk9oOHhrcm4wSDZvNzlWOUdCZkNnUzZKaHNzSzFzOUFpYzZlNFE?oc=5",
-      "snippet": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026  Zee News",
-      "publishedAt": "2026-02-04T02:54:41.000Z",
-      "source": "Google News • Fact Check (India)",
-      "theme": "misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Union Minister Pradhan vows to protect farmers; slams Congress for ‘misinformation’ - The New Indian Express",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOW1KRzhDd3QtNklSQzJQcXl4SkRWVXJBT3F3ZXVPbmlQM2J6M3RvV01PeXJFTkRoOFpxamp6SG9sOWpreXVNdWlDV2lyZWdrd25jc1B2ZllvblpETkw1cDRhcjNJU2VmMFp6Qkhvck5DUVMwMFhzLVNwcGNYNHVRVUF3LTZwdTZPXzJXdlNzN1R4bE4xUzd3UmZTakJxckR3NUI5MjMzRFpTYlBScG9HQjZxdnp2RDlLb0xNWWdwbUdBOWV0R0RXUEg1RDPSAdoBQVVfeXFMTjZ4a2ZON3NjUllqZHNSc2tBb2N3cmNENGw2VlZFcGhmYUdwTjJHb04tLW1PcGZ0dTR2S0FXX2hSeVJTMU9kUGhKaVhlNFJrQ1VJREU3WVo5U3hWLVdQVTJzOGNEMmpkN3cwemd5SFhiTVFlSlQ2VXpSaTJ6dmt1aEFsaEI4aTNFV1Q2bzBuQUZYNzVHMlJzLXhiV3lyUUNncmlyY3pNLVRBVU55RHBiQWVFd21Id2dZZV9iUEF5OXB0dFFtZ19lY29lcjQ1WUdLZTlJdWloVlpLUFE?oc=5",
-      "snippet": "Union Minister Pradhan vows to protect farmers; slams Congress for ‘misinformation’  The New Indian Express",
-      "publishedAt": "2026-02-04T02:45:47.000Z",
-      "source": "Google News • Misinformation (India)",
-      "theme": "misinformation",
-      "type": "News"
-    },
-    {
-      "title": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms - The Logical Indian",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWUxKMzU1Vzd3X0xyeHUtWk9xYVZYdEx6WnJSZ2ZNY3hqdmVHTkdrMHM2T3FCclNDVGJEUEpQUmJRVnBmNUlyODRkc1pzSXFBTlgtYjhnc2pGVkRzUmJlVFc2THo2UXI5V01uMHdJQ0x3SjZHVGY4VmJMSmhvQVpOQU1jUVZDUV81Z3hyUXFrRXgwYnFnRHE4WVAxQlpoX0tKR0FxRlgteEU4YjBLM195c2lCMXFDMkZ5QzFoRi1zb0lUYjVwSFVxTWhERlNmaU0?oc=5",
-      "snippet": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms  The Logical Indian",
-      "publishedAt": "2026-02-04T06:00:18.000Z",
-      "source": "Google News • Misinformation (India)",
-      "theme": "misinformation",
       "type": "News"
     }
   ]

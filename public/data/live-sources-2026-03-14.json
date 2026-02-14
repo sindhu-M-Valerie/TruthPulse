@@ -1,251 +1,34 @@
 {
-  "generatedAt": "2026-02-14T03:13:24.836Z",
+  "generatedAt": "2026-02-14T16:36:24.416675Z",
   "filters": {
     "theme": null,
     "type": "news"
   },
-  "stats": {
-    "total": 120,
-    "news": 120,
-    "publicConversations": 0
-  },
-  "sourceStatus": [
-    {
-      "label": "Google News • Violence and Violent Crime",
-      "theme": "violence",
-      "type": "News",
-      "status": "online",
-      "itemCount": 74
-    },
-    {
-      "label": "Google News • Child Abuse and Nudity Safety",
-      "theme": "child-abuse-nudity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Sexual Exploitation Online",
-      "theme": "sexual-exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 77
-    },
-    {
-      "label": "Google News • Human Exploitation Abuse",
-      "theme": "human-exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 59
-    },
-    {
-      "label": "Google News • Misinformation (India)",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Fact Check (India)",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Online Hate (India)",
-      "theme": "hate",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Online Exploitation (India)",
-      "theme": "exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 41
-    },
-    {
-      "label": "Google News • Suicide and Self-Harm (India)",
-      "theme": "suicide-self-harm",
-      "type": "News",
-      "status": "online",
-      "itemCount": 75
-    },
-    {
-      "label": "Google News • Violent Speech (India)",
-      "theme": "violent-speech",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • TVEC Terrorism (India)",
-      "theme": "tvec",
-      "type": "News",
-      "status": "online",
-      "itemCount": 62
-    },
-    {
-      "label": "Google News • Illegal Goods (India)",
-      "theme": "illegal-goods",
-      "type": "News",
-      "status": "online",
-      "itemCount": 63
-    },
-    {
-      "label": "Google News • Human Trafficking (South Asia)",
-      "theme": "human-trafficking",
-      "type": "News",
-      "status": "online",
-      "itemCount": 72
-    },
-    {
-      "label": "Google News • NCII / Revenge Porn (APAC)",
-      "theme": "ncii",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • Dangerous Criminal Organizations",
-      "theme": "dangerous-organizations",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • Harassment and Bullying",
-      "theme": "harassment-bullying",
-      "type": "News",
-      "status": "online",
-      "itemCount": 79
-    },
-    {
-      "label": "Google News • Dangerous Misinformation Endangerment",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 72
-    },
-    {
-      "label": "Google News • Spam and Inauthentic Behavior",
-      "theme": "spam-inauthentic",
-      "type": "News",
-      "status": "online",
-      "itemCount": 47
-    },
-    {
-      "label": "Google News • Malware and Abuseware Campaigns",
-      "theme": "malware",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • Cybersecurity Incidents",
-      "theme": "cybersecurity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • Fraud and Impersonation",
-      "theme": "fraud-impersonation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 70
-    },
-    {
-      "label": "PIB Fact Check",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "offline",
-      "itemCount": 0
-    },
-    {
-      "label": "BOOM Live • Fact Check",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • AI Safety Research Releases",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 65
-    },
-    {
-      "label": "Google News • AI Agent Launches",
-      "theme": "spam-inauthentic",
-      "type": "News",
-      "status": "online",
-      "itemCount": 62
-    },
-    {
-      "label": "Google News • Trust & Safety Startup Funding",
-      "theme": "fraud-impersonation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 70
-    },
-    {
-      "label": "Google News • Platform Transparency Reports",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 75
-    },
-    {
-      "label": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 333
-    },
-    {
-      "label": "Hugging Face Blog",
-      "theme": "cybersecurity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 734
-    },
-    {
-      "label": "GDELT Public News API",
-      "theme": "all",
-      "type": "News",
-      "status": "offline",
-      "itemCount": 0
-    }
-  ],
   "data": [
     {
       "title": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026 - Zee News",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONy0tY0UwQkJnSUFjWGxvMHVRVjhGUjZRcW5QZEZ0dmdBWUpnNmctemgtUHhkRGplM2E0QzZOV2JYZGREcHRJN3Ntd1Y1dE5yYkszc05wNFRuZHZqZ2x4akRTM2pQdGpYSmN6ZUs3aGJyNE56VFY5WmR6RWhMeHZ3Z3RMWUlSWk5qb1FSR2w0OW9JLS1xckprMlM5eUVCcDQw0gGmAUFVX3lxTE1Ma19nd1hJV1dBdVRuRXFzeUJxXzVSelM4RjZsUVFPZTczenlmZlgyc21tQUVfRGV4Z2prWWhBSl9RTjNSS1VQZ2xIVHFjbkFQcTh3d2ZLOGRINW5QTFNZWVpldFJjQTRqUTZhcnlVOGljRXgyaWhRNEdCc3ZzYlZfQk9oOHhrcm4wSDZvNzlWOUdCZkNnUzZKaHNzSzFzOUFpYzZlNFE?oc=5",
-      "snippet": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026  Zee News",
+      "snippet": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026\u00a0\u00a0Zee News",
       "publishedAt": "2026-03-14T02:54:41.000Z",
-      "source": "Google News • Fact Check (India)",
+      "source": "Google News \u2022 Fact Check (India)",
       "theme": "misinformation",
       "type": "News"
     },
     {
-      "title": "Union Minister Pradhan vows to protect farmers; slams Congress for ‘misinformation’ - The New Indian Express",
+      "title": "Union Minister Pradhan vows to protect farmers; slams Congress for \u2018misinformation\u2019 - The New Indian Express",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOW1KRzhDd3QtNklSQzJQcXl4SkRWVXJBT3F3ZXVPbmlQM2J6M3RvV01PeXJFTkRoOFpxamp6SG9sOWpreXVNdWlDV2lyZWdrd25jc1B2ZllvblpETkw1cDRhcjNJU2VmMFp6Qkhvck5DUVMwMFhzLVNwcGNYNHVRVUF3LTZwdTZPXzJXdlNzN1R4bE4xUzd3UmZTakJxckR3NUI5MjMzRFpTYlBScG9HQjZxdnp2RDlLb0xNWWdwbUdBOWV0R0RXUEg1RDPSAdoBQVVfeXFMTjZ4a2ZON3NjUllqZHNSc2tBb2N3cmNENGw2VlZFcGhmYUdwTjJHb04tLW1PcGZ0dTR2S0FXX2hSeVJTMU9kUGhKaVhlNFJrQ1VJREU3WVo5U3hWLVdQVTJzOGNEMmpkN3cwemd5SFhiTVFlSlQ2VXpSaTJ6dmt1aEFsaEI4aTNFV1Q2bzBuQUZYNzVHMlJzLXhiV3lyUUNncmlyY3pNLVRBVU55RHBiQWVFd21Id2dZZV9iUEF5OXB0dFFtZ19lY29lcjQ1WUdLZTlJdWloVlpLUFE?oc=5",
-      "snippet": "Union Minister Pradhan vows to protect farmers; slams Congress for ‘misinformation’  The New Indian Express",
+      "snippet": "Union Minister Pradhan vows to protect farmers; slams Congress for \u2018misinformation\u2019\u00a0\u00a0The New Indian Express",
       "publishedAt": "2026-03-14T02:45:47.000Z",
-      "source": "Google News • Misinformation (India)",
+      "source": "Google News \u2022 Misinformation (India)",
       "theme": "misinformation",
       "type": "News"
     },
     {
       "title": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms - The Logical Indian",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWUxKMzU1Vzd3X0xyeHUtWk9xYVZYdEx6WnJSZ2ZNY3hqdmVHTkdrMHM2T3FCclNDVGJEUEpQUmJRVnBmNUlyODRkc1pzSXFBTlgtYjhnc2pGVkRzUmJlVFc2THo2UXI5V01uMHdJQ0x3SjZHVGY4VmJMSmhvQVpOQU1jUVZDUV81Z3hyUXFrRXgwYnFnRHE4WVAxQlpoX0tKR0FxRlgteEU4YjBLM195c2lCMXFDMkZ5QzFoRi1zb0lUYjVwSFVxTWhERlNmaU0?oc=5",
-      "snippet": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms  The Logical Indian",
+      "snippet": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms\u00a0\u00a0The Logical Indian",
       "publishedAt": "2026-03-14T06:00:18.000Z",
-      "source": "Google News • Misinformation (India)",
+      "source": "Google News \u2022 Misinformation (India)",
       "theme": "misinformation",
       "type": "News"
     },

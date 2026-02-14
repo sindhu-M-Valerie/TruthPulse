@@ -1,251 +1,115 @@
 {
-  "generatedAt": "2026-02-14T03:13:24.836Z",
+  "generatedAt": "2026-02-14T16:36:24.387075Z",
   "filters": {
     "theme": null,
     "type": "news"
   },
-  "stats": {
-    "total": 120,
-    "news": 120,
-    "publicConversations": 0
-  },
-  "sourceStatus": [
-    {
-      "label": "Google News • Violence and Violent Crime",
-      "theme": "violence",
-      "type": "News",
-      "status": "online",
-      "itemCount": 74
-    },
-    {
-      "label": "Google News • Child Abuse and Nudity Safety",
-      "theme": "child-abuse-nudity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Sexual Exploitation Online",
-      "theme": "sexual-exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 77
-    },
-    {
-      "label": "Google News • Human Exploitation Abuse",
-      "theme": "human-exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 59
-    },
-    {
-      "label": "Google News • Misinformation (India)",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Fact Check (India)",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Online Hate (India)",
-      "theme": "hate",
-      "type": "News",
-      "status": "online",
-      "itemCount": 100
-    },
-    {
-      "label": "Google News • Online Exploitation (India)",
-      "theme": "exploitation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 41
-    },
-    {
-      "label": "Google News • Suicide and Self-Harm (India)",
-      "theme": "suicide-self-harm",
-      "type": "News",
-      "status": "online",
-      "itemCount": 75
-    },
-    {
-      "label": "Google News • Violent Speech (India)",
-      "theme": "violent-speech",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • TVEC Terrorism (India)",
-      "theme": "tvec",
-      "type": "News",
-      "status": "online",
-      "itemCount": 62
-    },
-    {
-      "label": "Google News • Illegal Goods (India)",
-      "theme": "illegal-goods",
-      "type": "News",
-      "status": "online",
-      "itemCount": 63
-    },
-    {
-      "label": "Google News • Human Trafficking (South Asia)",
-      "theme": "human-trafficking",
-      "type": "News",
-      "status": "online",
-      "itemCount": 72
-    },
-    {
-      "label": "Google News • NCII / Revenge Porn (APAC)",
-      "theme": "ncii",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • Dangerous Criminal Organizations",
-      "theme": "dangerous-organizations",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • Harassment and Bullying",
-      "theme": "harassment-bullying",
-      "type": "News",
-      "status": "online",
-      "itemCount": 79
-    },
-    {
-      "label": "Google News • Dangerous Misinformation Endangerment",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 72
-    },
-    {
-      "label": "Google News • Spam and Inauthentic Behavior",
-      "theme": "spam-inauthentic",
-      "type": "News",
-      "status": "online",
-      "itemCount": 47
-    },
-    {
-      "label": "Google News • Malware and Abuseware Campaigns",
-      "theme": "malware",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • Cybersecurity Incidents",
-      "theme": "cybersecurity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 78
-    },
-    {
-      "label": "Google News • Fraud and Impersonation",
-      "theme": "fraud-impersonation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 70
-    },
-    {
-      "label": "PIB Fact Check",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "offline",
-      "itemCount": 0
-    },
-    {
-      "label": "BOOM Live • Fact Check",
-      "theme": "misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 0
-    },
-    {
-      "label": "Google News • AI Safety Research Releases",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 65
-    },
-    {
-      "label": "Google News • AI Agent Launches",
-      "theme": "spam-inauthentic",
-      "type": "News",
-      "status": "online",
-      "itemCount": 62
-    },
-    {
-      "label": "Google News • Trust & Safety Startup Funding",
-      "theme": "fraud-impersonation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 70
-    },
-    {
-      "label": "Google News • Platform Transparency Reports",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 75
-    },
-    {
-      "label": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News",
-      "status": "online",
-      "itemCount": 333
-    },
-    {
-      "label": "Hugging Face Blog",
-      "theme": "cybersecurity",
-      "type": "News",
-      "status": "online",
-      "itemCount": 734
-    },
-    {
-      "label": "GDELT Public News API",
-      "theme": "all",
-      "type": "News",
-      "status": "offline",
-      "itemCount": 0
-    }
-  ],
   "data": [
+    {
+      "title": "AI-Driven Clinical Decision Support System for Enhanced Diabetes Diagnosis and Management",
+      "link": "https://arxiv.org/abs/2602.11237",
+      "snippet": "arXiv:2602.11237v1 Announce Type: cross \nAbstract: Identifying type 2 diabetes mellitus can be challenging, particularly for primary care physicians. Clinical decision support systems incorporating artificial intelligence (AI-CDSS) can assist medical professionals in diagnosing type 2 diabetes with high accuracy. This study aimed to assess an AI-CDSS specifically developed for the diagnosis of type 2 diabetes by employing a hybrid approach that integrates expert-driven insights with machine learning techniques. The AI-CDSS was developed (training dataset: n = 650) and tested (test dataset: n = 648) using a dataset of 1298 patients with and without type 2 diabetes. To generate predictions, the algorithm utilized key features such as body mass index, plasma fasting glucose, and hemoglobin A1C. Furthermore, a clinical pilot study involving 105 patients was conducted to assess the diagnostic accuracy of the system in comparison to non-endocrinology specialists. The AI-CDSS showed a high degree of accuracy, with 99.8% accuracy in predicting diabetes, 99.3% in predicting prediabetes, 99.2% in identifying at-risk individuals, and 98.8% in predicting no diabetes. The test dataset revealed a 98.8% agreement between endocrinology specialists and the AI-CDSS. Type 2 diabetes was identified in 45% of 105 individuals in the pilot study. Compared with diabetes specialists, the AI-CDSS scored a 98.5% concordance rate, greatly exceeding that of nonendocrinology specialists, who had an 85% agreement rate. These findings indicate that the AI-CDSS has the potential to be a useful tool for accurately identifying type 2 diabetes, especially in situations in which diabetes specialists are not readily available.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Toward Reliable Tea Leaf Disease Diagnosis Using Deep Learning Model: Enhancing Robustness With Explainable AI and Adversarial Training",
+      "link": "https://arxiv.org/abs/2602.11239",
+      "snippet": "arXiv:2602.11239v1 Announce Type: cross \nAbstract: Tea is a valuable asset for the economy of Bangladesh. So, tea cultivation plays an important role to boost the economy. These valuable plants are vulnerable to various kinds of leaf infections which may cause less production and low quality. It is not so easy to detect these diseases manually. It may take time and there could be some errors in the detection.Therefore, the purpose of the study is to develop an automated deep learning model for tea leaf disease classification based on the teaLeafBD dataset so that anyone can detect the diseases more easily and efficiently. There are 5,278 high-resolution images in this dataset. The images are classified into seven categories. Six of them represents various diseases and the rest one represents healthy leaves. The proposed pipeline contains data preprocessing, data splitting, adversarial training, augmentation, model training, evaluation, and comprehension made possible with Explainable AI strategies. DenseNet201 and EfficientNetB3 were employed to perform the classification task. To prepare the model more robustly, we applied adversarial training so it can operate effectively even with noisy or disturbed inputs. In addition, Grad-CAM visualization was executed to analyze the model's predictions by identifying the most influential regions of each image. Our experimental outcomes revealed that EfficientNetB3 achieved the highest classification accuracy of 93%, while DenseNet201 reached 91%. The outcomes prove that the effectiveness of the proposed approach can accurately detect tea leaf diseases and provide a practical solution for advanced agricultural management.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "How Many Features Can a Language Model Store Under the Linear Representation Hypothesis?",
+      "link": "https://arxiv.org/abs/2602.11246",
+      "snippet": "arXiv:2602.11246v1 Announce Type: cross \nAbstract: We introduce a mathematical framework for the linear representation hypothesis (LRH), which asserts that intermediate layers of language models store features linearly. We separate the hypothesis into two claims: linear representation (features are linearly embedded in neuron activations) and linear accessibility (features can be linearly decoded). We then ask: How many neurons $d$ suffice to both linearly represent and linearly access $m$ features? Classical results in compressed sensing imply that for $k$-sparse inputs, $d = O(k\\log (m/k))$ suffices if we allow non-linear decoding algorithms (Candes and Tao, 2006; Candes et al., 2006; Donoho, 2006). However, the additional requirement of linear decoding takes the problem out of the classical compressed sensing, into linear compressed sensing.\n  Our main theoretical result establishes nearly-matching upper and lower bounds for linear compressed sensing. We prove that $d = \\Omega_\\epsilon(\\frac{k^2}{\\log k}\\log (m/k))$ is required while $d = O_\\epsilon(k^2\\log m)$ suffices. The lower bound establishes a quantitative gap between classical and linear compressed setting, illustrating how linear accessibility is a meaningfully stronger hypothesis than linear representation alone. The upper bound confirms that neurons can store an exponential number of features under the LRH, giving theoretical evidence for the \"superposition hypothesis\" (Elhage et al., 2022).\n  The upper bound proof uses standard random constructions of matrices with approximately orthogonal columns. The lower bound proof uses rank bounds for near-identity matrices (Alon, 2003) together with Tur\\'an's theorem (bounding the number of edges in clique-free graphs). We also show how our results do and do not constrain the geometry of feature representations and extend our results to allow decoders with an activation function and bias.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "DeepRed: an architecture for redshift estimation",
+      "link": "https://arxiv.org/abs/2602.11281",
+      "snippet": "arXiv:2602.11281v1 Announce Type: cross \nAbstract: Estimating redshift is a central task in astrophysics, but its measurement is costly and time-consuming. In addition, current image-based methods are often validated on homogeneous datasets. The development and comparison of networks able generalize across different morphologies, ranging from galaxies to gravitationally-lensed transients, and observational conditions, remain an open challenge. This work proposes DeepRed, a deep learning pipeline that demonstrates how modern computer vision architectures, including ResNet, EfficientNet, Swin Transformer, and MLP-Mixer, can estimate redshifts from images of galaxies, gravitational lenses, and gravitationally-lensed supernovae. We compare these architectures and their ensemble to both neural networks (A1, A3, NetZ, and PhotoZ) and a feature-based method (HOG+SVR) on simulated (DeepGraviLens) and real (KiDS, SDSS) datasets. Our approach achieves state-of-the-art results on all datasets. On DeepGraviLens, DeepRed achieves a significant improvement in the Normalized Mean Absolute Deviation compared to the best baseline (PhotoZ): 55% on DES-deep (using EfficientNet), 51% on DES-wide (Ensemble), 52% on DESI-DOT (Ensemble), and 46% on LSST-wide (Ensemble). On real observations from the KiDS survey, the pipeline outperforms the best baseline (NetZ), improving NMAD by 16% on a general test set without high-probability lenses (Ensemble) and 27% on high-probability lenses (Ensemble). For non-lensed galaxies in the SDSS dataset, the MLP-Mixer architecture achieves a 5% improvement over the best baselines (A3 and NetZ). SHAP shows that the models correctly focus on the objects of interest with over 95% localization accuracy on high-quality images, validating the reliability of the predictions. These findings suggest that deep learning is a scalable, robust, and interpretable solution for redshift estimation in large-scale surveys.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "HiFloat4 Format for Language Model Inference",
+      "link": "https://arxiv.org/abs/2602.11287",
+      "snippet": "arXiv:2602.11287v1 Announce Type: cross \nAbstract: This paper introduces HiFloat4 (HiF4), a block floating-point data format tailored for deep learning. Each HiF4 unit packs 64 4-bit elements with 32 bits of shared scaling metadata, averaging 4.5 bits per value. The metadata specifies a three-level scaling hierarchy, capturing inter- and intra-group dynamic range while improving the utilization of the representational space. In addition, the large 64-element group size enables matrix multiplications to be executed in a highly fixed-point manner, significantly reducing hardware area and power consumption. To evaluate the proposed format, we conducted inference experiments on several language models, including LLaMA, Qwen, Mistral, DeepSeek-V3.1 and LongCat. Results show that HiF4 achieves higher average accuracy than the state-of-the-art NVFP4 format across multiple models and diverse downstream tasks.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
+      "link": "https://arxiv.org/abs/2602.11304",
+      "snippet": "arXiv:2602.11304v1 Announce Type: cross \nAbstract: Modern analyst agents must reason over complex, high token inputs, including dozens of retrieved documents, tool outputs, and time sensitive data. While prior work has produced tool calling benchmarks and examined factuality in knowledge augmented systems, relatively little work studies their intersection: settings where LLMs must integrate large volumes of dynamic, structured and unstructured multi tool outputs. We investigate LLM failure modes in this regime using crypto as a representative high data density domain. We introduce (1) CryptoAnalystBench, an analyst aligned benchmark of 198 production crypto and DeFi queries spanning 11 categories; (2) an agentic harness equipped with relevant crypto and DeFi tools to generate responses across multiple frontier LLMs; and (3) an evaluation pipeline with citation verification and an LLM as a judge rubric spanning four user defined success dimensions: relevance, temporal relevance, depth, and data consistency. Using human annotation, we develop a taxonomy of seven higher order error types that are not reliably captured by factuality checks or LLM based quality scoring. We find that these failures persist even in state of the art systems and can compromise high stakes decisions. Based on this taxonomy, we refine the judge rubric to better capture these errors. While the judge does not align with human annotators on precise scoring across rubric iterations, it reliably identifies critical failure modes, enabling scalable feedback for developers and researchers studying analyst style agents. We release CryptoAnalystBench with annotated queries, the evaluation pipeline, judge rubrics, and the error taxonomy, and outline mitigation strategies and open challenges in evaluating long form, multi tool augmented systems.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Predictive Associative Memory: Retrieval Beyond Similarity Through Temporal Co-occurrence",
+      "link": "https://arxiv.org/abs/2602.11322",
+      "snippet": "arXiv:2602.11322v1 Announce Type: cross \nAbstract: Current approaches to memory in neural systems rely on similarity-based retrieval: given a query, find the most representationally similar stored state. This assumption -- that useful memories are similar memories -- fails to capture a fundamental property of biological memory: association through temporal co-occurrence. We propose Predictive Associative Memory (PAM), an architecture in which a JEPA-style predictor, trained on temporal co-occurrence within a continuous experience stream, learns to navigate the associative structure of an embedding space. We introduce an Inward JEPA that operates over stored experience (predicting associatively reachable past states) as the complement to the standard Outward JEPA that operates over incoming sensory data (predicting future states). We evaluate PAM as an associative recall system -- testing faithfulness of recall for experienced associations -- rather than as a retrieval system evaluated on generalisation to unseen associations. On a synthetic benchmark, the predictor's top retrieval is a true temporal associate 97% of the time (Association Precision@1 = 0.970); it achieves cross-boundary Recall@20 = 0.421 where cosine similarity scores zero; and it separates experienced-together from never-experienced-together states with a discrimination AUC of 0.916 (cosine: 0.789). Even restricted to cross-room pairs where embedding similarity is uninformative, the predictor achieves AUC = 0.849 (cosine: 0.503, chance). A temporal shuffle control confirms the signal is genuine temporal co-occurrence structure, not embedding geometry: shuffling collapses cross-boundary recall by 90%, replicated across training seeds. All results are stable across seeds (SD < 0.006) and query selections (SD $\\leq$ 0.012).",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP",
+      "link": "https://arxiv.org/abs/2602.11327",
+      "snippet": "arXiv:2602.11327v1 Announce Type: cross \nAbstract: The rapid development of the AI agent communication protocols, including the Model Context Protocol (MCP), Agent2Agent (A2A), Agora, and Agent Network Protocol (ANP), is reshaping how AI agents communicate with tools, services, and each other. While these protocols support scalable multi-agent interaction and cross-organizational interoperability, their security principles remain understudied, and standardized threat modeling is limited; no protocol-centric risk assessment framework has been established yet. This paper presents a systematic security analysis of four emerging AI agent communication protocols. First, we develop a structured threat modeling analysis that examines protocol architectures, trust assumptions, interaction patterns, and lifecycle behaviors to identify protocol-specific and cross-protocol risk surfaces. Second, we introduce a qualitative risk assessment framework that identifies twelve protocol-level risks and evaluates security posture across the creation, operation, and update phases through systematic assessment of likelihood, impact, and overall protocol risk, with implications for secure deployment and future standardization. Third, we provide a measurement-driven case study on MCP that formalizes the risk of missing mandatory validation/attestation for executable components as a falsifiable security claim by quantifying wrong-provider tool execution under multi-server composition across representative resolver policies. Collectively, our results highlight key design-induced risk surfaces and provide actionable guidance for secure deployment and future standardization of agent communication ecosystems.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
+    {
+      "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
+      "link": "https://arxiv.org/abs/2602.11337",
+      "snippet": "arXiv:2602.11337v1 Announce Type: cross \nAbstract: Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets and tooling, we provide a foundation for scalable data generation, policy training, and benchmark creation for robot learning research.",
+      "publishedAt": "2026-03-05T05:00:00.000Z",
+      "source": "arXiv cs.AI Recent Papers",
+      "theme": "dangerous-misinformation",
+      "type": "News"
+    },
     {
       "title": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026 - Zee News",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONy0tY0UwQkJnSUFjWGxvMHVRVjhGUjZRcW5QZEZ0dmdBWUpnNmctemgtUHhkRGplM2E0QzZOV2JYZGREcHRJN3Ntd1Y1dE5yYkszc05wNFRuZHZqZ2x4akRTM2pQdGpYSmN6ZUs3aGJyNE56VFY5WmR6RWhMeHZ3Z3RMWUlSWk5qb1FSR2w0OW9JLS1xckprMlM5eUVCcDQw0gGmAUFVX3lxTE1Ma19nd1hJV1dBdVRuRXFzeUJxXzVSelM4RjZsUVFPZTczenlmZlgyc21tQUVfRGV4Z2prWWhBSl9RTjNSS1VQZ2xIVHFjbkFQcTh3d2ZLOGRINW5QTFNZWVpldFJjQTRqUTZhcnlVOGljRXgyaWhRNEdCc3ZzYlZfQk9oOHhrcm4wSDZvNzlWOUdCZkNnUzZKaHNzSzFzOUFpYzZlNFE?oc=5",
-      "snippet": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026  Zee News",
+      "snippet": "Angel Nuzhat viral MMS: Fact-check on the 12-minute video scam trending in 2026\u00a0\u00a0Zee News",
       "publishedAt": "2026-03-05T02:54:41.000Z",
-      "source": "Google News • Fact Check (India)",
+      "source": "Google News \u2022 Fact Check (India)",
       "theme": "misinformation",
       "type": "News"
     },
     {
-      "title": "Union Minister Pradhan vows to protect farmers; slams Congress for ‘misinformation’ - The New Indian Express",
+      "title": "Union Minister Pradhan vows to protect farmers; slams Congress for \u2018misinformation\u2019 - The New Indian Express",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOW1KRzhDd3QtNklSQzJQcXl4SkRWVXJBT3F3ZXVPbmlQM2J6M3RvV01PeXJFTkRoOFpxamp6SG9sOWpreXVNdWlDV2lyZWdrd25jc1B2ZllvblpETkw1cDRhcjNJU2VmMFp6Qkhvck5DUVMwMFhzLVNwcGNYNHVRVUF3LTZwdTZPXzJXdlNzN1R4bE4xUzd3UmZTakJxckR3NUI5MjMzRFpTYlBScG9HQjZxdnp2RDlLb0xNWWdwbUdBOWV0R0RXUEg1RDPSAdoBQVVfeXFMTjZ4a2ZON3NjUllqZHNSc2tBb2N3cmNENGw2VlZFcGhmYUdwTjJHb04tLW1PcGZ0dTR2S0FXX2hSeVJTMU9kUGhKaVhlNFJrQ1VJREU3WVo5U3hWLVdQVTJzOGNEMmpkN3cwemd5SFhiTVFlSlQ2VXpSaTJ6dmt1aEFsaEI4aTNFV1Q2bzBuQUZYNzVHMlJzLXhiV3lyUUNncmlyY3pNLVRBVU55RHBiQWVFd21Id2dZZV9iUEF5OXB0dFFtZ19lY29lcjQ1WUdLZTlJdWloVlpLUFE?oc=5",
-      "snippet": "Union Minister Pradhan vows to protect farmers; slams Congress for ‘misinformation’  The New Indian Express",
+      "snippet": "Union Minister Pradhan vows to protect farmers; slams Congress for \u2018misinformation\u2019\u00a0\u00a0The New Indian Express",
       "publishedAt": "2026-03-05T02:45:47.000Z",
-      "source": "Google News • Misinformation (India)",
+      "source": "Google News \u2022 Misinformation (India)",
       "theme": "misinformation",
       "type": "News"
     },
     {
       "title": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms - The Logical Indian",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWUxKMzU1Vzd3X0xyeHUtWk9xYVZYdEx6WnJSZ2ZNY3hqdmVHTkdrMHM2T3FCclNDVGJEUEpQUmJRVnBmNUlyODRkc1pzSXFBTlgtYjhnc2pGVkRzUmJlVFc2THo2UXI5V01uMHdJQ0x3SjZHVGY4VmJMSmhvQVpOQU1jUVZDUV81Z3hyUXFrRXgwYnFnRHE4WVAxQlpoX0tKR0FxRlgteEU4YjBLM195c2lCMXFDMkZ5QzFoRi1zb0lUYjVwSFVxTWhERlNmaU0?oc=5",
-      "snippet": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms  The Logical Indian",
+      "snippet": "India Mandates 3-Hour Takedown for Deepfakes, AI Content, and Misinformation Across Social Media Platforms\u00a0\u00a0The Logical Indian",
       "publishedAt": "2026-03-05T06:00:18.000Z",
-      "source": "Google News • Misinformation (India)",
+      "source": "Google News \u2022 Misinformation (India)",
       "theme": "misinformation",
       "type": "News"
     },
@@ -1216,87 +1080,6 @@
       "title": "Credal Concept Bottleneck Models: Structural Separation of Epistemic and Aleatoric Uncertainty",
       "link": "https://arxiv.org/abs/2602.11219",
       "snippet": "arXiv:2602.11219v1 Announce Type: cross \nAbstract: Decomposing predictive uncertainty into epistemic (model ignorance) and aleatoric (data ambiguity) components is central to reliable decision making, yet most methods estimate both from the same predictive distribution. Recent empirical and theoretical results show these estimates are typically strongly correlated, so changes in predictive spread simultaneously affect both components and blur their semantics. We propose a credal-set formulation in which uncertainty is represented as a set of predictive distributions, so that epistemic and aleatoric uncertainty correspond to distinct geometric properties: the size of the set versus the noise within its elements. We instantiate this idea in a Variational Credal Concept Bottleneck Model with two disjoint uncertainty heads trained by disjoint objectives and non-overlapping gradient paths, yielding separation by construction rather than post hoc decomposition. Across multi-annotator benchmarks, our approach reduces the correlation between epistemic and aleatoric uncertainty by over an order of magnitude compared to standard methods, while improving the alignment of epistemic uncertainty with prediction error and aleatoric uncertainty with ground-truth ambiguity.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "AI-Driven Clinical Decision Support System for Enhanced Diabetes Diagnosis and Management",
-      "link": "https://arxiv.org/abs/2602.11237",
-      "snippet": "arXiv:2602.11237v1 Announce Type: cross \nAbstract: Identifying type 2 diabetes mellitus can be challenging, particularly for primary care physicians. Clinical decision support systems incorporating artificial intelligence (AI-CDSS) can assist medical professionals in diagnosing type 2 diabetes with high accuracy. This study aimed to assess an AI-CDSS specifically developed for the diagnosis of type 2 diabetes by employing a hybrid approach that integrates expert-driven insights with machine learning techniques. The AI-CDSS was developed (training dataset: n = 650) and tested (test dataset: n = 648) using a dataset of 1298 patients with and without type 2 diabetes. To generate predictions, the algorithm utilized key features such as body mass index, plasma fasting glucose, and hemoglobin A1C. Furthermore, a clinical pilot study involving 105 patients was conducted to assess the diagnostic accuracy of the system in comparison to non-endocrinology specialists. The AI-CDSS showed a high degree of accuracy, with 99.8% accuracy in predicting diabetes, 99.3% in predicting prediabetes, 99.2% in identifying at-risk individuals, and 98.8% in predicting no diabetes. The test dataset revealed a 98.8% agreement between endocrinology specialists and the AI-CDSS. Type 2 diabetes was identified in 45% of 105 individuals in the pilot study. Compared with diabetes specialists, the AI-CDSS scored a 98.5% concordance rate, greatly exceeding that of nonendocrinology specialists, who had an 85% agreement rate. These findings indicate that the AI-CDSS has the potential to be a useful tool for accurately identifying type 2 diabetes, especially in situations in which diabetes specialists are not readily available.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Toward Reliable Tea Leaf Disease Diagnosis Using Deep Learning Model: Enhancing Robustness With Explainable AI and Adversarial Training",
-      "link": "https://arxiv.org/abs/2602.11239",
-      "snippet": "arXiv:2602.11239v1 Announce Type: cross \nAbstract: Tea is a valuable asset for the economy of Bangladesh. So, tea cultivation plays an important role to boost the economy. These valuable plants are vulnerable to various kinds of leaf infections which may cause less production and low quality. It is not so easy to detect these diseases manually. It may take time and there could be some errors in the detection.Therefore, the purpose of the study is to develop an automated deep learning model for tea leaf disease classification based on the teaLeafBD dataset so that anyone can detect the diseases more easily and efficiently. There are 5,278 high-resolution images in this dataset. The images are classified into seven categories. Six of them represents various diseases and the rest one represents healthy leaves. The proposed pipeline contains data preprocessing, data splitting, adversarial training, augmentation, model training, evaluation, and comprehension made possible with Explainable AI strategies. DenseNet201 and EfficientNetB3 were employed to perform the classification task. To prepare the model more robustly, we applied adversarial training so it can operate effectively even with noisy or disturbed inputs. In addition, Grad-CAM visualization was executed to analyze the model's predictions by identifying the most influential regions of each image. Our experimental outcomes revealed that EfficientNetB3 achieved the highest classification accuracy of 93%, while DenseNet201 reached 91%. The outcomes prove that the effectiveness of the proposed approach can accurately detect tea leaf diseases and provide a practical solution for advanced agricultural management.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "How Many Features Can a Language Model Store Under the Linear Representation Hypothesis?",
-      "link": "https://arxiv.org/abs/2602.11246",
-      "snippet": "arXiv:2602.11246v1 Announce Type: cross \nAbstract: We introduce a mathematical framework for the linear representation hypothesis (LRH), which asserts that intermediate layers of language models store features linearly. We separate the hypothesis into two claims: linear representation (features are linearly embedded in neuron activations) and linear accessibility (features can be linearly decoded). We then ask: How many neurons $d$ suffice to both linearly represent and linearly access $m$ features? Classical results in compressed sensing imply that for $k$-sparse inputs, $d = O(k\\log (m/k))$ suffices if we allow non-linear decoding algorithms (Candes and Tao, 2006; Candes et al., 2006; Donoho, 2006). However, the additional requirement of linear decoding takes the problem out of the classical compressed sensing, into linear compressed sensing.\n  Our main theoretical result establishes nearly-matching upper and lower bounds for linear compressed sensing. We prove that $d = \\Omega_\\epsilon(\\frac{k^2}{\\log k}\\log (m/k))$ is required while $d = O_\\epsilon(k^2\\log m)$ suffices. The lower bound establishes a quantitative gap between classical and linear compressed setting, illustrating how linear accessibility is a meaningfully stronger hypothesis than linear representation alone. The upper bound confirms that neurons can store an exponential number of features under the LRH, giving theoretical evidence for the \"superposition hypothesis\" (Elhage et al., 2022).\n  The upper bound proof uses standard random constructions of matrices with approximately orthogonal columns. The lower bound proof uses rank bounds for near-identity matrices (Alon, 2003) together with Tur\\'an's theorem (bounding the number of edges in clique-free graphs). We also show how our results do and do not constrain the geometry of feature representations and extend our results to allow decoders with an activation function and bias.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "DeepRed: an architecture for redshift estimation",
-      "link": "https://arxiv.org/abs/2602.11281",
-      "snippet": "arXiv:2602.11281v1 Announce Type: cross \nAbstract: Estimating redshift is a central task in astrophysics, but its measurement is costly and time-consuming. In addition, current image-based methods are often validated on homogeneous datasets. The development and comparison of networks able generalize across different morphologies, ranging from galaxies to gravitationally-lensed transients, and observational conditions, remain an open challenge. This work proposes DeepRed, a deep learning pipeline that demonstrates how modern computer vision architectures, including ResNet, EfficientNet, Swin Transformer, and MLP-Mixer, can estimate redshifts from images of galaxies, gravitational lenses, and gravitationally-lensed supernovae. We compare these architectures and their ensemble to both neural networks (A1, A3, NetZ, and PhotoZ) and a feature-based method (HOG+SVR) on simulated (DeepGraviLens) and real (KiDS, SDSS) datasets. Our approach achieves state-of-the-art results on all datasets. On DeepGraviLens, DeepRed achieves a significant improvement in the Normalized Mean Absolute Deviation compared to the best baseline (PhotoZ): 55% on DES-deep (using EfficientNet), 51% on DES-wide (Ensemble), 52% on DESI-DOT (Ensemble), and 46% on LSST-wide (Ensemble). On real observations from the KiDS survey, the pipeline outperforms the best baseline (NetZ), improving NMAD by 16% on a general test set without high-probability lenses (Ensemble) and 27% on high-probability lenses (Ensemble). For non-lensed galaxies in the SDSS dataset, the MLP-Mixer architecture achieves a 5% improvement over the best baselines (A3 and NetZ). SHAP shows that the models correctly focus on the objects of interest with over 95% localization accuracy on high-quality images, validating the reliability of the predictions. These findings suggest that deep learning is a scalable, robust, and interpretable solution for redshift estimation in large-scale surveys.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "HiFloat4 Format for Language Model Inference",
-      "link": "https://arxiv.org/abs/2602.11287",
-      "snippet": "arXiv:2602.11287v1 Announce Type: cross \nAbstract: This paper introduces HiFloat4 (HiF4), a block floating-point data format tailored for deep learning. Each HiF4 unit packs 64 4-bit elements with 32 bits of shared scaling metadata, averaging 4.5 bits per value. The metadata specifies a three-level scaling hierarchy, capturing inter- and intra-group dynamic range while improving the utilization of the representational space. In addition, the large 64-element group size enables matrix multiplications to be executed in a highly fixed-point manner, significantly reducing hardware area and power consumption. To evaluate the proposed format, we conducted inference experiments on several language models, including LLaMA, Qwen, Mistral, DeepSeek-V3.1 and LongCat. Results show that HiF4 achieves higher average accuracy than the state-of-the-art NVFP4 format across multiple models and diverse downstream tasks.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
-      "link": "https://arxiv.org/abs/2602.11304",
-      "snippet": "arXiv:2602.11304v1 Announce Type: cross \nAbstract: Modern analyst agents must reason over complex, high token inputs, including dozens of retrieved documents, tool outputs, and time sensitive data. While prior work has produced tool calling benchmarks and examined factuality in knowledge augmented systems, relatively little work studies their intersection: settings where LLMs must integrate large volumes of dynamic, structured and unstructured multi tool outputs. We investigate LLM failure modes in this regime using crypto as a representative high data density domain. We introduce (1) CryptoAnalystBench, an analyst aligned benchmark of 198 production crypto and DeFi queries spanning 11 categories; (2) an agentic harness equipped with relevant crypto and DeFi tools to generate responses across multiple frontier LLMs; and (3) an evaluation pipeline with citation verification and an LLM as a judge rubric spanning four user defined success dimensions: relevance, temporal relevance, depth, and data consistency. Using human annotation, we develop a taxonomy of seven higher order error types that are not reliably captured by factuality checks or LLM based quality scoring. We find that these failures persist even in state of the art systems and can compromise high stakes decisions. Based on this taxonomy, we refine the judge rubric to better capture these errors. While the judge does not align with human annotators on precise scoring across rubric iterations, it reliably identifies critical failure modes, enabling scalable feedback for developers and researchers studying analyst style agents. We release CryptoAnalystBench with annotated queries, the evaluation pipeline, judge rubrics, and the error taxonomy, and outline mitigation strategies and open challenges in evaluating long form, multi tool augmented systems.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Predictive Associative Memory: Retrieval Beyond Similarity Through Temporal Co-occurrence",
-      "link": "https://arxiv.org/abs/2602.11322",
-      "snippet": "arXiv:2602.11322v1 Announce Type: cross \nAbstract: Current approaches to memory in neural systems rely on similarity-based retrieval: given a query, find the most representationally similar stored state. This assumption -- that useful memories are similar memories -- fails to capture a fundamental property of biological memory: association through temporal co-occurrence. We propose Predictive Associative Memory (PAM), an architecture in which a JEPA-style predictor, trained on temporal co-occurrence within a continuous experience stream, learns to navigate the associative structure of an embedding space. We introduce an Inward JEPA that operates over stored experience (predicting associatively reachable past states) as the complement to the standard Outward JEPA that operates over incoming sensory data (predicting future states). We evaluate PAM as an associative recall system -- testing faithfulness of recall for experienced associations -- rather than as a retrieval system evaluated on generalisation to unseen associations. On a synthetic benchmark, the predictor's top retrieval is a true temporal associate 97% of the time (Association Precision@1 = 0.970); it achieves cross-boundary Recall@20 = 0.421 where cosine similarity scores zero; and it separates experienced-together from never-experienced-together states with a discrimination AUC of 0.916 (cosine: 0.789). Even restricted to cross-room pairs where embedding similarity is uninformative, the predictor achieves AUC = 0.849 (cosine: 0.503, chance). A temporal shuffle control confirms the signal is genuine temporal co-occurrence structure, not embedding geometry: shuffling collapses cross-boundary recall by 90%, replicated across training seeds. All results are stable across seeds (SD < 0.006) and query selections (SD $\\leq$ 0.012).",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "Security Threat Modeling for Emerging AI-Agent Protocols: A Comparative Analysis of MCP, A2A, Agora, and ANP",
-      "link": "https://arxiv.org/abs/2602.11327",
-      "snippet": "arXiv:2602.11327v1 Announce Type: cross \nAbstract: The rapid development of the AI agent communication protocols, including the Model Context Protocol (MCP), Agent2Agent (A2A), Agora, and Agent Network Protocol (ANP), is reshaping how AI agents communicate with tools, services, and each other. While these protocols support scalable multi-agent interaction and cross-organizational interoperability, their security principles remain understudied, and standardized threat modeling is limited; no protocol-centric risk assessment framework has been established yet. This paper presents a systematic security analysis of four emerging AI agent communication protocols. First, we develop a structured threat modeling analysis that examines protocol architectures, trust assumptions, interaction patterns, and lifecycle behaviors to identify protocol-specific and cross-protocol risk surfaces. Second, we introduce a qualitative risk assessment framework that identifies twelve protocol-level risks and evaluates security posture across the creation, operation, and update phases through systematic assessment of likelihood, impact, and overall protocol risk, with implications for secure deployment and future standardization. Third, we provide a measurement-driven case study on MCP that formalizes the risk of missing mandatory validation/attestation for executable components as a falsifiable security claim by quantifying wrong-provider tool execution under multi-server composition across representative resolver policies. Collectively, our results highlight key design-induced risk surfaces and provide actionable guidance for secure deployment and future standardization of agent communication ecosystems.",
-      "publishedAt": "2026-03-05T05:00:00.000Z",
-      "source": "arXiv cs.AI Recent Papers",
-      "theme": "dangerous-misinformation",
-      "type": "News"
-    },
-    {
-      "title": "MolmoSpaces: A Large-Scale Open Ecosystem for Robot Navigation and Manipulation",
-      "link": "https://arxiv.org/abs/2602.11337",
-      "snippet": "arXiv:2602.11337v1 Announce Type: cross \nAbstract: Deploying robots at scale demands robustness to the long tail of everyday situations. The countless variations in scene layout, object geometry, and task specifications that characterize real environments are vast and underrepresented in existing robot benchmarks. Measuring this level of generalization requires infrastructure at a scale and diversity that physical evaluation alone cannot provide. We introduce MolmoSpaces, a fully open ecosystem to support large-scale benchmarking of robot policies. MolmoSpaces consists of over 230k diverse indoor environments, ranging from handcrafted household scenes to procedurally generated multiroom houses, populated with 130k richly annotated object assets, including 48k manipulable objects with 42M stable grasps. Crucially, these environments are simulator-agnostic, supporting popular options such as MuJoCo, Isaac, and ManiSkill. The ecosystem supports the full spectrum of embodied tasks: static and mobile manipulation, navigation, and multiroom long-horizon tasks requiring coordinated perception, planning, and interaction across entire indoor environments. We also design MolmoSpaces-Bench, a benchmark suite of 8 tasks in which robots interact with our diverse scenes and richly annotated objects. Our experiments show MolmoSpaces-Bench exhibits strong sim-to-real correlation (R = 0.96, \\r{ho} = 0.98), confirm newer and stronger zero-shot policies outperform earlier versions in our benchmarks, and identify key sensitivities to prompt phrasing, initial joint positions, and camera occlusion. Through MolmoSpaces and its open-source assets and tooling, we provide a foundation for scalable data generation, policy training, and benchmark creation for robot learning research.",
       "publishedAt": "2026-03-05T05:00:00.000Z",
       "source": "arXiv cs.AI Recent Papers",
       "theme": "dangerous-misinformation",
