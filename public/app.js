@@ -547,7 +547,15 @@ loadAIEcosystemWatch();
 async function loadStreamStatus() {
   const misinfoNewsList = document.getElementById('misinfoNewsList');
   const streamPanelTitle = document.getElementById('streamPanelTitle');
-  streamPanelTitle.textContent = 'Live Trending News';
+  
+  // Update title with selected date
+  const dateObj = new Date(selectedDate + 'T00:00:00Z');
+  const formattedDate = dateObj.toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+  streamPanelTitle.textContent = `Articles from ${formattedDate}`;
 
   // Show loading state
   if (misinfoNewsList) {
@@ -557,7 +565,7 @@ async function loadStreamStatus() {
   try {
     // Build API URL with dynamic date, cache-busting, and sort parameters
     const cacheBuster = Date.now();
-    const apiUrl = `/api/live-sources?type=news&limit=30&from=${selectedDate}&sort=newest&_cb=${cacheBuster}`;
+    const apiUrl = `/api/live-sources?type=news&limit=30&from=${selectedDate}&to=${selectedDate}&sort=newest&_cb=${cacheBuster}`;
     
     const { payload, mode } = await fetchJson(
       apiUrl,
@@ -576,6 +584,8 @@ async function loadStreamStatus() {
     });
 
     streamItems = uniqueItems;
+    // Sort by most recent first
+    streamItems.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
     renderStreamPage();
@@ -599,10 +609,10 @@ async function loadStreamStatus() {
       errorMsg.id = 'streamErrorMessage';
       errorMsg.className = 'stream-error-message';
       errorMsg.innerHTML = `
-        <p><strong>⚠ Unable to fetch live articles</strong></p>
-        <p>The news feed is temporarily unavailable. Showing cached data from the closest available date.</p>
+        <p><strong>⚠ Unable to fetch articles</strong></p>
+        <p>Could not load articles for ${selectedDate}. The service may be temporarily unavailable.</p>
         <p style="font-size: 0.9em; margin-top: 8px; color: #999;">
-          Try refreshing in a few moments or select a different date.
+          Try refreshing or selecting a different date.
         </p>
       `;
       misinfoNewsList.insertBefore(errorMsg, misinfoNewsList.firstChild);
@@ -733,6 +743,7 @@ initThemeFilterBar();
 function initDateSelector() {
   const dateSelector = document.getElementById('dateSelector');
   if (!dateSelector) {
+    console.warn('Date selector element not found');
     return;
   }
 
@@ -741,17 +752,31 @@ function initDateSelector() {
   
   // Set initial value to today
   dateSelector.value = selectedDate;
+  console.log(`Date selector initialized with today's date: ${selectedDate}`);
 
+  /**
+   * Event listener for date selection
+   * Converts selected date to YYYY-MM-DD format and fetches articles
+   * Prevents selecting future dates and validates date format
+   */
   dateSelector.addEventListener('change', (e) => {
-    const selected = e.target.value;
+    const selectedDateValue = e.target.value;
     
-    // Validate that selected date is not in the future
-    if (selected > selectedDate) {
+    // Validate date format (YYYY-MM-DD)
+    if (!selectedDateValue || !/^\d{4}-\d{2}-\d{2}$/.test(selectedDateValue)) {
+      console.error('Invalid date format, must be YYYY-MM-DD');\n      dateSelector.value = selectedDate;
+      return;
+    }
+    
+    // Prevent selecting future dates
+    if (selectedDateValue > selectedDate) {
+      console.warn('Future date rejected:', selectedDateValue);
       dateSelector.value = selectedDate;
       return;
     }
     
-    selectedDate = selected;
+    // Update global selectedDate and fetch articles for that date
+    console.log(`User selected date: ${selectedDateValue}`);\n    selectedDate = selectedDateValue;
     loadStreamStatus();
   });
 }
