@@ -8,6 +8,7 @@ let activeDataMode = 'live';
 let lastDataTimestamp = null;
 let selectedStreamCategory = 'all';
 let selectedStreamRegion = 'all';
+let selectedDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
 
 if (window.location.hash) {
   history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
@@ -61,21 +62,39 @@ function apiUrl(path) {
 
 async function fetchJson(primaryUrl, fallbackUrl) {
   try {
-    const response = await fetch(primaryUrl);
+    const response = await fetch(primaryUrl, {
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
+    });
     if (!response.ok) {
-      throw new Error('Primary request failed');
+      throw new Error(`API request failed with status ${response.status}`);
     }
     return { payload: await response.json(), mode: 'live' };
   } catch (error) {
+    console.warn('Primary API fetch failed:', error.message);
     if (!fallbackUrl) {
       throw error;
     }
 
-    const fallbackResponse = await fetch(fallbackUrl);
-    if (!fallbackResponse.ok) {
+    try {
+      const fallbackResponse = await fetch(fallbackUrl, {
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        }
+      });
+      if (!fallbackResponse.ok) {
+        throw error;
+      }
+      return { payload: await fallbackResponse.json(), mode: 'snapshot' };
+    } catch (fallbackError) {
+      console.error('Both primary and fallback fetches failed:', fallbackError);
       throw error;
     }
-    return { payload: await fallbackResponse.json(), mode: 'snapshot' };
   }
 }
 
@@ -531,8 +550,12 @@ async function loadStreamStatus() {
   streamPanelTitle.textContent = 'Live Trending News';
 
   try {
+    // Build API URL with dynamic date, cache-busting, and sort parameters
+    const cacheBuster = Date.now();
+    const apiUrl = `/api/live-sources?type=news&limit=30&from=${selectedDate}&sort=newest&_cb=${cacheBuster}`;
+    
     const { payload, mode } = await fetchJson(
-      apiUrl('/api/live-sources?type=news&limit=30'),
+      apiUrl,
       './data/live-sources-all.json'
     );
     setDataMode(mode);
@@ -551,11 +574,34 @@ async function loadStreamStatus() {
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
     renderStreamPage();
+    
+    // Clear any persistent error message
+    const streamErrorMsg = document.getElementById('streamErrorMessage');
+    if (streamErrorMsg) {
+      streamErrorMsg.style.display = 'none';
+    }
   } catch (error) {
+    console.error('Error loading stream status:', error);
     streamItems = [];
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
     renderStreamPage();
+    
+    // Show error message to user
+    const misinfoNewsList = document.getElementById('misinfoNewsList');
+    if (misinfoNewsList) {
+      const errorMsg = document.createElement('div');
+      errorMsg.id = 'streamErrorMessage';
+      errorMsg.className = 'stream-error-message';
+      errorMsg.innerHTML = `
+        <p><strong>⚠ Unable to fetch live articles</strong></p>
+        <p>The news feed is temporarily unavailable. Showing cached data from the closest available date.</p>
+        <p style="font-size: 0.9em; margin-top: 8px; color: #999;">
+          Try refreshing in a few moments or select a different date.
+        </p>
+      `;
+      misinfoNewsList.insertBefore(errorMsg, misinfoNewsList.firstChild);
+    }
   }
 }
 
@@ -678,3 +724,20 @@ function initThemeFilterBar() {
 }
 
 initThemeFilterBar();
+
+function initDateSelector() {
+  const dateSelector = document.getElementById('dateSelector');
+  if (!dateSelector) {
+    return;
+  }
+
+  // Set initial value to today
+  dateSelector.value = selectedDate;
+
+  dateSelector.addEventListener('change', (e) => {
+    selectedDate = e.target.value;
+    loadStreamStatus();
+  });
+}
+
+initDateSelector();

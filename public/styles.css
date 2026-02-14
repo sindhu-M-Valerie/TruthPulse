@@ -1241,6 +1241,25 @@ a:active {
   padding: 0.5rem 0.7rem;
 }
 
+.stream-error-message {
+  border-left: 3px solid #ff6b6b;
+  border-right: 1px solid rgba(255, 107, 107, 0.25);
+  background: rgba(255, 107, 107, 0.1);
+  padding: 0.8rem 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 2px;
+}
+
+.stream-error-message p {
+  margin: 0.2rem 0;
+  font-size: 0.86rem;
+  color: #e8e8e8;
+}
+
+.stream-error-message strong {
+  color: #ff9999;
+}
+
 .live-source-title {
   margin: 0;
   font-weight: 700;
