@@ -98,16 +98,8 @@ Render gives you a live URL like:
 
 This serves the same Express app as local `npm start` and keeps link rendering behavior consistent.
 
-## Optional: GitHub Pages Frontend + Render API
+## Deployment
 
-If you still want Pages for frontend hosting, set [public/runtime-config.js](public/runtime-config.js):
+**Primary Deployment (Recommended):** [https://argus-web.onrender.com](https://argus-web.onrender.com)
 
-```js
-window.ARGUS_API_BASE = 'https://argus-web.onrender.com';
-```
-
-Then push to `main` so Pages picks up the API base.
-
-GitHub Pages URL for this repo:
-
-- `https://sindhu-m-valerie.github.io/Argus/`
+The app is deployed on Render with auto-deployment enabled. Push to `main` branch to trigger automatic deployment.
