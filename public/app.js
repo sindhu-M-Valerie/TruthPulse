@@ -564,6 +564,15 @@ async function loadStreamStatus() {
   const misinfoNewsList = document.getElementById('misinfoNewsList');
   const streamPanelTitle = document.getElementById('streamPanelTitle');
 
+  // 🧹 CLEAR OLD DATA AND UI FIRST
+  console.log(`   Clearing old UI...`);
+  if (misinfoNewsList) {
+    misinfoNewsList.innerHTML = '';
+  }
+  streamItems = []; // Reset global state
+  filteredStreamItems = [];
+  streamCurrentPage = 1;
+
   // Get selected date and convert to full ISO timestamps for exact day match
   const dateObj = new Date(selectedDate);
   const formattedDate = dateObj.toLocaleDateString('en-US', { 
@@ -593,8 +602,9 @@ async function loadStreamStatus() {
     // Build API URL with full ISO timestamps and cache busting
     const apiEndpoint = `/api/live-sources?type=news&limit=30&from=${from}&to=${to}&sort=newest&_cb=${Date.now()}`;
     
-    console.log(`Loading articles for ${selectedDate}`);
-    console.log(`Time range: ${from} → ${to}`);
+    console.log(`\n📡 FETCHING for date: ${selectedDate}`);
+    console.log(`   API URL: ${apiEndpoint}`);
+    console.log(`   Time range: ${from} → ${to}`);
 
     const response = await fetch(apiEndpoint, { cache: 'no-store' });
     
@@ -604,9 +614,10 @@ async function loadStreamStatus() {
     
     const payload = await response.json();
     
-    console.log(`📰 API Response received:`);
+    console.log(`✅ API Response received for ${selectedDate}:`);
     console.log(`   Articles in response: ${payload.data.length}`);
-    console.log(`   First article: ${payload.data[0]?.title?.substring(0, 50)}...`);
+    console.log(`   First 3 titles: ${payload.data.slice(0, 3).map(a => a.title.substring(0, 30)).join(' | ')}`);
+    console.log(`   publishedAt values: ${payload.data.slice(0, 3).map(a => a.publishedAt).join(' | ')}`);
     
     // Set data source mode
     setDataMode(payload.data && payload.data.length > 0 ? 'live' : 'snapshot');
@@ -629,12 +640,14 @@ async function loadStreamStatus() {
     uniqueItems.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
     streamItems = uniqueItems;
-    console.log(`✓ Loaded ${uniqueItems.length} unique articles for ${selectedDate}`);
-    console.log(`   Articles after dedup: ${streamItems.length}`);
+    console.log(`✅ Updated streamItems for ${selectedDate}: ${streamItems.length} articles`);
+    console.log(`   New streamItems titles: ${streamItems.slice(0, 2).map(a => a.title.substring(0, 30)).join(' | ')}`);
     
     refreshStreamFilterOptions();
     streamCurrentPage = 1;
+    console.log(`   Calling renderStreamPage()...`);
     renderStreamPage();
+    console.log(`✅ renderStreamPage() complete for ${selectedDate}`);
     
   } catch (error) {
     console.error('Error fetching news:', error.message);
@@ -665,22 +678,29 @@ async function loadStreamStatus() {
 loadStreamStatus();
 
 function renderStreamPage() {
+  console.log(`\n🎨 renderStreamPage() called`);
+  console.log(`   Current streamItems count: ${streamItems.length}`);
+  console.log(`   Titles in streamItems: ${streamItems.slice(0, 2).map(a => a.title.substring(0, 30)).join(' | ')}`);
+  
   const misinfoNewsList = document.getElementById('misinfoNewsList');
   const streamPrevBtn = document.getElementById('streamPrevBtn');
   const streamNextBtn = document.getElementById('streamNextBtn');
   const streamPageInfo = document.getElementById('streamPageInfo');
 
   if (!misinfoNewsList || !streamPrevBtn || !streamNextBtn || !streamPageInfo) {
+    console.error(`❌ Missing DOM elements`);
     return;
   }
 
   applyStreamFilters();
+  console.log(`   After applyStreamFilters: filteredStreamItems count: ${filteredStreamItems.length}`);
 
   const totalPages = Math.max(1, Math.ceil(filteredStreamItems.length / streamPageSize));
   streamCurrentPage = Math.min(Math.max(streamCurrentPage, 1), totalPages);
   const start = (streamCurrentPage - 1) * streamPageSize;
   const pageItems = filteredStreamItems.slice(start, start + streamPageSize);
 
+  console.log(`   Clearing old HTML and rendering ${pageItems.length} items...`);
   misinfoNewsList.innerHTML = '';
 
   if (!pageItems.length) {
@@ -709,6 +729,11 @@ function renderStreamPage() {
   streamPageInfo.textContent = `Page ${streamCurrentPage} of ${totalPages}`;
   streamPrevBtn.disabled = streamCurrentPage <= 1;
   streamNextBtn.disabled = streamCurrentPage >= totalPages;
+  
+  console.log(`✅ renderStreamPage() complete - rendered page ${streamCurrentPage} with ${pageItems.length} items`);
+  if (pageItems.length > 0) {
+    console.log(`   First item on page: "${pageItems[0].title.substring(0, 50)}..."`);
+  }
 }
 
 function initStreamPagination() {
